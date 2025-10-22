@@ -9,7 +9,7 @@
 
 ### 📁 Estrutura de Arquivos
 ```
-✅ package.json              - Dependências do projetos
+✅ package.json              - Dependências do projeto
 ✅ vite.config.ts            - Configuração Vite
 ✅ tsconfig.json             - Configuração TypeScript
 ✅ tsconfig.node.json        - Configuração TypeScript Node
