@@ -7,7 +7,7 @@ Este projeto contém **30 arquivos** organizados da seguinte forma:
 ## 📂 Estrutura de Pastas
 
 ```
-pgs3/
+dhsclima/
 ├── 📁 .github/
 ├── 📁 src/
 │   ├── 📁 components/

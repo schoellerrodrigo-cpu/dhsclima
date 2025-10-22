@@ -245,7 +245,7 @@ theme: {
 - [ ] npm instalado? (`npm --version`)
 - [ ] Reiniciou o computador?
 - [ ] Executou `npm install`?
-- [ ] Está na pasta correta? (`cd c:\Users\usuario10\Desktop\pgs3`)
+- [ ] Está na pasta correta? (`cd c:\Users\usuario10\Desktop\dhsclima`)
 - [ ] Tem conexão com internet?
 - [ ] Antivírus não está bloqueando?
 

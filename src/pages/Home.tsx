@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator } from 'lucide-react'
+import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function Home() {
@@ -43,6 +43,15 @@ export default function Home() {
       path: '/calculadora',
       color: 'text-cyan-600',
       bgColor: 'bg-cyan-50',
+      destaque: true
+    },
+    {
+      title: 'Plano de Contingência',
+      description: 'Elaboração de Planos de Contingência de Defesa Civil (PLANCON) baseado na PNPDEC.',
+      icon: Shield,
+      path: '/plano-contingencia',
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
       destaque: true
     },
     {

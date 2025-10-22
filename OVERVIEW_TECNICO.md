@@ -3,7 +3,7 @@
 ## Estrutura Completa do Projeto
 
 ```
-pgs3/
+dhsclima/
 ├── src/
 │   ├── components/          # 7 componentes React
 │   │   ├── Accordion.tsx    ✨ NOVO - Expansível para FAQ

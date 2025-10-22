@@ -14,6 +14,7 @@ export default function Header() {
     { name: 'Implementação', path: '/implementacao' },
     { name: 'Recursos', path: '/recursos' },
     { name: 'Calculadora', path: '/calculadora' },
+    { name: 'Plano Contingência', path: '/plano-contingencia' },
     { name: 'FAQ', path: '/faq' },
   ]
 

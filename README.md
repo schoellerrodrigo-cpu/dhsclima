@@ -63,10 +63,10 @@ Ferramenta interativa para avaliar o grau de maturidade DHS com:
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU-USUARIO/guia-dhs.git
+git clone https://github.com/SEU-USUARIO/dhsclima.git
 
 # Entre no diretório
-cd guia-dhs
+cd dhsclima
 
 # Instale as dependências
 npm install

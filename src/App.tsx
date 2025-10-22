@@ -8,6 +8,7 @@ import Implementacao from './pages/Implementacao'
 import Recursos from './pages/Recursos'
 import FAQ from './pages/FAQ'
 import CalculadoraDHS from './pages/CalculadoraDHS'
+import PlanoContingencia from './pages/PlanoContingencia'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/recursos" element={<Recursos />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/calculadora" element={<CalculadoraDHS />} />
+        <Route path="/plano-contingencia" element={<PlanoContingencia />} />
       </Routes>
     </Layout>
   )

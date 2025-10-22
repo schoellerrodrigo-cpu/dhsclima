@@ -88,11 +88,11 @@ Thumbs.db
 
 ### **PASSO 4: Inicializar repositório local**
 
-No PowerShell, dentro da pasta do projeto (`C:\Users\usuario10\Desktop\pgs3`):
+No PowerShell, dentro da pasta do projeto (`C:\Users\usuario10\Desktop\dhsclima`):
 
 ```powershell
 # Navegar para pasta do projeto
-cd C:\Users\usuario10\Desktop\pgs3
+cd C:\Users\usuario10\Desktop\dhsclima
 
 # Inicializar repositório git
 git init
@@ -112,7 +112,7 @@ git commit -m "🎉 Projeto inicial: Guia DHS completo com Calculadora"
 2. **Faça login** com sua conta
 3. **Clique** no botão verde "**New**" ou "**+**" → "**New repository**"
 4. **Preencha:**
-   - **Repository name:** `guia-dhs`
+   - **Repository name:** `dhsclima`
    - **Description:** `Guia prático de Desenvolvimento Harmônico e Sustentável com Calculadora interativa`
    - **Visibilidade:** 
      - ✅ **Public** (público - qualquer um pode ver)
@@ -130,7 +130,7 @@ Após criar o repositório, o GitHub mostrará comandos. Execute no PowerShell:
 
 ```powershell
 # Adicionar origem remota (substitua SEU-USUARIO pelo seu username do GitHub)
-git remote add origin https://github.com/SEU-USUARIO/guia-dhs.git
+git remote add origin https://github.com/SEU-USUARIO/dhsclima.git
 
 # Renomear branch para main (padrão do GitHub)
 git branch -M main
@@ -154,7 +154,7 @@ Se o git pedir senha ao fazer push:
 3. **Personal access tokens** → **Tokens (classic)**
 4. **Generate new token** → **Generate new token (classic)**
 5. **Preencha:**
-   - **Note:** `Token para guia-dhs`
+   - **Note:** `Token para dhsclima`
    - **Expiration:** 90 days (ou No expiration)
    - **Marque:** `repo` (acesso completo a repositórios)
 6. **Generate token**
@@ -167,7 +167,7 @@ Se o git pedir senha ao fazer push:
 
 ```powershell
 # 1. Navegar para projeto
-cd C:\Users\usuario10\Desktop\pgs3
+cd C:\Users\usuario10\Desktop\dhsclima
 
 # 2. Inicializar git
 git init
@@ -179,7 +179,7 @@ git add .
 git commit -m "🎉 Projeto inicial: Guia DHS completo"
 
 # 5. Conectar ao GitHub (substitua SEU-USUARIO)
-git remote add origin https://github.com/SEU-USUARIO/guia-dhs.git
+git remote add origin https://github.com/SEU-USUARIO/dhsclima.git
 
 # 6. Enviar para GitHub
 git branch -M main
@@ -290,7 +290,7 @@ Depois:
 3. **Source:** `gh-pages` branch
 4. **Save**
 5. Aguarde alguns minutos
-6. Site estará em: `https://SEU-USUARIO.github.io/guia-dhs`
+6. Site estará em: `https://SEU-USUARIO.github.io/dhsclima`
 
 ---
 
@@ -313,7 +313,7 @@ Depois:
 ## 📊 ESTRUTURA DO PROJETO NO GITHUB
 
 ```
-guia-dhs/
+dhsclima/
 ├── .github/
 │   └── copilot-instructions.md
 ├── src/

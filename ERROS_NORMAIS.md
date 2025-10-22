@@ -208,7 +208,7 @@ Você provavelmente está vendo erros como:
 2. Abra o terminal (`Ctrl + ` ` ou View > Terminal)
 3. Certifique-se que está na pasta do projeto:
    ```powershell
-   cd c:\Users\usuario10\Desktop\pgs3
+   cd c:\Users\usuario10\Desktop\dhsclima
    ```
 4. Execute:
    ```powershell
@@ -265,7 +265,7 @@ npm install --legacy-peer-deps
 
 ```
 ANTES do npm install:
-📂 pgs3/
+📂 dhsclima/
   ├── src/          (com 700+ erros)
   ├── package.json
   └── ❌ node_modules/ (não existe)
@@ -276,7 +276,7 @@ Executando npm install:
 ⏳ Building... (30 seg)
 
 DEPOIS do npm install:
-📂 pgs3/
+📂 dhsclima/
   ├── src/          (✅ 0 erros!)
   ├── package.json
   └── ✅ node_modules/ (245 pacotes)

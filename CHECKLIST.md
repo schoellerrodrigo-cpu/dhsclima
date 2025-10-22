@@ -67,7 +67,7 @@ No terminal do VS Code:
 - [ ] Abri o terminal (`Ctrl + ` `)
 - [ ] Estou na pasta do projeto
   ```powershell
-  cd c:\Users\usuario10\Desktop\pgs3
+  cd c:\Users\usuario10\Desktop\dhsclima
   ```
 - [ ] Verifiquei com `pwd` ou `ls`
 
