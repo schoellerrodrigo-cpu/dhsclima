@@ -3,7 +3,6 @@
 ## 🔴 Você tem 717 erros?
 
 ### ✅ SOLUÇÃO (3 passos):
-
 ```
 ┌─────────────────────────────────────────┐
 │  PASSO 1: Instalar Node.js              │
