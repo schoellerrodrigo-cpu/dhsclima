@@ -9,6 +9,8 @@ import Recursos from './pages/Recursos'
 import FAQ from './pages/FAQ'
 import CalculadoraDHS from './pages/CalculadoraDHS'
 import PlanoContingencia from './pages/PlanoContingencia'
+import CaoNaEstrada from './pages/CaoNaEstrada'
+import ViolenciaECA from './pages/ViolenciaECA'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/calculadora" element={<CalculadoraDHS />} />
         <Route path="/plano-contingencia" element={<PlanoContingencia />} />
+        <Route path="/cao-na-estrada" element={<CaoNaEstrada />} />
+        <Route path="/violencia-eca" element={<ViolenciaECA />} />
       </Routes>
     </Layout>
   )

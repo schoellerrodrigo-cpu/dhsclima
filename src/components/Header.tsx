@@ -15,6 +15,8 @@ export default function Header() {
     { name: 'Recursos', path: '/recursos' },
     { name: 'Calculadora', path: '/calculadora' },
     { name: 'Plano Contingência', path: '/plano-contingencia' },
+    { name: 'CAO na Estrada', path: '/cao-na-estrada' },
+    { name: 'Violência ECA', path: '/violencia-eca' },
     { name: 'FAQ', path: '/faq' },
   ]
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield } from 'lucide-react'
+import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield, Route } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function Home() {
@@ -52,6 +52,24 @@ export default function Home() {
       path: '/plano-contingencia',
       color: 'text-red-600',
       bgColor: 'bg-red-50',
+      destaque: true
+    },
+    {
+      title: 'CAO na Estrada',
+      description: 'Guia de Avaliação de Risco do MPDFT - Enfrentamento à violência doméstica com recomendações do MP-RS.',
+      icon: Route,
+      path: '/cao-na-estrada',
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      destaque: true
+    },
+    {
+      title: 'Violência ECA',
+      description: 'Protocolo de enfrentamento à violência contra crianças e adolescentes segundo o Estatuto da Criança e do Adolescente.',
+      icon: Shield,
+      path: '/violencia-eca',
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
       destaque: true
     },
     {

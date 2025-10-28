@@ -947,35 +947,105 @@ BASE LEGAL:
       <Card className="bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-600">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">🔗 Integração com o DHS</h2>
         <p className="text-gray-700 mb-4">
-          Os Planos de Contingência de Defesa Civil complementam perfeitamente a metodologia 
-          DHS (Desenvolvimento Harmônico e Sustentável) ao:
+          O guia de implementação da Matriz de Convergência do DHS via atuação resolutiva de PGS contribui para fomentar como foco prioritário a elaboração dos planos de contingência:
         </p>
-        <div className="grid md:grid-cols-2 gap-4">
-          <div className="bg-white p-4 rounded-lg border border-blue-300">
-            <h3 className="font-bold text-blue-900 mb-2">✓ Pensamento Sistêmico</h3>
-            <p className="text-sm text-gray-700">
-              Abordar riscos de forma integrada, considerando interdependências entre sistemas
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded-lg border border-green-300">
-            <h3 className="font-bold text-green-900 mb-2">✓ Participação Social</h3>
-            <p className="text-sm text-gray-700">
-              Envolver comunidades na construção de soluções, gerando corresponsabilidade
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded-lg border border-purple-300">
-            <h3 className="font-bold text-purple-900 mb-2">✓ Planejamento de Longo Prazo</h3>
-            <p className="text-sm text-gray-700">
-              Preparação antecipada e ciclo contínuo de melhoria
-            </p>
-          </div>
-          <div className="bg-white p-4 rounded-lg border border-orange-300">
-            <h3 className="font-bold text-orange-900 mb-2">✓ Resiliência Comunitária</h3>
-            <p className="text-sm text-gray-700">
-              Fortalecer capacidades locais para enfrentar adversidades
-            </p>
+        
+        {/* Orientações Gerais da Matriz */}
+        <div className="mb-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-3">📋 Orientações Gerais da Matriz</h3>
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">I. Ambiente</h4>
+              <p className="text-sm text-gray-700">Escolher o ambiente/Habitat para atuação</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">II. Atuação Interinstitucional</h4>
+              <p className="text-sm text-gray-700">Fomentar a atuação interinstitucional e com a comunidade</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">III. Atuação Institucional</h4>
+              <p className="text-sm text-gray-700">Fomentar a atuação institucional</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">IV. Abordagens</h4>
+              <p className="text-sm text-gray-700">4.1- Conscientização/Necessidade, 4.2- Meios e 4.3- Incentivos</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">V. Etapas</h4>
+              <p className="text-sm text-gray-700">5.1- Escolher foco prioritário e 5.2- Mapear/aperfeiçoar/convergência</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-blue-300">
+              <h4 className="font-semibold text-blue-900">VI. Fundamento</h4>
+              <p className="text-sm text-gray-700">Sempre partir do foco prioritário levando em consideração os critérios do DHS/PGS</p>
+            </div>
           </div>
         </div>
+
+        {/* Etapas Sugeridas para Implementação */}
+        <div className="mb-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-3">🎯 Etapas Sugeridas para Implementação</h3>
+          <div className="space-y-3">
+            <div className="bg-white p-4 rounded-lg border border-green-300">
+              <h4 className="font-semibold text-green-900">1. Escolher o(s) Foco(s) Prioritário(s)</h4>
+              <p className="text-sm text-gray-700">Baseado em critérios de conveniência, oportunidade e urgência. Recomenda-se focar em problemas que causam alta judicialização ou calamidades.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-green-300">
+              <h4 className="font-semibold text-green-900">2.a. Mapear Necessidades, Possibilidades e Atividades</h4>
+              <p className="text-sm text-gray-700">Levantar o que é preciso fazer, os recursos disponíveis e as iniciativas já existentes relacionadas ao foco escolhido.</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg border border-green-300">
+              <h4 className="font-semibold text-green-900">2.b. Promover o Aperfeiçoamento das relações e/ou a Convergência Estrutural, por meio de atividades</h4>
+              <p className="text-sm text-gray-700">Executar uma série de atividades ordenadas para transformar as estruturas e processos.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Atividades (Passo 2.b) */}
+        <div className="mb-6">
+          <h3 className="text-lg font-bold text-gray-800 mb-3">🔧 Atividades (Passo 2.b)</h3>
+          <div className="grid md:grid-cols-2 gap-3">
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>1.</strong> Fomentar o DHS em Ambientes de Convergência (ex. em audiências públicas, reuniões, comitês, etc.)</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>2.</strong> Reunir Documentos e Elaborar Diagnósticos</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>3.</strong> Executar os Encaminhamentos</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>4.</strong> ELABORAR PLANO DE CONTINGÊNCIA - de acordo com as 8 etapas</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>5.</strong> ELABORAR PLANO DE CONTINGÊNCIA - de acordo com as 8 etapas acima previstas</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>6.</strong> Realizar Eventos Interinstitucionais</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>7.</strong> Realizar Capacitações Institucionais</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>8.</strong> Criar Estruturas de Resolução de Problemas</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>9.</strong> Promover Ações Contra Irregularidades</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>10.</strong> Implementar Estratégias de Comunicação e Formação</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>11.</strong> Desenvolver Projetos e Políticas Públicas</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>12.</strong> Promover a Convergência Estrutural</p>
+            </div>
+            <div className="bg-white p-3 rounded-lg border border-purple-300">
+              <p className="text-sm text-gray-700"><strong>13.</strong> Revisar e Aperfeiçoar Periodicamente</p>
+            </div>
+          </div>
+        </div>
+        
         <div className="mt-6 bg-blue-100 border-l-4 border-blue-600 p-4">
           <p className="text-sm text-gray-800">
             <strong>💡 Dica:</strong> Utilize a <a href="/calculadora" className="text-blue-600 hover:underline font-medium">Calculadora DHS</a> para 

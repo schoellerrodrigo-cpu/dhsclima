@@ -48,11 +48,11 @@
 
 ## 📋 Lista das 13 Atividades Enumeradas
 
-1. **Fomentar o DHS em Ambientes de Convergência**
+1. **Fomentar o DHS em Ambientes de Convergência (ex. em audiências públicas, reuniões, comitês, etc.)**
 2. **Reunir Documentos e Elaborar Diagnósticos**
 3. **Executar os Encaminhamentos**
 4. **Criar Critérios e Fluxos Operacionais**
-5. **Formalizar Convergências**
+5. **Formalizar Convergências (ex. elaborar planos, recomendações, cartilhas, decretos, etc.)**
 6. **Realizar Eventos Interinstitucionais**
 7. **Realizar Capacitações Institucionais**
 8. **Criar Estruturas de Resolução de Problemas**
@@ -157,7 +157,7 @@
 
 ## 🚀 Resultado Final
 
-A seção "Atividades da Convergência Estrutural (Passo 2.b)" agora apresenta:
+A seção "Atividades (Passo 2.b)" agora apresenta:
 
 1. ✅ **Numeração clara e visível** (1 a 13)
 2. ✅ **Ordem sequencial explícita**
@@ -180,11 +180,11 @@ A seção "Atividades da Convergência Estrutural (Passo 2.b)" agora apresenta:
 
 ### Estrutura Atual:
 ```
-[1] Fomentar o DHS em Ambientes de Convergência
+[1] Fomentar o DHS em Ambientes de Convergência (ex. em audiências públicas, reuniões, comitês, etc.)
 [2] Reunir Documentos e Elaborar Diagnósticos
 [3] Executar os Encaminhamentos
 [4] Criar Critérios e Fluxos Operacionais
-[5] Formalizar Convergências
+[5] Formalizar Convergências (ex. elaborar planos, recomendações, cartilhas, decretos, etc.)
 ...
 ```
 

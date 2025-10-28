@@ -18,18 +18,18 @@ export default function Implementacao() {
     },
     {
       numero: '2.b',
-      titulo: 'Promover o Aperfeiçoamento e a Convergência Estrutural',
+      titulo: 'Promover o Aperfeiçoamento e/ou a Convergência Estrutural',
       descricao: 'Executar uma série de atividades ordenadas para transformar as estruturas e processos.',
       icon: Rocket
     }
   ]
 
   const atividades = [
-    'Fomentar o DHS em Ambientes de Convergência',
+    'Fomentar o DHS em Ambientes de Convergência (ex. em audiências públicas, reuniões, comitês, etc.)',
     'Reunir Documentos e Elaborar Diagnósticos',
     'Executar os Encaminhamentos',
     'Criar Critérios e Fluxos Operacionais',
-    'Formalizar Convergências',
+    'Formalizar Convergências (ex. elaborar planos, recomendações, cartilhas, decretos, etc.)',
     'Realizar Eventos Interinstitucionais',
     'Realizar Capacitações Institucionais',
     'Criar Estruturas de Resolução de Problemas',
@@ -44,7 +44,7 @@ export default function Implementacao() {
     { eixo: 'I. Ambiente', descricao: 'Escolher o ambiente/Habitat para atuação' },
     { eixo: 'II. Atuação Interinstitucional', descricao: 'Fomentar a atuação interinstitucional e com a comunidade' },
     { eixo: 'III. Atuação Institucional', descricao: 'Fomentar a atuação institucional' },
-    { eixo: 'IV. Abordagens (Como)', descricao: '4.1- Conscientização/Necessidade, 4.2- Meios e 4.3- Incentivos' },
+    { eixo: 'IV. Abordagens', descricao: '4.1- Conscientização/Necessidade, 4.2- Meios e 4.3- Incentivos' },
     { eixo: 'V. Etapas', descricao: '5.1- Escolher foco prioritário e 5.2- Mapear/aperfeiçoar/convergência' },
     { eixo: 'VI. Fundamento', descricao: 'Sempre partir do foco prioritário levando em consideração os critérios do DHS/PGS' }
   ]
@@ -91,7 +91,7 @@ export default function Implementacao() {
 
         {/* Passos de Implementação */}
         <section className="mb-12">
-          <h2 className="section-subtitle">Passos Sugeridos para Implementação</h2>
+          <h2 className="section-subtitle">Etapas Sugeridas para Implementação</h2>
           
           <div className="space-y-6">
             {passos.map((passo) => {
@@ -118,7 +118,7 @@ export default function Implementacao() {
 
         {/* Atividades do Passo 2.b */}
         <section className="mb-12">
-          <h2 className="section-subtitle">Atividades da Convergência Estrutural (Passo 2.b)</h2>
+          <h2 className="section-subtitle">Atividades (Passo 2.b)</h2>
           
           <Card>
             <p className="text-gray-700 mb-6">
