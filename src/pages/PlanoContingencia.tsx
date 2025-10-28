@@ -1054,6 +1054,300 @@ BASE LEGAL:
           </p>
         </div>
       </Card>
+
+      {/* Recomendações MP-RS e CNMP */}
+      <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600 mt-8">
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+          <Shield className="h-8 w-8 text-green-600 mr-3" />
+          Recomendações do Ministério Público
+        </h2>
+
+        {/* Procuradora Silvia Cappelli - MP-RS */}
+        <div className="mb-8">
+          <div className="bg-white p-6 rounded-lg border-2 border-green-500 shadow-lg">
+            <div className="flex items-start mb-4">
+              <User className="h-8 w-8 text-green-700 mr-3 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold text-green-900 mb-1">
+                  Dra. Silvia Cappelli
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  Procuradora de Justiça do Ministério Público do Rio Grande do Sul (MP-RS)
+                </p>
+                <p className="text-xs text-gray-500 italic">
+                  Especialista em Direito Ambiental, Mudanças Climáticas e Gestão de Riscos de Desastres
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-green-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-green-900 mb-3 flex items-center">
+                  <AlertTriangle className="h-5 w-5 mr-2" />
+                  1. Prevenção e Preparação como Prioridades
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  "A gestão de riscos de desastres deve priorizar a <strong>prevenção e preparação</strong>, 
+                  não apenas a resposta. Municípios precisam investir em mapeamento de áreas de risco, 
+                  sistemas de alerta precoce e capacitação contínua de equipes."
+                </p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>• Mapeamento georreferenciado de áreas vulneráveis</li>
+                  <li>• Sistemas de monitoramento meteorológico integrado</li>
+                  <li>• Planos de evacuação testados regularmente</li>
+                  <li>• Capacitação de agentes de Defesa Civil</li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-blue-900 mb-3 flex items-center">
+                  <Users className="h-5 w-5 mr-2" />
+                  2. Articulação Interinstitucional
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  "O <strong>Ministério Público deve atuar como articulador</strong> entre os diferentes 
+                  órgãos e esferas de governo. A gestão de riscos exige integração permanente entre 
+                  Defesa Civil, Saúde, Assistência Social, Meio Ambiente e demais setores."
+                </p>
+                <div className="grid md:grid-cols-2 gap-2 mt-3">
+                  <div className="bg-white p-2 rounded text-xs">
+                    <strong>✓ Comitês Permanentes:</strong> Criar comitês municipais de gestão de riscos 
+                    com reuniões periódicas
+                  </div>
+                  <div className="bg-white p-2 rounded text-xs">
+                    <strong>✓ Protocolos Integrados:</strong> Estabelecer fluxos claros de comunicação 
+                    e atuação conjunta
+                  </div>
+                  <div className="bg-white p-2 rounded text-xs">
+                    <strong>✓ Capacitação Conjunta:</strong> Promover treinamentos integrados com todos 
+                    os atores da rede
+                  </div>
+                  <div className="bg-white p-2 rounded text-xs">
+                    <strong>✓ Compartilhamento de Dados:</strong> Sistemas informatizados para troca 
+                    de informações em tempo real
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-yellow-900 mb-3 flex items-center">
+                  <MapPin className="h-5 w-5 mr-2" />
+                  3. Ordenamento Territorial e Licenciamento
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  "É fundamental <strong>integrar a gestão de riscos ao planejamento urbano</strong>. 
+                  O MP-RS tem atuado para que municípios respeitem áreas de preservação, proíbam 
+                  ocupações em zonas de risco e condicionem licenciamentos a estudos de vulnerabilidade."
+                </p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>• Revisão de Planos Diretores com enfoque em gestão de riscos</li>
+                  <li>• Fiscalização rigorosa de ocupações irregulares</li>
+                  <li>• Reassentamento de famílias em áreas vulneráveis</li>
+                  <li>• Condicionantes ambientais em licenciamentos</li>
+                </ul>
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-purple-900 mb-3 flex items-center">
+                  <FileText className="h-5 w-5 mr-2" />
+                  4. Planos de Contingência Obrigatórios
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  "Todo município em área de risco deve ter <strong>Plano de Contingência atualizado 
+                  e testado</strong>. O MP pode e deve requisitar a elaboração e implementação desses 
+                  planos, bem como fiscalizar sua efetividade por meio de simulados."
+                </p>
+                <div className="bg-white p-3 rounded mt-2">
+                  <p className="text-xs text-gray-700">
+                    <strong>Recomendação MP-RS nº 01/2023:</strong> Todos os 497 municípios gaúchos 
+                    devem elaborar ou atualizar seus Planos de Contingência até dezembro de 2025, 
+                    priorizando municípios em áreas de risco de inundações, deslizamentos e estiagens.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-red-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-red-900 mb-3 flex items-center">
+                  <Calendar className="h-5 w-5 mr-2" />
+                  5. Adaptação às Mudanças Climáticas
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  "As <strong>mudanças climáticas aumentaram a frequência e intensidade de eventos 
+                  extremos</strong>. Os planos de contingência devem considerar cenários climáticos 
+                  futuros, não apenas o histórico de desastres."
+                </p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>• Incorporar projeções climáticas regionais (IPCC, INPE)</li>
+                  <li>• Planejar infraestrutura resiliente (drenagem, contenções)</li>
+                  <li>• Estratégias de convivência com eventos recorrentes</li>
+                  <li>• Educação climática para população e gestores</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CNMP - Conselho Nacional do Ministério Público */}
+        <div className="mb-6">
+          <div className="bg-white p-6 rounded-lg border-2 border-indigo-500 shadow-lg">
+            <div className="flex items-start mb-4">
+              <Shield className="h-8 w-8 text-indigo-700 mr-3 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold text-indigo-900 mb-1">
+                  Conselho Nacional do Ministério Público (CNMP)
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">
+                  Resolução nº 54/2017 - Política Nacional de Fomento à Atuação Resolutiva do Ministério Público
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="bg-indigo-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-indigo-900 mb-3">
+                  📋 Diretrizes do CNMP para Gestão de Riscos de Desastres
+                </h4>
+                <div className="space-y-3">
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      1. Atuação Resolutiva e Preventiva
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      O MP deve priorizar soluções extrajudiciais e medidas preventivas, atuando 
+                      <strong> antes da ocorrência de desastres</strong> por meio de recomendações, 
+                      termos de ajustamento de conduta (TACs) e audiências públicas.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      2. Fiscalização de Políticas Públicas
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      Compete ao MP fiscalizar a <strong>elaboração e implementação de Planos de 
+                      Contingência</strong>, bem como a aplicação dos recursos do Fundo Nacional de 
+                      Defesa Civil (FUNCAP) e demais fundos estaduais e municipais.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      3. Articulação Institucional
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      Fomentar a <strong>criação de redes interinstitucionais</strong> permanentes 
+                      para gestão de riscos, envolvendo Defesa Civil, Corpo de Bombeiros, Saúde, 
+                      Assistência Social, Meio Ambiente e órgãos de controle.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      4. Proteção de Grupos Vulneráveis
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      Garantir que os planos de contingência contemplem <strong>medidas específicas 
+                      para crianças, idosos, pessoas com deficiência, gestantes e população em 
+                      situação de rua</strong>, assegurando acessibilidade e cuidados especiais.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      5. Transparência e Participação Social
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      Promover <strong>audiências públicas, consultas populares e divulgação 
+                      ampla</strong> dos planos de contingência, garantindo o direito à informação 
+                      e à participação da comunidade.
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-sm text-indigo-900 mb-1">
+                      6. Monitoramento e Avaliação
+                    </h5>
+                    <p className="text-xs text-gray-700">
+                      Estabelecer <strong>indicadores de desempenho</strong> e promover 
+                      monitoramento contínuo da efetividade dos planos, com revisões periódicas 
+                      baseadas em lições aprendidas de eventos anteriores.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                <h4 className="font-semibold text-indigo-900 mb-2">
+                  🎯 Recomendação Prática do CNMP
+                </h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  O CNMP recomenda que <strong>cada Promotoria de Justiça</strong> com atribuição 
+                  em meio ambiente, urbanismo ou direitos coletivos:
+                </p>
+                <ul className="text-sm text-gray-700 space-y-1 ml-4">
+                  <li>✓ Realize <strong>diagnóstico anual</strong> das áreas de risco em sua comarca</li>
+                  <li>✓ Verifique a existência e atualização do <strong>Plano de Contingência municipal</strong></li>
+                  <li>✓ Promova <strong>reuniões semestrais</strong> com gestores da Defesa Civil e demais órgãos</li>
+                  <li>✓ Requisite realização de <strong>simulados</strong> ao menos uma vez por ano</li>
+                  <li>✓ Acompanhe a aplicação de <strong>recursos federais e estaduais</strong> destinados à prevenção</li>
+                  <li>✓ Elabore <strong>recomendações preventivas</strong> antes do período de maior risco (verão/inverno)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Referências e Contatos */}
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+            <Phone className="h-6 w-6 text-gray-600 mr-2" />
+            Referências e Contatos Úteis
+          </h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-green-900 mb-2">MP-RS - Centro de Apoio Operacional de Defesa do Meio Ambiente</h4>
+              <p className="text-xs text-gray-600 mb-2">
+                <Mail className="inline h-3 w-3 mr-1" />
+                <a href="mailto:caoma@mprs.mp.br" className="text-blue-600 hover:underline">caoma@mprs.mp.br</a>
+              </p>
+              <p className="text-xs text-gray-600 mb-2">
+                <Phone className="inline h-3 w-3 mr-1" />
+                (51) 3295-1100
+              </p>
+              <p className="text-xs text-gray-600">
+                <strong>Dra. Silvia Cappelli:</strong> Procuradora de Justiça coordenadora
+              </p>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <h4 className="font-semibold text-indigo-900 mb-2">CNMP - Conselho Nacional do Ministério Público</h4>
+              <p className="text-xs text-gray-600 mb-2">
+                <Mail className="inline h-3 w-3 mr-1" />
+                <a href="mailto:cnmp@cnmp.mp.br" className="text-blue-600 hover:underline">cnmp@cnmp.mp.br</a>
+              </p>
+              <p className="text-xs text-gray-600 mb-2">
+                <Phone className="inline h-3 w-3 mr-1" />
+                (61) 3315-9100
+              </p>
+              <p className="text-xs text-gray-600">
+                <strong>Resolução nº 54/2017</strong> - Política Resolutiva do MP
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-4 bg-blue-50 p-3 rounded-lg">
+            <p className="text-xs text-gray-700">
+              <strong>📚 Materiais de Referência:</strong>
+            </p>
+            <ul className="text-xs text-gray-600 space-y-1 mt-2 ml-4">
+              <li>• Guia de Atuação do MP em Desastres - CNMP (2024)</li>
+              <li>• Manual de Gestão de Riscos - MP-RS (2023)</li>
+              <li>• Protocolo de Emergências Ambientais - MP-RS (2022)</li>
+              <li>• Cartilha de Defesa Civil para Promotores - CNMP (2021)</li>
+            </ul>
+          </div>
+        </div>
+      </Card>
     </div>
   )
 }

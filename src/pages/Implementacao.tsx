@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Rocket, MapPin, Target, Users, FileText, ArrowRight } from 'lucide-react'
+import { Rocket, MapPin, Target, Users, FileText, ArrowRight, Download } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function Implementacao() {
@@ -107,7 +107,30 @@ export default function Implementacao() {
                         <Icon className="h-6 w-6 mr-2 text-primary-600" />
                         {passo.titulo}
                       </h3>
-                      <p className="text-gray-700">{passo.descricao}</p>
+                      <p className="text-gray-700 mb-4">{passo.descricao}</p>
+                      
+                      {passo.numero === '2.b' && (
+                        <div className="mt-4 bg-blue-50 border-l-4 border-blue-600 p-4 rounded-lg">
+                          <div className="flex items-start">
+                            <FileText className="h-5 w-5 text-blue-600 mr-2 flex-shrink-0 mt-1" />
+                            <div className="flex-grow">
+                              <p className="text-sm text-gray-700 mb-3">
+                                <strong className="text-blue-900">📄 Documento Detalhado:</strong> Acesse o material completo 
+                                que descreve de forma detalhada todas as etapas e passos da Matriz de Convergência.
+                              </p>
+                              <a 
+                                href="/documentos/matriz-convergencia-dhs-detalhado.pdf" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg text-sm font-medium"
+                              >
+                                <Download className="h-4 w-4 mr-2" />
+                                Visualizar Guia Completo da Matriz de Convergência (PDF)
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </Card>
@@ -143,11 +166,30 @@ export default function Implementacao() {
             <Rocket className="h-8 w-8 text-accent-600 mr-4 flex-shrink-0 mt-1" />
             <div>
               <h3 className="text-xl font-semibold mb-2 text-accent-900">Prioridade Urgente</h3>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-4">
                 A <strong>Estratégia de Comunicação e Formação</strong> é destacada como a atividade mais urgente 
                 no cenário atual, pois visa informar a sociedade sobre a existência de <strong>soluções viáveis</strong> 
                 para as crises, combatendo a desesperança e mobilizando a ação coletiva.
               </p>
+              <div className="bg-white p-4 rounded-lg border border-accent-300 mt-4">
+                <p className="text-sm text-gray-800 font-semibold mb-2 flex items-center">
+                  <FileText className="h-4 w-4 mr-2 text-accent-600" />
+                  📄 Documento Completo - Cartilha Estratégica
+                </p>
+                <p className="text-xs text-gray-600 mb-2">
+                  Acesse o documento completo do CNMP sobre Desenvolvimento Harmônico e Sustentável, 
+                  PGS, NMC e Estratégia de Comunicação e Formação:
+                </p>
+                <a 
+                  href="https://www.cnmp.mp.br/portal/images/Comissoes/DireitosFundamentais/Arquivos/Desenvolvimento_Harmonico_e_sustentavel/NOVOS_ARQUIVOS_DHS/CNMP_Fomento_DHS_PGS_NMC_Estrategia_Comunicacao_Formacao__ESBOCO_CARTILHA_ESTRATEGICA_09_05_18.doc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 hover:underline text-sm font-medium inline-flex items-center"
+                >
+                  <Download className="h-4 w-4 mr-1" />
+                  Baixar Cartilha Estratégica CNMP (DOC)
+                </a>
+              </div>
             </div>
           </div>
         </Card>
