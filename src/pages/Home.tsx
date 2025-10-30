@@ -97,7 +97,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Guia de Desenvolvimento<br />Harmônico e Sustentável
+              Desenvolvimento Harmônico e Sustentável via atuação resolutiva de Planejamento e de Gestão Sistêmicos
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Instrumento prático de implementação para todas as áreas

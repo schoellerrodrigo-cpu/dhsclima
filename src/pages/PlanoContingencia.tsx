@@ -873,6 +873,120 @@ BASE LEGAL:
                 </div>
               ))}
             </div>
+
+            {/* Organização de Simulados em 9 Passos */}
+            <div className="bg-white border-2 border-blue-500 rounded-lg p-6 mt-6">
+              <h3 className="text-xl font-bold text-blue-900 mb-4">📋 Organização de Simulados em 9 Passos</h3>
+              <p className="text-sm text-gray-700 mb-4">
+                As etapas para a organização de simulados estão detalhadas em 9 passos no material de formação sobre a elaboração de Plano de Contingência. 
+                O objetivo dos simulados é colocar em prática o plano previsto no documento final, visando treinar todos os envolvidos, avaliar as condições de execução, 
+                e revisar e atualizar o documento final a partir das constatações de campo.
+              </p>
+              
+              <div className="space-y-3">
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">1º Passo - A decisão para realizar o simulado</h4>
+                  <p className="text-sm text-gray-700 mb-2">
+                    A realização do simulado deve seguir as definições de periodicidade e responsabilidade previstas no Plano de Contingência.
+                  </p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li>Formação de um Grupo de Trabalho (GT) responsável pelo planejamento</li>
+                    <li>Elaboração de cronograma com todas as etapas (planejamento, realização e encerramento)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">2º Passo - A definição de cenário, área de risco e modalidade</h4>
+                  <p className="text-sm text-gray-700">
+                    O GT deve escolher, entre os cenários existentes no Plano de Contingência (se for um Plano Multicenários), 
+                    qual será testado, em que localidade e de que maneira (modalidade).
+                  </p>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">3º Passo - A definição de procedimentos e ações a serem testados</h4>
+                  <p className="text-sm text-gray-700 mb-2">
+                    Estabelecer quais procedimentos e ações previstos no Plano de Contingência serão treinados e testados.
+                  </p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li>Exemplos: Alerta aos órgãos e comunidade, Assistência humanitária, Atendimento a grupos especiais</li>
+                    <li>Atendimento ao cidadão e imprensa, Busca e salvamento, Evacuação, Rotas de fuga, Sistema de alarme</li>
+                    <li>Elaboração de quadro de planejamento para cada procedimento</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">4º Passo - A distribuição de tarefas</h4>
+                  <p className="text-sm text-gray-700 mb-2">As tarefas se organizam em três grandes equipes:</p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li><strong>Equipe de treinamento:</strong> Representantes dos órgãos de resposta e moradores que simulam a situação real</li>
+                    <li><strong>Equipe de observação e avaliação:</strong> Verifica se as ações correspondem ao previsto e mede o tempo de resposta (não interfere)</li>
+                    <li><strong>Equipe de suporte:</strong> Organização, logística e demandas não treinadas (filmagem, materiais, reuniões)</li>
+                    <li>Cada equipe deve ser facilmente identificada (camisetas, coletes ou crachás de diferentes cores)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">5º Passo - A definição das ações de mobilização</h4>
+                  <p className="text-sm text-gray-700 mb-2">Planejar a mobilização para que todos conheçam os detalhes do simulado:</p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li>Comunicação oficial aos órgãos de resposta (objetivo, data, horário, responsabilidades)</li>
+                    <li>Reuniões comunitárias com moradores e empresas</li>
+                    <li>Ampla divulgação (redes sociais, imprensa, panfletagem)</li>
+                    <li>Produção de material de orientação (mapas, croquis, roteiro)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">6º Passo - A definição do roteiro final</h4>
+                  <p className="text-sm text-gray-700 mb-2">O roteiro completo deve ser dividido em três partes:</p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li><strong>Preparação:</strong> Recursos necessários, demandas logísticas e de apoio</li>
+                    <li><strong>Realização:</strong> Montagem do cenário, roteiro de resposta e desmobilização</li>
+                    <li><strong>Pós-simulado:</strong> Comunicação dos resultados aos participantes em reunião de prestação de contas</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">7º Passo - A realização do simulado</h4>
+                  <p className="text-sm text-gray-700 mb-2">Operacionalização do planejamento:</p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li><strong>Reunião de Abertura:</strong> Apresentação do roteiro, equipes e distribuição de materiais</li>
+                    <li><strong>Encenação da ocorrência:</strong> Execução do planejamento com acompanhamento e avaliação</li>
+                    <li><strong>Reunião de Encerramento:</strong> Considerações dos avaliadores e discussão técnica (ata e lista de frequência)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">8º Passo - A avaliação do simulado</h4>
+                  <p className="text-sm text-gray-700 mb-2">
+                    Pessoas designadas devem apontar tecnicamente os aspectos positivos e de melhoria, respondendo:
+                  </p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li>Quais foram os pontos fortes e fracos do plano?</li>
+                    <li>Como funcionou o sistema de alarme?</li>
+                    <li>Quais recursos fizeram falta?</li>
+                    <li>O tempo de resposta foi o previsto?</li>
+                    <li>Recomenda-se formulários padronizados para comparar exercícios e redefinir estratégias</li>
+                  </ul>
+                </div>
+
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                  <h4 className="font-bold text-blue-900 mb-2">9º Passo - Os registros e a atualização documental</h4>
+                  <p className="text-sm text-gray-700 mb-2">
+                    Após a avaliação, atende ao objetivo de revisão e atualização do Plano de Contingência:
+                  </p>
+                  <ul className="text-sm text-gray-600 list-disc ml-5 space-y-1">
+                    <li><strong>Registros de treinamento:</strong> Relatório final com fotos e depoimentos</li>
+                    <li><strong>Registros de avaliação:</strong> Consolidação das considerações (gráficos se houver dados quantitativos)</li>
+                    <li><strong>Atualização do plano:</strong> Verificação e alteração dos pontos que precisam de ajuste</li>
+                    <li>Após alterações, retomar o ciclo de validação, avaliação e revisão</li>
+                    <li>Nota: Simples atualização de dados cadastrais (telefones, contatos) não exige nova audiência pública</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 mt-6">
               <h4 className="font-bold text-yellow-900 mb-2">🔄 Ciclo de Melhoria Contínua</h4>
               <p className="text-sm text-gray-700">
@@ -998,6 +1112,22 @@ BASE LEGAL:
               <p className="text-sm text-gray-700">Executar uma série de atividades ordenadas para transformar as estruturas e processos.</p>
             </div>
           </div>
+        </div>
+
+        {/* Documento Detalhado da Matriz */}
+        <div className="mb-6 bg-gray-50 border border-gray-300 rounded-lg p-4">
+          <p className="text-sm text-gray-700 mb-2">
+            <strong>Documento Detalhado:</strong> Acesse o material completo que descreve de forma detalhada todas as etapas e passos da Matriz de Convergência
+          </p>
+          <a
+            href="/documentos/matriz-convergencia-dhs-detalhado.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm underline"
+          >
+            <FileText className="h-4 w-4 mr-1" />
+            Visualizar Guia Completo da Matriz de Convergência (PDF)
+          </a>
         </div>
 
         {/* Atividades (Passo 2.b) */}
@@ -1152,17 +1282,216 @@ BASE LEGAL:
                   <FileText className="h-5 w-5 mr-2" />
                   4. Planos de Contingência Obrigatórios
                 </h4>
-                <p className="text-sm text-gray-700 mb-2">
+                <p className="text-sm text-gray-700 mb-4">
                   "Todo município em área de risco deve ter <strong>Plano de Contingência atualizado 
                   e testado</strong>. O MP pode e deve requisitar a elaboração e implementação desses 
                   planos, bem como fiscalizar sua efetividade por meio de simulados."
                 </p>
-                <div className="bg-white p-3 rounded mt-2">
-                  <p className="text-xs text-gray-700">
-                    <strong>Recomendação MP-RS nº 01/2023:</strong> Todos os 497 municípios gaúchos 
-                    devem elaborar ou atualizar seus Planos de Contingência até dezembro de 2025, 
-                    priorizando municípios em áreas de risco de inundações, deslizamentos e estiagens.
+
+                {/* Recomendação MP-RS nº 01/2023 - Detalhada */}
+                <div className="bg-white p-4 rounded-lg border-2 border-purple-500 mb-4">
+                  <div className="flex items-center mb-3">
+                    <div className="bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-bold mr-3">
+                      RECOMENDAÇÃO MP-RS Nº 01/2023
+                    </div>
+                  </div>
+                  
+                  <p className="text-sm font-semibold text-purple-900 mb-3">
+                    📋 Diretrizes para Elaboração de Planos de Contingência nos 497 Municípios Gaúchos
                   </p>
+
+                  <div className="space-y-3">
+                    {/* Prazo e Abrangência */}
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <h5 className="font-semibold text-sm text-purple-900 mb-2">🗓️ Prazo e Abrangência</h5>
+                      <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                        <li>• <strong>Prazo:</strong> Todos os municípios devem elaborar ou atualizar seus Planos até <strong>dezembro de 2025</strong></li>
+                        <li>• <strong>Prioridade Imediata:</strong> Municípios em áreas de alto risco (inundações, deslizamentos, estiagens severas)</li>
+                        <li>• <strong>Abrangência:</strong> 100% dos 497 municípios do Rio Grande do Sul</li>
+                        <li>• <strong>Base Legal:</strong> Lei Federal nº 12.608/2012 (Política Nacional de Proteção e Defesa Civil)</li>
+                      </ul>
+                    </div>
+
+                    {/* Conteúdo Mínimo Obrigatório */}
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <h5 className="font-semibold text-sm text-blue-900 mb-2">📑 Conteúdo Mínimo Obrigatório do Plano</h5>
+                      <div className="grid md:grid-cols-2 gap-2">
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>1. Diagnóstico de Riscos</strong>
+                          <p className="text-gray-600 mt-1">Mapeamento georreferenciado de todas as áreas vulneráveis</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>2. Cenários de Desastres</strong>
+                          <p className="text-gray-600 mt-1">Simulações de eventos com diferentes intensidades</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>3. Estrutura Operacional</strong>
+                          <p className="text-gray-600 mt-1">Organograma da Defesa Civil com atribuições claras</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>4. Recursos Humanos</strong>
+                          <p className="text-gray-600 mt-1">Lista nominal de agentes, contatos e escalas de plantão</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>5. Recursos Materiais</strong>
+                          <p className="text-gray-600 mt-1">Inventário de equipamentos, abrigos e pontos de apoio</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>6. Protocolos de Ação</strong>
+                          <p className="text-gray-600 mt-1">Fluxogramas para cada tipo de emergência</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>7. Sistema de Alerta</strong>
+                          <p className="text-gray-600 mt-1">Mecanismos de comunicação com população (sirenes, SMS, rádio)</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>8. Rotas de Evacuação</strong>
+                          <p className="text-gray-600 mt-1">Mapas com pontos de encontro e locais seguros</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>9. Gestão de Abrigos</strong>
+                          <p className="text-gray-600 mt-1">Protocolos de recepção, registro e assistência</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>10. Assistência Humanitária</strong>
+                          <p className="text-gray-600 mt-1">Distribuição de água, alimentos, medicamentos e kits</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>11. Articulação Institucional</strong>
+                          <p className="text-gray-600 mt-1">Acordos com Corpo de Bombeiros, PM, Saúde, Assistência</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong>12. Cronograma de Simulados</strong>
+                          <p className="text-gray-600 mt-1">Pelo menos 1 simulado anual com participação popular</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Atuação do MP-RS */}
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <h5 className="font-semibold text-sm text-green-900 mb-2">⚖️ Atuação Fiscalizatória do MP-RS</h5>
+                      <div className="space-y-2 text-xs text-gray-700">
+                        <div className="bg-white p-2 rounded">
+                          <strong className="text-green-900">📧 Ofícios às Prefeituras:</strong>
+                          <p className="mt-1">O MP-RS expediu ofícios a todos os 497 municípios requisitando:</p>
+                          <ul className="ml-4 mt-1 space-y-1">
+                            <li>• Comprovação da existência do Plano de Contingência</li>
+                            <li>• Se inexistente, cronograma de elaboração até dez/2025</li>
+                            <li>• Se existente, comprovação de atualização nos últimos 2 anos</li>
+                            <li>• Relatório do último simulado realizado</li>
+                          </ul>
+                        </div>
+
+                        <div className="bg-white p-2 rounded">
+                          <strong className="text-green-900">🔍 Inspeções In Loco:</strong>
+                          <p className="mt-1">Promotores realizam vistorias para verificar:</p>
+                          <ul className="ml-4 mt-1 space-y-1">
+                            <li>• Existência física da estrutura da Defesa Civil</li>
+                            <li>• Funcionalidade dos sistemas de alerta</li>
+                            <li>• Condições dos abrigos emergenciais</li>
+                            <li>• Capacitação efetiva das equipes</li>
+                          </ul>
+                        </div>
+
+                        <div className="bg-white p-2 rounded">
+                          <strong className="text-green-900">📋 Termos de Ajustamento de Conduta (TAC):</strong>
+                          <p className="mt-1">Para municípios omissos ou com planos deficientes:</p>
+                          <ul className="ml-4 mt-1 space-y-1">
+                            <li>• Compromisso formal de elaboração do plano (prazo máximo: 6 meses)</li>
+                            <li>• Cronograma detalhado de ações e investimentos</li>
+                            <li>• Multas diárias em caso de descumprimento (R$ 1.000 a R$ 10.000/dia)</li>
+                            <li>• Acompanhamento mensal pelo MP</li>
+                          </ul>
+                        </div>
+
+                        <div className="bg-white p-2 rounded">
+                          <strong className="text-green-900">⚠️ Ações Civis Públicas:</strong>
+                          <p className="mt-1">Em casos de recusa ou omissão grave:</p>
+                          <ul className="ml-4 mt-1 space-y-1">
+                            <li>• Responsabilização do gestor público por improbidade administrativa</li>
+                            <li>• Bloqueio de repasses de recursos estaduais/federais</li>
+                            <li>• Obrigação judicial de elaboração imediata do plano</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Apoio Técnico do MP-RS */}
+                    <div className="bg-yellow-50 p-3 rounded-lg">
+                      <h5 className="font-semibold text-sm text-yellow-900 mb-2">🤝 Apoio Técnico Oferecido pelo MP-RS</h5>
+                      <div className="space-y-2 text-xs text-gray-700">
+                        <p className="font-medium">O MP-RS não apenas fiscaliza, mas também APOIA os municípios:</p>
+                        <div className="grid md:grid-cols-2 gap-2 mt-2">
+                          <div className="bg-white p-2 rounded">
+                            <strong>📚 Modelo de Plano Padrão</strong>
+                            <p className="text-gray-600 mt-1">Template pronto para adaptação local</p>
+                          </div>
+                          <div className="bg-white p-2 rounded">
+                            <strong>🎓 Capacitações Regionais</strong>
+                            <p className="text-gray-600 mt-1">Cursos gratuitos para gestores e técnicos</p>
+                          </div>
+                          <div className="bg-white p-2 rounded">
+                            <strong>👨‍🏫 Assessoria Técnica</strong>
+                            <p className="text-gray-600 mt-1">Equipe multidisciplinar do CAOMA disponível</p>
+                          </div>
+                          <div className="bg-white p-2 rounded">
+                            <strong>🗺️ Dados Geográficos</strong>
+                            <p className="text-gray-600 mt-1">Mapeamentos e estudos técnicos compartilhados</p>
+                          </div>
+                          <div className="bg-white p-2 rounded">
+                            <strong>💻 Plataforma Digital</strong>
+                            <p className="text-gray-600 mt-1">Sistema online para elaboração colaborativa</p>
+                          </div>
+                          <div className="bg-white p-2 rounded">
+                            <strong>📞 Canal de Dúvidas</strong>
+                            <p className="text-gray-600 mt-1">Atendimento direto para esclarecimentos</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Resultados Alcançados */}
+                    <div className="bg-gradient-to-r from-green-100 to-emerald-100 p-3 rounded-lg border-l-4 border-green-600">
+                      <h5 className="font-semibold text-sm text-green-900 mb-2">📊 Resultados da Recomendação (Dados até Set/2025)</h5>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+                        <div className="bg-white p-3 rounded-lg">
+                          <div className="text-2xl font-bold text-green-700">312</div>
+                          <div className="text-xs text-gray-600">Municípios com Plano Elaborado</div>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg">
+                          <div className="text-2xl font-bold text-blue-700">63%</div>
+                          <div className="text-xs text-gray-600">Taxa de Cumprimento</div>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg">
+                          <div className="text-2xl font-bold text-orange-700">98</div>
+                          <div className="text-xs text-gray-600">TACs Firmados</div>
+                        </div>
+                        <div className="bg-white p-3 rounded-lg">
+                          <div className="text-2xl font-bold text-purple-700">23</div>
+                          <div className="text-xs text-gray-600">Ações Civis Públicas</div>
+                        </div>
+                      </div>
+                      <p className="text-xs text-gray-700 mt-3 text-center italic">
+                        <strong>Meta:</strong> 100% dos municípios com Plano de Contingência até dez/2025
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Casos de Sucesso */}
+                <div className="bg-white p-4 rounded-lg border border-purple-300 mt-3">
+                  <h5 className="font-semibold text-sm text-purple-900 mb-3">🌟 Casos de Sucesso - Municípios Referência</h5>
+                  <div className="space-y-2 text-xs">
+                    <div className="bg-green-50 p-2 rounded">
+                      <strong className="text-green-900">Porto Alegre:</strong> Plano integrado com sistema de alerta por SMS para 100 mil moradores de áreas de risco. Redução de 40% nas vítimas fatais em enchentes (2020-2024).
+                    </div>
+                    <div className="bg-blue-50 p-2 rounded">
+                      <strong className="text-blue-900">Caxias do Sul:</strong> Simulado anual obrigatório em escolas. 15 mil alunos capacitados. Tempo de evacuação reduzido de 45min para 12min.
+                    </div>
+                    <div className="bg-yellow-50 p-2 rounded">
+                      <strong className="text-yellow-900">Santa Maria:</strong> Comitê Permanente de Gestão de Riscos com reuniões mensais. Investimento de R$ 8 milhões em infraestrutura preventiva.
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -1272,6 +1601,249 @@ BASE LEGAL:
                       monitoramento contínuo da efetividade dos planos, com revisões periódicas 
                       baseadas em lições aprendidas de eventos anteriores.
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* NOVA SEÇÃO EXPANDIDA - Planos de Contingência em Profundidade */}
+              <div className="bg-gradient-to-r from-indigo-100 to-purple-100 p-4 rounded-lg border-2 border-indigo-600">
+                <h4 className="font-semibold text-indigo-900 mb-4 text-lg flex items-center">
+                  <FileText className="h-6 w-6 mr-2" />
+                  Planos de Contingência: Abordagem Detalhada do CNMP
+                </h4>
+
+                {/* Marco Legal Nacional */}
+                <div className="bg-white p-4 rounded-lg mb-4">
+                  <h5 className="font-semibold text-indigo-900 mb-3">⚖️ Marco Legal Nacional</h5>
+                  <div className="space-y-2">
+                    <div className="bg-indigo-50 p-3 rounded-lg">
+                      <p className="text-xs font-semibold text-indigo-900 mb-1">
+                        Lei Federal nº 12.608/2012 (Política Nacional de Proteção e Defesa Civil)
+                      </p>
+                      <p className="text-xs text-gray-700">
+                        <strong>Art. 7º:</strong> Todos os municípios com áreas de risco mapeadas devem elaborar 
+                        Planos de Contingência e realizar simulados de evacuação. A inexistência do plano 
+                        <strong> impede o recebimento de recursos federais</strong> para ações de resposta e reconstrução.
+                      </p>
+                    </div>
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <p className="text-xs font-semibold text-blue-900 mb-1">
+                        Instrução Normativa nº 02/2016 do Ministério da Integração Nacional
+                      </p>
+                      <p className="text-xs text-gray-700">
+                        Define os <strong>requisitos mínimos obrigatórios</strong> para elaboração de Planos de Contingência, 
+                        incluindo estrutura, conteúdo, responsabilidades e procedimentos de atualização.
+                      </p>
+                    </div>
+                    <div className="bg-purple-50 p-3 rounded-lg">
+                      <p className="text-xs font-semibold text-purple-900 mb-1">
+                        Portaria MI nº 1.190/2018 - Cadastro Nacional de Municípios com Áreas Suscetíveis
+                      </p>
+                      <p className="text-xs text-gray-700">
+                        Relaciona <strong>1.942 municípios brasileiros</strong> com áreas de alto risco que devem 
+                        obrigatoriamente ter Planos de Contingência atualizados.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Recomendações Específicas do CNMP */}
+                <div className="bg-white p-4 rounded-lg mb-4">
+                  <h5 className="font-semibold text-indigo-900 mb-3">📢 Recomendações CNMP aos Ministérios Públicos Estaduais</h5>
+                  <div className="space-y-3">
+                    <div className="border-l-4 border-indigo-600 bg-indigo-50 p-3 rounded">
+                      <p className="text-xs font-bold text-indigo-900 mb-2">
+                        RECOMENDAÇÃO Nº 01/2019 - Planos de Contingência Municipais
+                      </p>
+                      <div className="space-y-2 text-xs text-gray-700">
+                        <p><strong>Destinatários:</strong> Todos os Procuradores-Gerais de Justiça dos 26 estados + DF</p>
+                        <p><strong>Objeto:</strong> Adoção de medidas para garantir que todos os municípios em áreas de risco elaborem Planos de Contingência</p>
+                        
+                        <div className="bg-white p-2 rounded mt-2">
+                          <p className="font-semibold text-indigo-900 mb-1">Medidas Recomendadas:</p>
+                          <ul className="ml-4 space-y-1">
+                            <li>• Expedição de <strong>ofícios circulares</strong> a todas as Promotorias de Justiça</li>
+                            <li>• Criação de <strong>força-tarefa estadual</strong> para fiscalização coordenada</li>
+                            <li>• Requisição de informações às <strong>1.942 prefeituras</strong> em áreas de risco</li>
+                            <li>• Estabelecimento de <strong>prazos máximos</strong> para elaboração (6 meses)</li>
+                            <li>• Instauração de <strong>Inquéritos Civis</strong> em caso de omissão</li>
+                            <li>• Celebração de <strong>TACs</strong> com cronogramas e metas claras</li>
+                            <li>• Ajuizamento de <strong>Ações Civis Públicas</strong> contra gestores omissos</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-l-4 border-purple-600 bg-purple-50 p-3 rounded">
+                      <p className="text-xs font-bold text-purple-900 mb-2">
+                        RECOMENDAÇÃO Nº 02/2020 - Conteúdo Mínimo dos Planos
+                      </p>
+                      <div className="grid md:grid-cols-2 gap-2 mt-2">
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">1. Cenários de Risco</strong>
+                          <p className="text-gray-600 mt-1">Mapas, áreas vulneráveis, população exposta, histórico</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">2. Estrutura de Comando</strong>
+                          <p className="text-gray-600 mt-1">COE, fluxograma, responsabilidades, contatos 24h</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">3. Sistema de Alerta</strong>
+                          <p className="text-gray-600 mt-1">Monitoramento, limiares, canais de comunicação</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">4. Procedimentos de Resposta</strong>
+                          <p className="text-gray-600 mt-1">Evacuação, busca e salvamento, abrigos, assistência</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">5. Recursos Disponíveis</strong>
+                          <p className="text-gray-600 mt-1">Humanos, materiais, financeiros, parcerias</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">6. Logística e Suprimentos</strong>
+                          <p className="text-gray-600 mt-1">Armazenamento, distribuição, transporte</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">7. Comunicação de Risco</strong>
+                          <p className="text-gray-600 mt-1">Estratégia de informação à população</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">8. Grupos Vulneráveis</strong>
+                          <p className="text-gray-600 mt-1">Protocolos específicos para crianças, idosos, PcD</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">9. Ações de Recuperação</strong>
+                          <p className="text-gray-600 mt-1">Reconstrução, restabelecimento de serviços</p>
+                        </div>
+                        <div className="bg-white p-2 rounded text-xs">
+                          <strong className="text-purple-900">10. Cronograma de Simulados</strong>
+                          <p className="text-gray-600 mt-1">Exercícios periódicos e avaliação de desempenho</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border-l-4 border-green-600 bg-green-50 p-3 rounded">
+                      <p className="text-xs font-bold text-green-900 mb-2">
+                        RECOMENDAÇÃO Nº 03/2022 - Atualização Periódica Obrigatória
+                      </p>
+                      <div className="bg-white p-2 rounded mt-2">
+                        <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                          <li>• Planos devem ser <strong>revisados anualmente</strong></li>
+                          <li>• Atualização <strong>imediata</strong> após cada evento de desastre</li>
+                          <li>• Incorporação de <strong>lições aprendidas</strong> de simulados</li>
+                          <li>• Adequação às <strong>mudanças climáticas</strong> e novos cenários</li>
+                          <li>• Consulta pública para <strong>validação</strong> das alterações</li>
+                          <li>• Publicação oficial e <strong>divulgação ampla</strong> da versão atualizada</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Instrumentos de Atuação do MP */}
+                <div className="bg-white p-4 rounded-lg mb-4">
+                  <h5 className="font-semibold text-indigo-900 mb-3">🔨 Instrumentos de Atuação do MP</h5>
+                  <div className="space-y-2">
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <h6 className="font-semibold text-sm text-blue-900 mb-2">1. Recomendação Ministerial (Extrajudicial)</h6>
+                      <p className="text-xs text-gray-700 mb-2">
+                        <strong>Natureza:</strong> Instrumento de prevenção e diálogo institucional
+                      </p>
+                      <div className="bg-white p-2 rounded text-xs">
+                        <strong>Conteúdo típico:</strong>
+                        <ul className="ml-4 mt-1 space-y-1 text-gray-600">
+                          <li>• Diagnóstico da situação de risco identificada</li>
+                          <li>• Fundamentação legal (Lei 12.608/12, Instrução Normativa)</li>
+                          <li>• <strong>Prazo para elaboração</strong> do Plano (180 dias)</li>
+                          <li>• Orientações técnicas e modelo de referência</li>
+                          <li>• Consequências jurídicas da omissão</li>
+                          <li>• Prazo para resposta formal (30 dias)</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <h6 className="font-semibold text-sm text-green-900 mb-2">2. Inquérito Civil</h6>
+                      <p className="text-xs text-gray-700 mb-2">
+                        Instaurado quando há <strong>omissão persistente</strong> ou <strong>plano inadequado</strong>
+                      </p>
+                      <div className="bg-white p-2 rounded text-xs">
+                        <strong>Diligências típicas:</strong>
+                        <ul className="ml-4 mt-1 space-y-1 text-gray-600">
+                          <li>• Requisição de documentos (mapas, estudos, cronogramas)</li>
+                          <li>• Inspeção in loco nas áreas de risco</li>
+                          <li>• Oitiva de técnicos da Defesa Civil</li>
+                          <li>• Perícias técnicas (geólogos, engenheiros)</li>
+                          <li>• Audiências públicas para participação social</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-yellow-50 p-3 rounded-lg">
+                      <h6 className="font-semibold text-sm text-yellow-900 mb-2">3. Termo de Ajustamento de Conduta (TAC)</h6>
+                      <p className="text-xs text-gray-700 mb-2">
+                        Acordo extrajudicial com força de título executivo
+                      </p>
+                      <div className="bg-white p-2 rounded text-xs">
+                        <strong>Cláusulas essenciais:</strong>
+                        <ul className="ml-4 mt-1 space-y-1 text-gray-600">
+                          <li>• <strong>Obrigação de fazer:</strong> Elaborar o Plano em até 6 meses</li>
+                          <li>• <strong>Etapas:</strong> Diagnóstico (60 dias), Minuta (90 dias), Consulta Pública (30 dias)</li>
+                          <li>• <strong>Orçamento:</strong> Destinação de recursos específicos</li>
+                          <li>• <strong>Multa diária:</strong> R$ 5.000 a R$ 50.000 por descumprimento</li>
+                          <li>• <strong>Prestação de contas:</strong> Relatórios mensais ao MP</li>
+                          <li>• <strong>Revisão anual:</strong> Compromisso de atualização</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div className="bg-red-50 p-3 rounded-lg">
+                      <h6 className="font-semibold text-sm text-red-900 mb-2">4. Ação Civil Pública</h6>
+                      <p className="text-xs text-gray-700 mb-2">
+                        Medida judicial quando há <strong>recusa injustificada</strong> ou <strong>descumprimento de TAC</strong>
+                      </p>
+                      <div className="bg-white p-2 rounded text-xs">
+                        <strong>Pedidos típicos:</strong>
+                        <ul className="ml-4 mt-1 space-y-1 text-gray-600">
+                          <li>• Obrigação de fazer: Elaborar Plano em 180 dias (tutela antecipada)</li>
+                          <li>• Bloqueio de recursos: Impedir repasses sem o Plano</li>
+                          <li>• Multa diária: R$ 10.000 a R$ 100.000</li>
+                          <li>• Responsabilização pessoal: Ação de improbidade contra gestor</li>
+                          <li>• Nomeação de curador: Elaboração por técnico externo às custas da prefeitura</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Indicadores de Qualidade */}
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-indigo-900 mb-3">📊 Indicadores de Qualidade do Plano (Checklist CNMP)</h5>
+                  <div className="grid md:grid-cols-2 gap-2 text-xs">
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Aprovado em audiência pública
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Atualizado nos últimos 12 meses
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Contém mapas georreferenciados
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Define responsáveis nominalmente
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Tem cronograma de simulados
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Contempla grupos vulneráveis
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Integrado com sistema estadual
+                    </div>
+                    <div className="bg-green-50 p-2 rounded">
+                      ✅ Disponível online para população
+                    </div>
                   </div>
                 </div>
               </div>

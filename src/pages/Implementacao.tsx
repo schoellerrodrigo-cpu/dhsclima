@@ -235,6 +235,34 @@ export default function Implementacao() {
               ))}
             </div>
           </Card>
+
+          <div className="mt-6">
+            <p className="text-gray-700 font-bold mb-3">
+              Como exemplo de promoção da Convergência Estrutural no âmbito do Ministério Público:
+            </p>
+            <a
+              href="/documentos/DHS_Convergencia_Estrutural.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 underline"
+            >
+              <FileText className="h-4 w-4 mr-1" />
+              Acessar documento DHS - Convergência Estrutural (PDF)
+            </a>
+            <div className="mt-4 p-4 bg-blue-50 border-l-4 border-blue-500 rounded">
+              <p className="text-base text-gray-800">
+                <strong>Detalhamento da Convergência Estrutural</strong> consta das fls. 122 a 158 da Cartilha de DHS disponível em:{' '}
+                <a
+                  href="https://www.cnmp.mp.br/portal/images/Comissoes/DireitosFundamentais/Arquivos/Desenvolvimento_Harmonico_e_sustentavel/NOVOS_ARQUIVOS_DHS/5-Cartilha_DHS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-700 hover:text-blue-900 underline font-semibold"
+                >
+                  Cartilha DHS (CNMP)
+                </a>
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* CTA */}
