@@ -18,8 +18,8 @@ export default function Implementacao() {
     },
     {
       numero: '2.b',
-      titulo: 'Promover o Aperfeiçoamento e/ou a Convergência Estrutural',
-      descricao: 'Executar uma série de atividades ordenadas para transformar as estruturas e processos.',
+      titulo: 'Promover o Aperfeiçoamento das relações estabelecidas e/ou a Convergência Estrutural, por meio de atividades ordenadas',
+      descricao: '',
       icon: Rocket
     }
   ]

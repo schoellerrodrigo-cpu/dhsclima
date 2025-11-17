@@ -1,4 +1,5 @@
-import { AlertTriangle, Shield, FileText, Users, Target, CheckCircle, BookOpen, Scale } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { AlertTriangle, Shield, FileText, Users, Target, CheckCircle, BookOpen, Scale, Download } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function CaoNaEstrada() {
@@ -1461,6 +1462,640 @@ export default function CaoNaEstrada() {
               <p className="text-sm text-gray-800">
                 <strong>🤝 Contribuições MP-RS:</strong> Implementação de políticas públicas baseadas em evidências 
                 e fortalecimento da rede de enfrentamento no Rio Grande do Sul.
+              </p>
+            </div>
+          </Card>
+        </section>
+
+        {/* Integração ao DHS */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Target className="h-8 w-8 text-primary-600 mr-3" />
+            10. Integração da Avaliação de Risco ao Desenvolvimento Harmônico e Sustentável (DHS)
+          </h2>
+
+          <Card className="mb-6 bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600">
+            <h3 className="text-xl font-bold text-teal-900 mb-4">🌱 Violência Doméstica como Foco Prioritário do DHS</h3>
+            <p className="text-gray-700 mb-4">
+              O enfrentamento à violência doméstica e familiar contra a mulher se enquadra perfeitamente nos 
+              <strong> critérios de priorização do DHS</strong>, pois trata-se de um problema que:
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">⚖️</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Alta Judicialização</h4>
+                <p className="text-xs text-gray-600">
+                  Gera grande volume de processos judiciais (medidas protetivas, inquéritos, processos criminais)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">🚨</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Urgência e Gravidade</h4>
+                <p className="text-xs text-gray-600">
+                  Envolve risco à vida, à saúde e à integridade física e psicológica das vítimas
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">🌍</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Impacto Social</h4>
+                <p className="text-xs text-gray-600">
+                  Afeta toda a sociedade, perpetuando desigualdades de gênero e ciclos de violência
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">📋 Aplicando a Matriz de Convergência ao Enfrentamento à Violência Doméstica</h3>
+            <p className="text-gray-700 mb-4">
+              A <strong>Matriz de Convergência</strong> oferece um modelo metodológico para fomentar a formação de redes de cooperação 
+              de enfrentamento à violência doméstica. A seguir, os eixos da Matriz 
+              aplicados a este tema:
+            </p>
+
+            <div className="space-y-4">
+              {/* Eixo I - Ambiente */}
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">I</div>
+                  Ambiente/Habitat
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Escolher o ambiente para atuação:</strong> Definir territórios com maior incidência de violência 
+                  doméstica, identificar comunidades vulneráveis, mapear a rede local de proteção.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• Análise de dados georeferenciados de ocorrências policiais</li>
+                  <li>• Mapeamento de áreas com maior concentração de medidas protetivas</li>
+                  <li>• Identificação de regiões com rede de atendimento deficiente</li>
+                </ul>
+              </div>
+
+              {/* Eixo II - Atuação Interinstitucional */}
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+                <h4 className="font-bold text-green-900 mb-2 flex items-center">
+                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">II</div>
+                  Atuação Interinstitucional
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Fomentar a atuação interinstitucional e com a comunidade:</strong> Articular Polícia, 
+                  Ministério Público, Judiciário, Saúde, Assistência Social e sociedade civil.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• <strong>Rede Integrada:</strong> Sistema compartilhado de informações entre delegacias, MP, Judiciário e rede socioassistencial</li>
+                  <li>• <strong>Fluxos de Atendimento:</strong> Protocolos interinstitucionais claros e integrados</li>
+                  <li>• <strong>Reuniões Periódicas:</strong> Encontros regulares da rede para alinhamento e acompanhamento de casos</li>
+                  <li>• <strong>Comitês Gestores:</strong> Grupos de trabalho multidisciplinares para gestão de casos complexos</li>
+                </ul>
+              </div>
+
+              {/* Eixo III - Atuação Institucional */}
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
+                <h4 className="font-bold text-purple-900 mb-2 flex items-center">
+                  <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">III</div>
+                  Atuação Institucional
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Fomentar a atuação institucional:</strong> Fortalecer as capacidades internas de cada 
+                  instituição para responder adequadamente à violência doméstica.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• <strong>Ministério Público:</strong> Protocolo de avaliação de risco, monitoramento de medidas protetivas, atuação em rede</li>
+                  <li>• <strong>Polícia Civil:</strong> Delegacias especializadas (DEAMs), capacitação em atendimento humanizado, investigação célere</li>
+                  <li>• <strong>Poder Judiciário:</strong> Varas especializadas, análise urgente de medidas protetivas, uso de tecnologias (tornozeleira)</li>
+                  <li>• <strong>Saúde:</strong> Notificação compulsória, atendimento psicológico, documentação médica adequada</li>
+                  <li>• <strong>Assistência Social:</strong> CRAS/CREAS, acompanhamento psicossocial, acesso a benefícios e programas</li>
+                </ul>
+              </div>
+
+              {/* Eixo IV - Abordagens */}
+              <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-600">
+                <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">IV</div>
+                  Abordagens
+                </h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  <strong>Trabalhar nas três frentes:</strong> Conscientização/Necessidade, Meios e Incentivos.
+                </p>
+                <div className="grid md:grid-cols-3 gap-3">
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.1 - Conscientização/Necessidade</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Campanhas educativas sobre tipos de violência</li>
+                      <li>• Desmistificação do "amor romântico" violento</li>
+                      <li>• Educação em escolas sobre relações saudáveis</li>
+                      <li>• Divulgação de canais de ajuda (180, 190)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.2 - Meios</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Estrutura de DEAMs em todos os municípios</li>
+                      <li>• Casas de acolhimento adequadas</li>
+                      <li>• Equipes multidisciplinares (psicólogos, assistentes sociais)</li>
+                      <li>• Tecnologias (botão do pânico, tornozeleira eletrônica)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.3 - Incentivos</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Benefícios sociais (Bolsa Família, auxílios)</li>
+                      <li>• Programas de qualificação profissional</li>
+                      <li>• Prioridade em habitação popular</li>
+                      <li>• Reconhecimento de instituições com boas práticas</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo V - Etapas */}
+              <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-600">
+                <h4 className="font-bold text-teal-900 mb-2 flex items-center">
+                  <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">V</div>
+                  Etapas
+                </h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  <strong>Seguir as etapas de implementação do DHS:</strong> Escolher foco prioritário e Mapear/Aperfeiçoar/Convergência Estrutural.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 1: Escolher o Foco Prioritário</h5>
+                    <p className="text-xs text-gray-700 mb-1">
+                      <strong>Violência doméstica como evento evitável</strong> - com ênfase em prevenção de feminicídio 
+                      através de avaliação de risco e gestão de casos.
+                    </p>
+                    <p className="text-xs text-gray-600">
+                      ✓ Critérios: Alta judicialização + Urgência (risco à vida) + Impacto social significativo
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 2.a: Mapear Necessidades, Possibilidades e Atividades</h5>
+                    <ul className="text-xs text-gray-600 space-y-1 ml-4">
+                      <li>• <strong>Necessidades:</strong> Dados sobre incidência, lacunas na rede de proteção, recursos faltantes</li>
+                      <li>• <strong>Possibilidades:</strong> Estruturas existentes (DEAMs, CREAS, varas especializadas), profissionais capacitados</li>
+                      <li>• <strong>Atividades em curso:</strong> Protocolos já implementados, grupos reflexivos, capacitações realizadas</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 2.b: Promover o Aperfeiçoamento das relações estabelecidas e/ou a Convergência Estrutural, por meio de atividades ordenadas</h5>
+                    <p className="text-xs text-gray-700 mb-3">
+                      <strong>Executar as 13 atividades ordenadas e interligadas:</strong>
+                    </p>
+                    <div className="space-y-3">
+                      {/* Atividade 1 */}
+                      <div className="bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                        <div className="flex items-start">
+                          <div className="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">1</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-blue-900 text-xs mb-1">Fomentar o DHS em Ambientes de Convergência</h6>
+                            <p className="text-xs text-gray-600">
+                              Em audiências públicas, reuniões, comitês, grupos de trabalho - apresentar e discutir os princípios do DHS 
+                              e a importância da avaliação de risco na prevenção de feminicídios.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 2 */}
+                      <div className="bg-green-50 p-3 rounded-lg border-l-4 border-green-500">
+                        <div className="flex items-start">
+                          <div className="bg-green-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">2</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-green-900 text-xs mb-1">Reunir Documentos e Elaborar Diagnósticos</h6>
+                            <p className="text-xs text-gray-600">
+                              Coletar dados sobre violência doméstica (ocorrências policiais, medidas protetivas, feminicídios), 
+                              mapear a rede de proteção existente, identificar lacunas e necessidades.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 3 */}
+                      <div className="bg-purple-50 p-3 rounded-lg border-l-4 border-purple-500">
+                        <div className="flex items-start">
+                          <div className="bg-purple-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">3</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-purple-900 text-xs mb-1">Executar os Encaminhamentos</h6>
+                            <p className="text-xs text-gray-600">
+                              Articular com delegacias para aplicação do instrumento de avaliação de risco, encaminhar vítimas para 
+                              rede psicossocial, requisitar medidas protetivas ao Judiciário com base na avaliação.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 4 */}
+                      <div className="bg-orange-50 p-3 rounded-lg border-l-4 border-orange-500">
+                        <div className="flex items-start">
+                          <div className="bg-orange-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">4</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-orange-900 text-xs mb-1">Criar Critérios e Fluxos Operacionais</h6>
+                            <p className="text-xs text-gray-600">
+                              Estabelecer fluxos claros de atendimento entre Polícia → MP → Judiciário → Rede de Apoio. 
+                              Definir prazos, responsabilidades e procedimentos para cada nível de risco (moderado, grave, extremo).
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 5 */}
+                      <div className="bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                        <div className="flex items-start">
+                          <div className="bg-red-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">5</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-red-900 text-xs mb-1">Formalizar Convergências</h6>
+                            <p className="text-xs text-gray-600">
+                              Elaborar protocolos interinstitucionais, recomendações do MP, resoluções, cartilhas informativas, 
+                              decretos municipais sobre rede de atendimento à violência doméstica.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 6 */}
+                      <div className="bg-indigo-50 p-3 rounded-lg border-l-4 border-indigo-500">
+                        <div className="flex items-start">
+                          <div className="bg-indigo-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">6</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-indigo-900 text-xs mb-1">Realizar Eventos Interinstitucionais</h6>
+                            <p className="text-xs text-gray-600">
+                              Seminários, workshops, reuniões periódicas da rede de enfrentamento para alinhamento de práticas, 
+                              compartilhamento de experiências e fortalecimento da articulação.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 7 */}
+                      <div className="bg-pink-50 p-3 rounded-lg border-l-4 border-pink-500">
+                        <div className="flex items-start">
+                          <div className="bg-pink-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">7</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-pink-900 text-xs mb-1">Realizar Capacitações Institucionais</h6>
+                            <p className="text-xs text-gray-600">
+                              Cursos para policiais, promotores, juízes, assistentes sociais sobre aplicação do Guia de Avaliação de Risco, 
+                              escuta qualificada, atendimento humanizado e trabalho em rede.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 8 */}
+                      <div className="bg-teal-50 p-3 rounded-lg border-l-4 border-teal-500">
+                        <div className="flex items-start">
+                          <div className="bg-teal-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">8</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-teal-900 text-xs mb-1">Criar Estruturas de Resolução de Problemas</h6>
+                            <p className="text-xs text-gray-600">
+                              Comitês gestores de casos complexos, grupos de trabalho para casos de alto risco, 
+                              equipes multidisciplinares permanentes no MP e Judiciário para acompanhamento especializado.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 9 */}
+                      <div className="bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                        <div className="flex items-start">
+                          <div className="bg-yellow-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">9</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-yellow-900 text-xs mb-1">Promover Ações Contra Irregularidades</h6>
+                            <p className="text-xs text-gray-600">
+                              Fiscalizar cumprimento de medidas protetivas, investigar descumprimentos, representar por prisão preventiva, 
+                              promover ações civis públicas contra omissões do poder público na proteção às vítimas.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 10 */}
+                      <div className="bg-cyan-50 p-3 rounded-lg border-l-4 border-cyan-500">
+                        <div className="flex items-start">
+                          <div className="bg-cyan-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">10</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-cyan-900 text-xs mb-1">Implementar Estratégias de Comunicação e Formação</h6>
+                            <p className="text-xs text-gray-600">
+                              <strong className="text-cyan-800">PRIORIDADE URGENTE:</strong> Campanhas educativas sobre violência doméstica, 
+                              divulgação de canais de ajuda (180, 190), educação nas escolas sobre relações saudáveis, 
+                              informar a sociedade sobre soluções viáveis e mobilizar ação coletiva.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 11 */}
+                      <div className="bg-violet-50 p-3 rounded-lg border-l-4 border-violet-500">
+                        <div className="flex items-start">
+                          <div className="bg-violet-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">11</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-violet-900 text-xs mb-1">Desenvolver Projetos e Políticas Públicas</h6>
+                            <p className="text-xs text-gray-600">
+                              Projetos como "Botão do Pânico", "Patrulha Maria da Penha", casas de acolhimento, 
+                              políticas de qualificação profissional para vítimas, programas de responsabilização de agressores.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 12 */}
+                      <div className="bg-rose-50 p-3 rounded-lg border-l-4 border-rose-500">
+                        <div className="flex items-start">
+                          <div className="bg-rose-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">12</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-rose-900 text-xs mb-1">Promover a Convergência Estrutural</h6>
+                            <p className="text-xs text-gray-600">
+                              Alinhar os 8 aspectos estruturais: Planos, Meios, Mensuração/Indicadores, Convergência dos 3 setores, 
+                              Valoração do desempenho, Critérios de fiscalização, Incentivos, Comunicação e formação. 
+                              Exemplo: todos usam os mesmos 20 fatores de risco, mesmos fluxos, mesmos indicadores de sucesso.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Atividade 13 */}
+                      <div className="bg-emerald-50 p-3 rounded-lg border-l-4 border-emerald-500">
+                        <div className="flex items-start">
+                          <div className="bg-emerald-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold mr-2 flex-shrink-0">13</div>
+                          <div className="flex-1">
+                            <h6 className="font-semibold text-emerald-900 text-xs mb-1">Revisar e Aperfeiçoar Periodicamente</h6>
+                            <p className="text-xs text-gray-600">
+                              Monitorar resultados (redução de feminicídios, tempo de resposta, satisfação das vítimas), 
+                              avaliar efetividade das ações, ajustar protocolos e fluxos com base em evidências. 
+                              Ciclo contínuo de melhoria.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Nota sobre Comunicação e Formação */}
+                    <div className="mt-4 p-3 bg-amber-100 border border-amber-400 rounded-lg">
+                      <p className="text-xs text-amber-900">
+                        <strong>⚠️ Atividade 10 - Prioridade Urgente:</strong> A Estratégia de Comunicação e Formação é destacada 
+                        como a atividade mais urgente no cenário atual, pois visa informar a sociedade sobre a existência de 
+                        soluções viáveis para as crises, combatendo a desesperança e mobilizando a ação coletiva.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo VI - Fundamento */}
+              <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                <h4 className="font-bold text-indigo-900 mb-2 flex items-center">
+                  <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">VI</div>
+                  Fundamento
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Sempre partir do foco prioritário considerando os critérios do DHS/PGS:</strong>
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>✓ <strong>Equilíbrio econômico-social-ambiental:</strong> Enfrentamento à violência gera economia (redução de custos com saúde, sistema de justiça), justiça social (igualdade de gênero) e ambiente saudável (famílias seguras)</li>
+                  <li>✓ <strong>Convergência público-privado-sociedade civil:</strong> Atuação integrada de Estado, empresas (programas de qualificação) e ONGs</li>
+                  <li>✓ <strong>Pensamento sistêmico:</strong> Compreensão da violência como fenômeno multicausal que exige respostas integradas</li>
+                  <li>✓ <strong>Atendimento de necessidades humanas integrais:</strong> Segurança, saúde, autonomia econômica, dignidade, acesso à justiça</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* Exemplo Prático de Convergência Estrutural */}
+          <Card className="mb-6 bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-600">
+            <h3 className="text-lg font-bold text-cyan-900 mb-4">💼 Exemplo Prático: Convergência Estrutural na Avaliação de Risco</h3>
+            <p className="text-gray-700 mb-4">
+              O <strong>Guia de Avaliação de Risco</strong> é um exemplo concreto de <strong>Convergência Estrutural</strong> 
+              aplicada ao enfrentamento da violência doméstica:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <h4 className="font-semibold text-red-900 mb-2">📋 Alinhamento de Planos e Planejamentos</h4>
+                <p className="text-sm text-gray-700">
+                  O Guia de Avaliação de Risco orienta a elaboração de <strong>planos individuais de segurança</strong> 
+                  para cada vítima em alto risco, alinhando ações de diferentes instituições (patrulhamento, 
+                  acolhimento, acompanhamento psicossocial) em torno de um objetivo comum.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900 mb-2">📊 Alinhamento de Critérios e Indicadores</h4>
+                <p className="text-sm text-gray-700">
+                  Todos os atores da rede (Polícia, MP, Judiciário, Saúde, Assistência Social) passam a utilizar 
+                  <strong> os mesmos 20 fatores de risco</strong> para avaliar e classificar casos. Isso elimina 
+                  divergências de entendimento e permite <strong>linguagem comum</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900 mb-2">🔄 Alinhamento de Fluxos e Procedimentos</h4>
+                <p className="text-sm text-gray-700">
+                  O protocolo estabelece <strong>fluxos claros</strong>: delegacia aplica avaliação → encaminha ao MP 
+                  → MP requisita medidas → Judiciário decide em 48h → rede de apoio acolhe vítima. 
+                  <strong> Todos sabem o que fazer e quando</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                <h4 className="font-semibold text-purple-900 mb-2">⚖️ Alinhamento de Meios de Realização</h4>
+                <p className="text-sm text-gray-700">
+                  Recursos compartilhados: sistema integrado de informações, equipes multidisciplinares do MP 
+                  para atendimento, botão do pânico fornecido pela segurança pública, casas de acolhimento 
+                  mantidas pela assistência social. <strong>Cada instituição contribui com seus meios</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                <h4 className="font-semibold text-orange-900 mb-2">🎯 Alinhamento de Modos de Valoração</h4>
+                <p className="text-sm text-gray-700">
+                  O sucesso não é mais medido apenas por número de prisões ou processos, mas por 
+                  <strong> redução de feminicídios, tempo de resposta às vítimas, taxa de reincidência</strong>. 
+                  Todas as instituições avaliam seu desempenho pelos mesmos indicadores de resultado.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-teal-500">
+                <h4 className="font-semibold text-teal-900 mb-2">📢 Alinhamento de Comunicação e Formação</h4>
+                <p className="text-sm text-gray-700">
+                  Campanhas educativas unificadas sobre violência doméstica, capacitação conjunta de profissionais 
+                  da rede, materiais informativos padronizados para vítimas. <strong>Mensagem coerente e integrada</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                <h4 className="font-semibold text-indigo-900 mb-2">🔍 Alinhamento de Critérios de Fiscalização</h4>
+                <p className="text-sm text-gray-700">
+                  Inspeções do MP, auditorias do Tribunal de Contas, avaliações de políticas públicas passam a 
+                  verificar <strong>implementação do protocolo de avaliação de risco, tempo de resposta, 
+                  qualidade do atendimento</strong> - critérios alinhados ao DHS.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+                <h4 className="font-semibold text-pink-900 mb-2">🎁 Alinhamento de Incentivos</h4>
+                <p className="text-sm text-gray-700">
+                  Profissionais e instituições que alcançam melhores resultados (menor reincidência, maior 
+                  satisfação das vítimas) recebem <strong>reconhecimento, premiações, recursos adicionais</strong>. 
+                  Incentivos orientados para o DHS.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Documentos e Recursos DHS */}
+          <Card className="bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600">
+            <h3 className="text-lg font-bold text-amber-900 mb-4 flex items-center">
+              <FileText className="h-6 w-6 mr-2" />
+              📚 Recursos e Documentos sobre DHS aplicado à Violência Doméstica
+            </h3>
+            
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Cartilha DHS - Conselho Nacional do Ministério Público (CNMP)</h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  Documento completo sobre Desenvolvimento Harmônico e Sustentável, incluindo a Matriz de Convergência 
+                  e orientações para aplicação prática em diferentes áreas de atuação do Ministério Público.
+                </p>
+                <a 
+                  href="https://www.cnmp.mp.br/portal/images/Comissoes/DireitosFundamentais/Arquivos/Desenvolvimento_Harmonico_e_sustentavel/NOVOS_ARQUIVOS_DHS/5-Cartilha_DHS.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm inline-flex items-center"
+                >
+                  <Download className="h-4 w-4 mr-1" />
+                  Baixar Cartilha DHS (PDF)
+                </a>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Convergência Estrutural - Detalhamento (fls. 122-158 da Cartilha DHS)</h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  Seção específica da Cartilha que detalha os <strong>8 aspectos a serem alinhados</strong> na 
+                  Convergência Estrutural, com exemplos práticos de aplicação.
+                </p>
+                <p className="text-xs text-gray-500 italic">
+                  ℹ️ Disponível nas páginas 122 a 158 da Cartilha DHS acima
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Guia Completo da Matriz de Convergência</h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  Material detalhado que descreve todas as etapas e passos da Matriz de Convergência, 
+                  com aplicações práticas para diferentes contextos institucionais.
+                </p>
+                <a 
+                  href="/documentos/matriz-convergencia-dhs-detalhado.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm inline-flex items-center"
+                >
+                  <Download className="h-4 w-4 mr-1" />
+                  Visualizar Guia da Matriz de Convergência (PDF)
+                </a>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Estratégia de Comunicação e Formação - CNMP</h4>
+                <p className="text-xs text-gray-600 mb-2">
+                  Documento estratégico sobre fomento ao DHS, PGS, NMC e estratégias de comunicação para 
+                  mobilização social e disseminação de soluções viáveis.
+                </p>
+                <a 
+                  href="https://www.cnmp.mp.br/portal/images/Comissoes/DireitosFundamentais/Arquivos/Desenvolvimento_Harmonico_e_sustentavel/NOVOS_ARQUIVOS_DHS/CNMP_Fomento_DHS_PGS_NMC_Estrategia_Comunicacao_Formacao__ESBOCO_CARTILHA_ESTRATEGICA_09_05_18.doc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-semibold text-sm inline-flex items-center"
+                >
+                  <Download className="h-4 w-4 mr-1" />
+                  Baixar Cartilha Estratégica CNMP (DOC)
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-4 p-4 bg-amber-100 border border-amber-300 rounded-lg">
+              <p className="text-xs text-amber-900">
+                <strong>💡 Para saber mais:</strong> Explore a aba <Link to="/implementacao" className="text-blue-600 hover:text-blue-800 font-semibold underline">Implementação</Link> deste site para 
+                compreender em detalhes a Matriz de Convergência e como aplicá-la em diferentes contextos de atuação do Ministério Público.
+              </p>
+            </div>
+          </Card>
+
+          {/* Benefícios da Integração */}
+          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-bold text-green-900 mb-4">✨ Benefícios da Integração DHS no Enfrentamento à Violência Doméstica</h3>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                  Ganhos para as Instituições
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Coordenação aprimorada:</strong> Eliminação de duplicidade de esforços e lacunas no atendimento</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Eficiência operacional:</strong> Fluxos claros reduzem tempo de resposta e uso de recursos</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Cultura de colaboração:</strong> Superação de compartimentalização institucional</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Gestão baseada em evidências:</strong> Monitoramento com indicadores compartilhados</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Inovação contínua:</strong> Revisão periódica com aprendizado coletivo</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                  Ganhos para as Vítimas e Sociedade
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Proteção efetiva:</strong> Avaliação precisa de risco e medidas adequadas salvam vidas</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Atendimento humanizado:</strong> Profissionais capacitados em escuta qualificada</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Integralidade:</strong> Apoio jurídico, psicológico, social e econômico integrado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Empoderamento:</strong> Vítimas informadas sobre direitos e recursos disponíveis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Transformação cultural:</strong> Mudança de padrões sociais através de educação e prevenção</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg">
+              <p className="text-sm text-green-900 font-semibold mb-2">
+                🌱 <strong>Visão de Futuro:</strong> DHS como Paradigma de Enfrentamento Sistêmico
+              </p>
+              <p className="text-xs text-gray-700">
+                A integração da avaliação de risco ao DHS representa uma mudança de paradigma: de ações fragmentadas 
+                e reativas para uma <strong>abordagem sistêmica, preventiva e transformadora</strong>. O feminicídio, 
+                compreendido como evento evitável, deixa de ser tratado como fatalidade e passa a ser objeto de 
+                <strong> políticas públicas integradas</strong> que protegem vidas, promovem igualdade de gênero e 
+                constroem uma sociedade mais justa e harmônica.
               </p>
             </div>
           </Card>
