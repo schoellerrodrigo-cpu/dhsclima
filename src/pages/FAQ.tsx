@@ -267,7 +267,7 @@ export default function FAQ() {
               Sim! Existem diversas formas de conectar-se com outros praticantes:
             </p>
             <ul className="space-y-2 ml-4">
-              <li>• Comitês interinstitucionais regionais</li>
+              <li>• Comitês</li>
               <li>• Eventos e workshops sobre DHS e PGS</li>
               <li>• Grupos de trabalho em tribunais e ministérios públicos</li>
               <li>• Fóruns online de discussão</li>
