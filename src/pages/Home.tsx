@@ -55,7 +55,7 @@ export default function Home() {
       destaque: true
     },
     {
-      title: 'CAO na Estrada',
+      title: 'Violência Doméstica',
       description: 'Guia de Avaliação de Risco do MPDFT - Enfrentamento à violência doméstica com recomendações do MP-RS.',
       icon: Route,
       path: '/cao-na-estrada',
