@@ -1,4 +1,5 @@
-import { AlertTriangle, Shield, Heart, Scale, Phone, Eye, Gavel, Building } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { AlertTriangle, Shield, Heart, Scale, Phone, Eye, Gavel, Building, Target, CheckCircle, FileText, ArrowRight } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function ViolenciaECA() {
@@ -123,7 +124,7 @@ export default function ViolenciaECA() {
                   </tr>
                   <tr className="bg-blue-50">
                     <td className="p-3 font-semibold">Resolução CNMP 287/2024</td>
-                    <td className="p-3">Atuação <strong>transversal do MP</strong></td>
+                    <td className="p-3">Atuação <strong>integrada do MP</strong></td>
                   </tr>
                 </tbody>
               </table>
@@ -424,11 +425,11 @@ export default function ViolenciaECA() {
           </Card>
         </section>
 
-        {/* Seção 7: Atuação Transversal do MP */}
+        {/* Seção 7: Atuação Integrada do MP */}
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center mb-6">
             <Gavel className="h-8 w-8 text-primary-600 mr-3" />
-            7. Atuação Transversal do MP (Resolução CNMP 287/2024)
+            7. Atuação Integrada do MP (Resolução CNMP 287/2024)
           </h2>
 
           <Card className="bg-gradient-to-r from-indigo-50 to-purple-50 border-l-4 border-indigo-600">
@@ -473,7 +474,7 @@ export default function ViolenciaECA() {
             </div>
 
             <div className="bg-indigo-100 p-4 rounded">
-              <h4 className="font-semibold text-indigo-900 mb-2">🎯 Objetivos da Atuação Transversal:</h4>
+              <h4 className="font-semibold text-indigo-900 mb-2">🎯 Objetivos da Atuação Integrada:</h4>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>✓ Evitar duplicidade ou lacunas na proteção</li>
                 <li>✓ Garantir resposta rápida e integrada</li>
@@ -604,7 +605,7 @@ export default function ViolenciaECA() {
                 <div>
                   <strong className="text-blue-900">1. Comitês Regionalizados</strong>
                   <p className="text-xs text-gray-700 mt-1">
-                    Comitês de Gestão Colegiada em todas as comarcas, com reuniões periódicas e 
+                    Comitês de Gestão Colegiada com reuniões periódicas e 
                     monitoramento de casos.
                   </p>
                 </div>
@@ -629,6 +630,452 @@ export default function ViolenciaECA() {
                     e rede de proteção.
                   </p>
                 </div>
+              </div>
+            </div>
+          </Card>
+        </section>
+
+        {/* Integração com DHS */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Target className="h-8 w-8 text-primary-600 mr-3" />
+            9. Integração com o Desenvolvimento Harmônico e Sustentável via atuação resolutiva de Planejamento e de Gestão Sistêmicos
+          </h2>
+
+          <Card className="mb-6 bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600">
+            <h3 className="text-xl font-bold text-teal-900 mb-4">🌱 Violência contra Crianças e Adolescentes como Foco Prioritário do DHS</h3>
+            <p className="text-gray-700 mb-4">
+              O enfrentamento à violência contra crianças e adolescentes se enquadra perfeitamente nos 
+              <strong> critérios de priorização do DHS</strong>, pois trata-se de um problema que:
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">⚖️</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Alta Judicialização</h4>
+                <p className="text-xs text-gray-600">
+                  Gera grande volume de processos (medidas protetivas, destituições de poder familiar, ações penais)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">🚨</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Urgência e Gravidade</h4>
+                <p className="text-xs text-gray-600">
+                  Envolve risco à vida, desenvolvimento e integridade de pessoas em condição peculiar de desenvolvimento
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <div className="text-2xl mb-2">🌍</div>
+                <h4 className="font-semibold text-gray-800 mb-2">Impacto Social</h4>
+                <p className="text-xs text-gray-600">
+                  Afeta toda a sociedade, perpetuando ciclos de violência e comprometendo o desenvolvimento humano
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">📋 Aplicando a Matriz de Convergência ao Enfrentamento à Violência contra Crianças e Adolescentes</h3>
+            <p className="text-gray-700 mb-4">
+              A <strong>Matriz de Convergência</strong> oferece um modelo metodológico para fomentar a formação de redes de cooperação 
+              de enfrentamento à violência contra crianças e adolescentes. A seguir, os eixos da Matriz aplicados a este tema:
+            </p>
+
+            <div className="space-y-4">
+              {/* Eixo I - Ambiente */}
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-600">
+                <h4 className="font-bold text-blue-900 mb-2 flex items-center">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">I</div>
+                  Ambiente/Habitat
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Escolher o ambiente para atuação:</strong> Definir territórios com maior incidência de violência 
+                  contra crianças e adolescentes, identificar comunidades vulneráveis, mapear a rede local de proteção.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• Análise de dados do Disque 100 e Conselhos Tutelares</li>
+                  <li>• Mapeamento de regiões com maior número de notificações compulsórias (saúde)</li>
+                  <li>• Identificação de áreas com rede de proteção deficiente (CREAS, CRAS)</li>
+                  <li>• Levantamento de escolas e unidades de saúde em territórios prioritários</li>
+                </ul>
+              </div>
+
+              {/* Eixo II - Atuação Interinstitucional */}
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-600">
+                <h4 className="font-bold text-green-900 mb-2 flex items-center">
+                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">II</div>
+                  Atuação Interinstitucional
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Fomentar a atuação interinstitucional e com a comunidade:</strong> Articular MP, Judiciário, 
+                  Conselhos Tutelares, Saúde, Educação, Assistência Social e sociedade civil.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• <strong>Comitês de Gestão Colegiada:</strong> Reuniões periódicas para alinhamento e gestão de casos complexos (Decreto 9.603/2018)</li>
+                  <li>• <strong>Fluxos Integrados:</strong> Protocolos intersetoriais para notificação, escuta especializada e depoimento especial</li>
+                  <li>• <strong>Sistema Compartilhado:</strong> Plataforma digital entre MP, Judiciário, Delegacias, Conselhos Tutelares e CREAS</li>
+                  <li>• <strong>Capacitação Conjunta:</strong> Formação integrada em escuta protegida e proteção integral (Lei 13.431/2017)</li>
+                </ul>
+              </div>
+
+              {/* Eixo III - Atuação Institucional */}
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-600">
+                <h4 className="font-bold text-purple-900 mb-2 flex items-center">
+                  <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">III</div>
+                  Atuação Institucional
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Fomentar a atuação institucional:</strong> Fortalecer as capacidades internas de cada 
+                  instituição para responder adequadamente à violência contra crianças e adolescentes.
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>• <strong>Ministério Público:</strong> Atuação integrada conforme Resolução CNMP 287/2024, promotorias especializadas, monitoramento de medidas protetivas</li>
+                  <li>• <strong>Poder Judiciário:</strong> Varas da Infância, salas especiais para depoimento, decisões céleres sobre acolhimento institucional</li>
+                  <li>• <strong>Conselhos Tutelares:</strong> Atendimento 24h, aplicação de medidas protetivas (Art. 101 do ECA), encaminhamentos à rede</li>
+                  <li>• <strong>Saúde:</strong> Notificação compulsória obrigatória, atendimento psicológico especializado, documentação adequada de lesões</li>
+                  <li>• <strong>Educação:</strong> Identificação precoce de sinais de violência, articulação com Conselho Tutelar, programas preventivos</li>
+                  <li>• <strong>Assistência Social:</strong> CREAS para alta complexidade, CRAS para prevenção, acompanhamento de famílias</li>
+                </ul>
+              </div>
+
+              {/* Eixo IV - Abordagens */}
+              <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-600">
+                <h4 className="font-bold text-orange-900 mb-2 flex items-center">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">IV</div>
+                  Abordagens
+                </h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  <strong>Trabalhar nas três frentes:</strong> Conscientização/Necessidade, Meios e Incentivos.
+                </p>
+                <div className="grid md:grid-cols-3 gap-3">
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.1 - Conscientização/Necessidade</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Campanhas sobre tipos de violência (física, psicológica, sexual, negligência)</li>
+                      <li>• Educação em escolas sobre direitos das crianças</li>
+                      <li>• Desmistificação da "correção" violenta</li>
+                      <li>• Divulgação do Disque 100 e canais de denúncia</li>
+                      <li>• Capacitação de educadores e profissionais de saúde</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.2 - Meios</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Salas de escuta especializada e depoimento especial</li>
+                      <li>• Equipamentos de gravação audiovisual adequados</li>
+                      <li>• Conselhos Tutelares estruturados e equipados</li>
+                      <li>• Equipes multidisciplinares (psicólogos, assistentes sociais)</li>
+                      <li>• Casas de acolhimento adequadas às diferentes faixas etárias</li>
+                    </ul>
+                  </div>
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-orange-900 text-xs mb-2">4.3 - Incentivos</h5>
+                    <ul className="text-xs text-gray-600 space-y-1">
+                      <li>• Programas de apoio a famílias vulneráveis (Bolsa Família, BPC)</li>
+                      <li>• Acesso facilitado a creches e escolas de tempo integral</li>
+                      <li>• Acompanhamento psicossocial gratuito</li>
+                      <li>• Reconhecimento de instituições com boas práticas</li>
+                      <li>• Priorização de políticas para famílias em situação de risco</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo V - Etapas */}
+              <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-600">
+                <h4 className="font-bold text-teal-900 mb-2 flex items-center">
+                  <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">V</div>
+                  Etapas
+                </h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  <strong>Seguir as etapas de implementação do DHS:</strong> Escolher foco prioritário e Mapear/Aperfeiçoar/Convergência Estrutural.
+                </p>
+                <div className="space-y-3">
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 1: Escolher o Foco Prioritário</h5>
+                    <p className="text-xs text-gray-700 mb-1">
+                      <strong>Violência contra crianças e adolescentes</strong> - com ênfase em prevenção, escuta protegida 
+                      e articulação da rede de proteção integral.
+                    </p>
+                    <p className="text-xs text-gray-600">
+                      ✓ Critérios: Alta judicialização + Urgência (prioridade absoluta - CF Art. 227) + Impacto social significativo
+                    </p>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 2.a: Mapear Necessidades, Possibilidades e Atividades</h5>
+                    <ul className="text-xs text-gray-600 space-y-1 ml-4">
+                      <li>• <strong>Necessidades:</strong> Dados do Disque 100, notificações compulsórias, lacunas na rede de proteção</li>
+                      <li>• <strong>Possibilidades:</strong> Estruturas existentes (Conselhos Tutelares, CREAS, Varas da Infância), profissionais capacitados</li>
+                      <li>• <strong>Atividades em curso:</strong> Comitês de Gestão Colegiada, fluxos de escuta especializada, capacitações realizadas</li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-3 rounded-lg">
+                    <h5 className="font-semibold text-teal-900 text-sm mb-2">Passo 2.b: Promover o Aperfeiçoamento e/ou a Convergência Estrutural</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Executar as 13 atividades ordenadas e interligadas</strong> adaptadas ao contexto da violência contra crianças e adolescentes:
+                    </p>
+                    <div className="space-y-2">
+                      <div className="bg-blue-50 p-2 rounded border-l-2 border-blue-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-blue-900">1.</strong> Fomentar o DHS em audiências públicas, reuniões dos Comitês de Gestão Colegiada, grupos de trabalho
+                        </p>
+                      </div>
+                      <div className="bg-green-50 p-2 rounded border-l-2 border-green-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-green-900">2.</strong> Reunir dados (Disque 100, notificações, medidas protetivas), elaborar diagnósticos territoriais
+                        </p>
+                      </div>
+                      <div className="bg-purple-50 p-2 rounded border-l-2 border-purple-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-purple-900">3.</strong> Executar encaminhamentos à rede (CREAS, saúde, educação, Conselho Tutelar)
+                        </p>
+                      </div>
+                      <div className="bg-orange-50 p-2 rounded border-l-2 border-orange-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-orange-900">4.</strong> Criar critérios e fluxos operacionais para escuta especializada e depoimento especial
+                        </p>
+                      </div>
+                      <div className="bg-pink-50 p-2 rounded border-l-2 border-pink-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-pink-900">5.</strong> Formalizar convergências (TACs, recomendações, protocolos municipais, decretos)
+                        </p>
+                      </div>
+                      <div className="bg-indigo-50 p-2 rounded border-l-2 border-indigo-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-indigo-900">6.</strong> Realizar eventos interinstitucionais (seminários, encontros da rede de proteção)
+                        </p>
+                      </div>
+                      <div className="bg-teal-50 p-2 rounded border-l-2 border-teal-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-teal-900">7.</strong> Realizar capacitações (escuta protegida, Lei 13.431/2017, proteção integral)
+                        </p>
+                      </div>
+                      <div className="bg-red-50 p-2 rounded border-l-2 border-red-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-red-900">8.</strong> Criar estruturas de resolução de problemas (comitês gestores, grupos de acompanhamento de casos)
+                        </p>
+                      </div>
+                      <div className="bg-yellow-50 p-2 rounded border-l-2 border-yellow-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-yellow-900">9.</strong> Promover ações contra irregularidades (inspeções, recomendações, ações civis públicas)
+                        </p>
+                      </div>
+                      <div className="bg-cyan-50 p-2 rounded border-l-2 border-cyan-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-cyan-900">10.</strong> Implementar estratégias de comunicação (campanhas educativas, materiais informativos)
+                        </p>
+                      </div>
+                      <div className="bg-lime-50 p-2 rounded border-l-2 border-lime-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-lime-900">11.</strong> Desenvolver projetos e políticas públicas (planos municipais de enfrentamento à violência)
+                        </p>
+                      </div>
+                      <div className="bg-amber-50 p-2 rounded border-l-2 border-amber-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-amber-900">12.</strong> Promover a Convergência Estrutural (alinhar 8 aspectos: planos, indicadores, fluxos, meios, valoração, fiscalização, incentivos, comunicação)
+                        </p>
+                      </div>
+                      <div className="bg-rose-50 p-2 rounded border-l-2 border-rose-500">
+                        <p className="text-xs text-gray-700">
+                          <strong className="text-rose-900">13.</strong> Revisar e aperfeiçoar periodicamente (reavaliações semestrais, ajustes com base em indicadores)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Eixo VI - Fundamento */}
+              <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600">
+                <h4 className="font-bold text-indigo-900 mb-2 flex items-center">
+                  <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">VI</div>
+                  Fundamento
+                </h4>
+                <p className="text-sm text-gray-700 mb-2">
+                  <strong>Sempre partir do foco prioritário considerando os critérios do DHS/PGS:</strong>
+                </p>
+                <ul className="text-xs text-gray-600 ml-6 space-y-1">
+                  <li>✓ <strong>Equilíbrio econômico-social-ambiental:</strong> Prevenção gera economia (redução de custos futuros), justiça social (proteção integral) e ambiente saudável (famílias estruturadas)</li>
+                  <li>✓ <strong>Convergência público-privado-sociedade civil:</strong> Atuação integrada de Estado, empresas (responsabilidade social) e ONGs</li>
+                  <li>✓ <strong>Pensamento sistêmico:</strong> Compreensão da violência como fenômeno multicausal que exige respostas articuladas</li>
+                  <li>✓ <strong>Atendimento de necessidades humanas integrais:</strong> Segurança, saúde, educação, convivência familiar, dignidade</li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* Exemplo Prático de Convergência Estrutural */}
+          <Card className="mb-6 bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-600">
+            <h3 className="text-lg font-bold text-cyan-900 mb-4">💼 Exemplo Prático: Convergência Estrutural na Escuta Protegida</h3>
+            <p className="text-gray-700 mb-4">
+              São exemplos concretos de <strong>Convergência Estrutural</strong> aplicada ao enfrentamento da violência contra crianças e adolescentes:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <h4 className="font-semibold text-red-900 mb-2">📋 Alinhamento de Planos e Planejamentos</h4>
+                <p className="text-sm text-gray-700">
+                  Os Comitês de Gestão Colegiada elaboram <strong>planos individuais de atendimento</strong> para cada criança/adolescente, 
+                  alinhando ações de diferentes instituições (saúde, educação, assistência social, Conselho Tutelar, MP) em torno de um objetivo comum.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900 mb-2">📊 Alinhamento de Critérios e Indicadores</h4>
+                <p className="text-sm text-gray-700">
+                  Todos os atores da rede utilizam <strong>os mesmos conceitos</strong> (escuta especializada vs depoimento especial, 
+                  tipos de violência, medidas protetivas do Art. 101 do ECA). Isso elimina divergências e permite <strong>linguagem comum</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900 mb-2">🔄 Alinhamento de Fluxos e Procedimentos</h4>
+                <p className="text-sm text-gray-700">
+                  O protocolo estabelece <strong>fluxos claros</strong>: identificação (escola/saúde) → notificação compulsória → 
+                  Conselho Tutelar → escuta especializada → MP/Judiciário → depoimento especial. <strong>Todos sabem o que fazer e quando</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                <h4 className="font-semibold text-purple-900 mb-2">⚖️ Alinhamento de Meios de Realização</h4>
+                <p className="text-sm text-gray-700">
+                  Recursos compartilhados: salas de depoimento especial nos fóruns, sistema integrado de informações, 
+                  equipes multidisciplinares do MP, casas de acolhimento da assistência social. <strong>Cada instituição contribui com seus meios</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                <h4 className="font-semibold text-orange-900 mb-2">🎯 Alinhamento de Modos de Valoração</h4>
+                <p className="text-sm text-gray-700">
+                  O sucesso não é mais medido apenas por número de processos, mas por <strong>redução de revitimização, 
+                  tempo de resposta, qualidade do atendimento, reintegração familiar bem-sucedida</strong>. 
+                  Todas as instituições avaliam seu desempenho pelos mesmos indicadores de resultado.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-teal-500">
+                <h4 className="font-semibold text-teal-900 mb-2">📢 Alinhamento de Comunicação e Formação</h4>
+                <p className="text-sm text-gray-700">
+                  Campanhas educativas unificadas sobre direitos das crianças, capacitação conjunta de profissionais da rede 
+                  em escuta protegida, materiais informativos padronizados. <strong>Mensagem coerente e integrada</strong>.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                <h4 className="font-semibold text-indigo-900 mb-2">🔍 Alinhamento de Critérios de Fiscalização</h4>
+                <p className="text-sm text-gray-700">
+                  Inspeções do MP, auditorias do Tribunal de Contas, avaliações de políticas públicas passam a verificar 
+                  <strong> implementação da escuta protegida, estrutura dos Conselhos Tutelares, funcionamento dos Comitês</strong> - 
+                  critérios alinhados ao DHS.
+                </p>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+                <h4 className="font-semibold text-pink-900 mb-2">🎁 Alinhamento de Incentivos</h4>
+                <p className="text-sm text-gray-700">
+                  Profissionais e instituições que alcançam melhores resultados (menor revitimização, maior taxa de reintegração familiar) 
+                  recebem <strong>reconhecimento, premiações, recursos adicionais</strong>. Incentivos orientados para o DHS.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          {/* Benefícios da Integração */}
+          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-bold text-green-900 mb-4">✨ Benefícios da Integração DHS no Enfrentamento à Violência contra Crianças e Adolescentes</h3>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                  Ganhos para as Instituições
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Coordenação aprimorada:</strong> Eliminação de duplicidade de atendimentos e lacunas na proteção</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Eficiência operacional:</strong> Fluxos claros reduzem tempo de resposta e uso de recursos</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Cultura de colaboração:</strong> Superação de compartimentalização entre saúde, educação, assistência e justiça</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Gestão baseada em evidências:</strong> Monitoramento com indicadores compartilhados entre toda a rede</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Inovação contínua:</strong> Revisão periódica com aprendizado coletivo dos Comitês de Gestão Colegiada</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h4 className="font-semibold text-gray-800 mb-3 flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
+                  Ganhos para Crianças, Adolescentes e Sociedade
+                </h4>
+                <ul className="space-y-2 text-xs text-gray-700">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Proteção efetiva:</strong> Resposta rápida e articulada previne agravamento da violência</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Evitar revitimização:</strong> Escuta especializada e depoimento especial reduzem repetição de relatos traumáticos</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Integralidade:</strong> Apoio jurídico, psicológico, social e educacional coordenado</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Desenvolvimento saudável:</strong> Intervenções tempestivas preservam potencial de desenvolvimento</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-2">✓</span>
+                    <span><strong>Interrupção de ciclos:</strong> Prevenção de perpetuação intergeracional da violência</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-lg">
+              <p className="text-sm text-green-900 font-semibold mb-2">
+                🌱 <strong>Visão de Futuro:</strong> DHS como Paradigma de Proteção Integral Sistêmica
+              </p>
+              <p className="text-xs text-gray-700">
+                A integração da escuta protegida e da rede de proteção ao DHS representa uma mudança de paradigma: de ações fragmentadas 
+                e reativas para uma <strong>abordagem sistêmica, preventiva e transformadora</strong>. A violência contra crianças e 
+                adolescentes, compreendida como evento evitável, deixa de ser tratada como fatalidade e passa a ser objeto de 
+                <strong> políticas públicas integradas</strong> que protegem vidas, garantem desenvolvimento saudável e 
+                constroem uma sociedade mais justa e harmônica.
+              </p>
+            </div>
+          </Card>
+
+          {/* Link para Implementação */}
+          <Card className="bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600">
+            <div className="flex items-start">
+              <FileText className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
+              <div>
+                <h4 className="font-semibold text-amber-900 mb-2">📚 Aprofunde-se na Metodologia DHS</h4>
+                <p className="text-sm text-gray-700 mb-3">
+                  Para compreender em detalhes a Matriz de Convergência, as 13 atividades ordenadas e os 8 aspectos 
+                  da Convergência Estrutural, visite a página de Implementação deste guia.
+                </p>
+                <Link 
+                  to="/implementacao" 
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm underline"
+                >
+                  <ArrowRight className="h-4 w-4 mr-1" />
+                  Ir para Guia de Implementação
+                </Link>
               </div>
             </div>
           </Card>
