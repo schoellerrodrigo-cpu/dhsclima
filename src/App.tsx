@@ -11,6 +11,7 @@ import CalculadoraDHS from './pages/CalculadoraDHS'
 import PlanoContingencia from './pages/PlanoContingencia'
 import CaoNaEstrada from './pages/CaoNaEstrada'
 import ViolenciaECA from './pages/ViolenciaECA'
+import PrimeiraInfancia from './pages/PrimeiraInfancia'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/plano-contingencia" element={<PlanoContingencia />} />
         <Route path="/cao-na-estrada" element={<CaoNaEstrada />} />
         <Route path="/violencia-eca" element={<ViolenciaECA />} />
+        <Route path="/primeira-infancia" element={<PrimeiraInfancia />} />
       </Routes>
     </Layout>
   )

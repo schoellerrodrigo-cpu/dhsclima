@@ -17,6 +17,7 @@ export default function Header() {
     { name: 'Plano Contingência', path: '/plano-contingencia' },
     { name: 'Violência Doméstica', path: '/cao-na-estrada' },
     { name: 'Violência ECA', path: '/violencia-eca' },
+    { name: 'Primeira Infância', path: '/primeira-infancia' },
     { name: 'FAQ', path: '/faq' },
   ]
 

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield, Route } from 'lucide-react'
+import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield, Route, Baby } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function Home() {
@@ -70,6 +70,15 @@ export default function Home() {
       path: '/violencia-eca',
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
+      destaque: true
+    },
+    {
+      title: 'Primeira Infância',
+      description: 'Manual de Atuação do MP na Defesa e Promoção da Educação Infantil - Superação do déficit de vagas em creches e pré-escolas.',
+      icon: Baby,
+      path: '/primeira-infancia',
+      color: 'text-pink-600',
+      bgColor: 'bg-pink-50',
       destaque: true
     },
     {
