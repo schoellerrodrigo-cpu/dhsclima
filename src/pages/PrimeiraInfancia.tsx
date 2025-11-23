@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Baby, TrendingUp, Scale, Users, Target, CheckCircle, AlertTriangle, BookOpen, DollarSign, Building, FileText, ArrowRight, Droplet, Heart, Shield, Gavel } from 'lucide-react'
+import { Baby, TrendingUp, Scale, Users, Target, CheckCircle, AlertTriangle, BookOpen, DollarSign, Building, FileText, ArrowRight, Droplet, Heart, Shield } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function PrimeiraInfancia() {
@@ -1186,50 +1186,6 @@ export default function PrimeiraInfancia() {
                 <li>• <strong>Acolhimento Institucional:</strong> Máximo de 18 meses (art. 19, §2º, ECA)</li>
                 <li>• <strong>Depoimento Especial:</strong> Agendamento com urgência de réu preso (Lei 13.431/2017)</li>
               </ul>
-            </div>
-          </Card>
-
-          <Card className="mb-6">
-            <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
-              <Gavel className="h-6 w-6 text-gray-700 mr-3" />
-              Depoimento Especial - Urgência Máxima (Art. 5º)
-            </h3>
-            <p className="text-gray-700 mb-4">
-              A Recomendação dedica atenção especial ao <strong>depoimento especial de crianças e adolescentes 
-              vítimas ou testemunhas de violência</strong> (Lei 13.431/2017):
-            </p>
-
-            <div className="space-y-3">
-              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-                <h4 className="font-semibold text-blue-900 mb-2 text-sm">1. Produção Antecipada de Provas</h4>
-                <p className="text-xs text-gray-700 mb-2">
-                  Sempre que necessário o depoimento especial, o MP deve ajuizar com <strong>máxima brevidade</strong> 
-                  ação cautelar de produção antecipada de provas, especialmente nos casos obrigatórios (art. 11, §1º, I e II, Lei 13.431/2017).
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  <strong>Objetivo:</strong> Evitar revitimização, preservar qualidade da prova e prevenir contaminações da memória.
-                </p>
-              </div>
-
-              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
-                <h4 className="font-semibold text-purple-900 mb-2 text-sm">2. Agendamento Prioritário</h4>
-                <p className="text-xs text-gray-700 mb-2">
-                  A oitiva da criança ou adolescente deve ser agendada com <strong>prioridade absoluta</strong>, 
-                  em agenda específica e com a <strong>mesma urgência de processos de réu preso</strong>.
-                </p>
-                <p className="text-xs text-gray-600 italic">
-                  <strong>Evitar:</strong> Que a audiência seja agendada na pauta comum da Vara, causando violência institucional.
-                </p>
-              </div>
-
-              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-                <h4 className="font-semibold text-green-900 mb-2 text-sm">3. Integração ao Procedimento Principal</h4>
-                <p className="text-xs text-gray-700 mb-2">
-                  Quando realizado o depoimento especial em produção antecipada, este deve integrar com 
-                  <strong> brevidade</strong> o procedimento que serviu de fundamento, priorizando medidas cabíveis 
-                  e resguardando sigilo (Resolução CNMP 287/2024).
-                </p>
-              </div>
             </div>
           </Card>
 

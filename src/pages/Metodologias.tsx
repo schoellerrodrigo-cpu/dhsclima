@@ -299,6 +299,270 @@ export default function Metodologias() {
           </Card>
         </section>
 
+        {/* Recomendação CNMP 05/2025 */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Scale className="h-8 w-8 text-primary-600 mr-3" />
+            4. Recomendação CNMP nº 05/2025 - Processos Estruturais
+          </h2>
+
+          <Card className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600">
+            <h3 className="text-lg font-bold text-gray-900 mb-3">Boas Práticas para Atuação Estrutural do MP</h3>
+            <p className="text-gray-700 mb-4">
+              Editada em <strong>06 de agosto de 2025</strong> pelo Corregedor Nacional do Ministério Público, 
+              a Recomendação estabelece diretrizes para identificação, condução e aprimoramento de 
+              <strong> processos estruturais</strong> que visam solucionar desconformidades complexas e violações 
+              reiteradas de direitos sociais.
+            </p>
+            <div className="bg-white p-4 rounded-lg border border-blue-200">
+              <p className="text-sm text-gray-600 italic">
+                "Fortalecimento da atuação resolutiva, cooperativa e estruturante do Ministério Público brasileiro 
+                diante de desconformidades institucionais e violações reiteradas de direitos e interesses sociais."
+              </p>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              📋 Identificação de Casos Estruturais (Art. 1º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Devem ser tratados como <strong>estruturais</strong> os casos que envolvam:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {[
+                'Desconformidades complexas e contínuas',
+                'Necessidade de reorganização institucional',
+                'Reconstrução de políticas públicas',
+                'Saúde',
+                'Infância e Juventude',
+                'Violência contra a Mulher',
+                'Segurança Pública',
+                'Educação',
+                'Sistema Prisional',
+                'Meio Ambiente (natural, artificial e do trabalho)',
+                'Consumidor',
+                'Urbanismo'
+              ].map((item, index) => (
+                <div key={index} className="flex items-start bg-gray-50 p-3 rounded-lg">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-semibold mb-4 text-green-900">
+              🔄 Ciclo Estrutural de Atuação (Art. 3º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Metodologia sistemática composta por <strong>6 etapas</strong>:
+            </p>
+            <div className="space-y-3">
+              {[
+                { num: 1, titulo: 'Diagnóstico', desc: 'Identificação e análise do problema estrutural', color: 'bg-blue-500' },
+                { num: 2, titulo: 'Plano Estrutural', desc: 'Construção participativa com metas mensuráveis', color: 'bg-purple-500' },
+                { num: 3, titulo: 'Execução', desc: 'Implementação das ações planejadas', color: 'bg-green-500' },
+                { num: 4, titulo: 'Monitoramento', desc: 'Acompanhamento contínuo dos indicadores', color: 'bg-yellow-500' },
+                { num: 5, titulo: 'Revisão', desc: 'Ajustes periódicos baseados nos resultados', color: 'bg-orange-500' },
+                { num: 6, titulo: 'Encerramento', desc: 'Conclusão quando atingidos os objetivos', color: 'bg-red-500' }
+              ].map((etapa) => (
+                <div key={etapa.num} className="flex items-start bg-white p-4 rounded-lg shadow-sm">
+                  <div className={`${etapa.color} text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4 flex-shrink-0`}>
+                    {etapa.num}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900">{etapa.titulo}</h4>
+                    <p className="text-gray-600 text-sm">{etapa.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              🎯 Planos Estruturais Participativos (Art. 4º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Construção com participação de <strong>sujeitos institucionais e comunidade</strong>, devendo conter:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                { icon: '📊', titulo: 'Metas Mensuráveis', desc: 'Objetivos claros e quantificáveis' },
+                { icon: '📅', titulo: 'Cronogramas', desc: 'Prazos definidos para cada etapa' },
+                { icon: '📈', titulo: 'Indicadores', desc: 'Métricas de acompanhamento e avaliação' },
+                { icon: '🔄', titulo: 'Revisão Periódica', desc: 'Previsão de ajustes conforme resultados' }
+              ].map((item, index) => (
+                <div key={index} className="bg-gradient-to-r from-blue-50 to-cyan-50 p-4 rounded-lg">
+                  <div className="flex items-center mb-2">
+                    <span className="text-2xl mr-2">{item.icon}</span>
+                    <h4 className="font-semibold text-gray-900">{item.titulo}</h4>
+                  </div>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-600">
+            <h3 className="text-lg font-semibold mb-4 text-purple-900">
+              🤝 Priorização da Via Extrajudicial (Art. 5º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Privilégio aos mecanismos de <strong>autocomposição estrutural</strong>:
+            </p>
+            <div className="space-y-2">
+              {[
+                'Mediação entre os envolvidos',
+                'Negociação institucional',
+                'Construção de consensos',
+                'Compromissos significativos',
+                'Busca de soluções por autocomposição em juízo (quando necessária via judicial)'
+              ].map((item, index) => (
+                <div key={index} className="flex items-start">
+                  <ArrowRight className="h-5 w-5 text-purple-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">{item}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 bg-white p-3 rounded-lg border border-purple-200">
+              <p className="text-sm text-gray-600">
+                <strong>Nota:</strong> A via judicial não é descartada quando necessária, mas a prioridade é 
+                resolver estruturalmente através do diálogo e construção conjunta de soluções.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              🏛️ Estruturas de Apoio (Arts. 6º e 7º)
+            </h3>
+            
+            <div className="bg-gradient-to-r from-amber-50 to-yellow-50 p-4 rounded-lg mb-4 border-l-4 border-amber-600">
+              <h4 className="font-semibold text-amber-900 mb-2">Articulação Institucional</h4>
+              <p className="text-gray-700 text-sm mb-3">
+                Promoção de convergência com órgãos de apoio para suporte técnico e compartilhamento de boas práticas:
+              </p>
+              <div className="space-y-2">
+                {[
+                  'Centros de Apoio Operacional (CAOs)',
+                  'Câmaras de Coordenação e Revisão (CCRs)',
+                  'Núcleos específicos para processos estruturais',
+                  'Estruturas multidisciplinares',
+                  'Convênios com instituições e universidades'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start">
+                    <CheckCircle2 className="h-4 w-4 text-amber-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border-l-4 border-blue-600">
+              <h4 className="font-semibold text-blue-900 mb-2">Implementação Local (Art. 7º)</h4>
+              <p className="text-gray-700 text-sm">
+                Utilização de <strong>procedimentos administrativos estruturais</strong> como instrumento para 
+                implementar decisões estruturais nacionais ou regionais (STF, ACPs com efeitos ampliados) 
+                no âmbito local de cada unidade do MP.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              📢 Transparência e Publicidade (Art. 8º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Garantia de ampla divulgação dos processos estruturais:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {[
+                'Linguagem acessível à população',
+                'Disponibilização em portais eletrônicos institucionais',
+                'Transparência dos atos e planos estruturais',
+                'Prestação de contas à sociedade'
+              ].map((item, index) => (
+                <div key={index} className="flex items-start bg-gray-50 p-3 rounded-lg">
+                  <CheckCircle2 className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-cyan-50 to-blue-50 border-l-4 border-cyan-600">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-900">
+              📊 Avaliação Adequada (Art. 9º)
+            </h3>
+            <p className="text-gray-700 mb-3">
+              Indicadores de correição e produtividade devem considerar:
+            </p>
+            <div className="space-y-2">
+              {[
+                { label: 'Complexidade do Processo', desc: 'Reconhecimento da natureza estrutural e multifacetada' },
+                { label: 'Impacto Social', desc: 'Mensuração dos efeitos nas políticas públicas e direitos coletivos' },
+                { label: 'Tempo Necessário', desc: 'Processos estruturais demandam prazos mais longos' }
+              ].map((item, index) => (
+                <div key={index} className="bg-white p-3 rounded-lg">
+                  <h4 className="font-semibold text-gray-900 text-sm">{item.label}</h4>
+                  <p className="text-gray-600 text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-semibold mb-4 text-gray-900">
+              🎓 Capacitação Continuada (Art. 10)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Fomento à formação de membros e servidores por meio dos <strong>Centros de Estudos e 
+              Aperfeiçoamento Funcional</strong> e <strong>Escolas do MP</strong>:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {[
+                { icon: '📚', titulo: 'Formação Continuada', desc: 'Cursos especializados em processos estruturais' },
+                { icon: '🔬', titulo: 'Incentivo à Pesquisa', desc: 'Desenvolvimento de estudos sobre o tema' },
+                { icon: '📖', titulo: 'Produção Institucional', desc: 'Sistematização de boas práticas e conhecimento' }
+              ].map((item, index) => (
+                <div key={index} className="bg-gradient-to-r from-indigo-50 to-purple-50 p-4 rounded-lg text-center">
+                  <div className="text-3xl mb-2">{item.icon}</div>
+                  <h4 className="font-semibold text-gray-900 mb-1 text-sm">{item.titulo}</h4>
+                  <p className="text-gray-600 text-xs">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-semibold mb-4 text-green-900">
+              ⚖️ Abrangência da Recomendação (Art. 11)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              Aplica-se a <strong>todos os ramos e unidades do MP brasileiro</strong>, nas seguintes matérias:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+              {[
+                'Penal',
+                'Administrativa',
+                'Trabalhista',
+                'Eleitoral',
+                'Controle',
+                'Execução de Políticas Públicas',
+                'Intervenção em Instituições Públicas',
+                'Intervenção em Instituições Privadas'
+              ].map((materia, index) => (
+                <div key={index} className="bg-white px-3 py-2 rounded-lg text-center border border-green-200">
+                  <span className="text-gray-800 text-sm font-medium">{materia}</span>
+                </div>
+              ))}
+            </div>
+          </Card>
+        </section>
+
         {/* CTA */}
         <div className="text-center bg-gradient-to-r from-primary-600 to-accent-600 text-white p-8 rounded-xl">
           <h3 className="text-2xl font-bold mb-4">Pronto para Implementar?</h3>
