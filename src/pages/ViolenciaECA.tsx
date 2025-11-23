@@ -639,7 +639,7 @@ export default function ViolenciaECA() {
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center">
             <Shield className="h-8 w-8 text-primary-600 mr-3" />
-            8.1. Recomendação de Caráter Geral nº 06/2025 do CNMP - Prioridade Absoluta
+            9. Recomendação de Caráter Geral nº 06/2025 do CNMP - Prioridade Absoluta
           </h2>
 
           <Card className="mb-6 bg-gradient-to-r from-red-50 to-rose-50 border-l-4 border-red-600">
@@ -1043,7 +1043,7 @@ export default function ViolenciaECA() {
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center">
             <Target className="h-8 w-8 text-primary-600 mr-3" />
-            9. Integração com o Desenvolvimento Harmônico e Sustentável via atuação resolutiva de Planejamento e de Gestão Sistêmicos
+            10. Integração com o Desenvolvimento Harmônico e Sustentável via atuação resolutiva de Planejamento e de Gestão Sistêmicos
           </h2>
 
           <Card className="mb-6 bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600">
