@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Leaf } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Header() {
@@ -18,6 +18,7 @@ export default function Header() {
     { name: 'Violência Doméstica', path: '/cao-na-estrada' },
     { name: 'Violência ECA', path: '/violencia-eca' },
     { name: 'Primeira Infância', path: '/primeira-infancia' },
+    { name: 'Org. Criminosas', path: '/organizacoes-criminosas' },
     { name: 'FAQ', path: '/faq' },
   ]
 
@@ -27,12 +28,6 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <Leaf className="h-8 w-8 text-accent-600" />
-            <span className="text-xl font-bold text-gray-900">Guia DHS</span>
-          </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navigation.map((item) => (

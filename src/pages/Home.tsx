@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield, Route, Baby } from 'lucide-react'
+import { ArrowRight, Target, Lightbulb, Users, BookOpen, CheckCircle, HelpCircle, Calculator, Shield, Route, Baby, AlertTriangle } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function Home() {
@@ -79,6 +79,15 @@ export default function Home() {
       path: '/primeira-infancia',
       color: 'text-pink-600',
       bgColor: 'bg-pink-50',
+      destaque: true
+    },
+    {
+      title: 'Org. Criminosas',
+      description: 'PNAE 2025 - Enfrentamento das Organizações Criminosas Violentas pelo Ministério Público através dos GAECOs.',
+      icon: AlertTriangle,
+      path: '/organizacoes-criminosas',
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
       destaque: true
     },
     {

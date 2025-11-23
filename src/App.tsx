@@ -12,6 +12,7 @@ import PlanoContingencia from './pages/PlanoContingencia'
 import CaoNaEstrada from './pages/CaoNaEstrada'
 import ViolenciaECA from './pages/ViolenciaECA'
 import PrimeiraInfancia from './pages/PrimeiraInfancia'
+import OrganizacoesCriminosas from './pages/OrganizacoesCriminosas'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/cao-na-estrada" element={<CaoNaEstrada />} />
         <Route path="/violencia-eca" element={<ViolenciaECA />} />
         <Route path="/primeira-infancia" element={<PrimeiraInfancia />} />
+        <Route path="/organizacoes-criminosas" element={<OrganizacoesCriminosas />} />
       </Routes>
     </Layout>
   )
