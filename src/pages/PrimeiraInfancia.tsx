@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Baby, TrendingUp, Scale, Users, Target, CheckCircle, AlertTriangle, BookOpen, DollarSign, Building, FileText, ArrowRight, Droplet, Heart } from 'lucide-react'
+import { Baby, TrendingUp, Scale, Users, Target, CheckCircle, AlertTriangle, BookOpen, DollarSign, Building, FileText, ArrowRight, Droplet, Heart, Shield, Gavel } from 'lucide-react'
 import Card from '../components/Card'
 
 export default function PrimeiraInfancia() {
@@ -967,17 +967,420 @@ export default function PrimeiraInfancia() {
           </Card>
         </section>
 
+        {/* Recomendação CNMP nº 06/2025 */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Shield className="h-8 w-8 text-primary-600 mr-3" />
+            7.1. Recomendação de Caráter Geral nº 06/2025 do CNMP - Prioridade Absoluta
+          </h2>
+
+          <Card className="mb-6 bg-gradient-to-r from-red-50 to-rose-50 border-l-4 border-red-600">
+            <h3 className="text-xl font-bold text-red-900 mb-4">⚖️ Prioridade Absoluta na Defesa dos Direitos da Criança e do Adolescente</h3>
+            <p className="text-gray-700 mb-4">
+              Em <strong>28 de agosto de 2025</strong>, a Corregedoria Nacional do Ministério Público expediu a 
+              <strong> Recomendação de Caráter Geral nº 06/2025</strong>, determinando que todos os ramos e unidades do MP 
+              assegurem <strong>prioridade absoluta</strong> na atuação em defesa e promoção dos direitos de crianças e adolescentes.
+            </p>
+            <div className="bg-red-100 p-4 rounded-lg border border-red-300">
+              <p className="text-sm text-red-900 font-semibold mb-2">
+                📌 <strong>Fundamento Constitucional:</strong>
+              </p>
+              <p className="text-sm text-gray-700">
+                A Constituição Federal (art. 227) e o Estatuto da Criança e do Adolescente (art. 4º) estabelecem ser dever 
+                do Estado assegurar, com <strong>absoluta prioridade</strong>, os direitos da criança e do adolescente, 
+                colocando-os a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">🎯 Contexto e Motivação da Recomendação</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação surge em um contexto de fortalecimento institucional da proteção à infância e juventude, 
+              considerando:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <p className="text-sm font-semibold text-blue-900 mb-2">📣 Campanha Primeiros Passos</p>
+                <p className="text-xs text-gray-700">
+                  Iniciativa da Presidência do CNMP voltada à promoção de ações articuladas com diversas instituições, 
+                  tendo como foco a proteção e o cuidado com a infância, com apoio da Corregedoria Nacional e da 
+                  Comissão de Infância, Juventude e Educação (CIJE).
+                </p>
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                <p className="text-sm font-semibold text-purple-900 mb-2">🤝 Atuação Integrada e Intersetorial</p>
+                <p className="text-xs text-gray-700">
+                  Reconhecimento de que a efetivação da prioridade absoluta demanda <strong>convergência entre todas 
+                  as áreas de atuação do MP</strong>, não apenas as Promotorias especializadas da Infância e Juventude.
+                </p>
+              </div>
+
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <p className="text-sm font-semibold text-green-900 mb-2">🔍 Monitoramento Permanente</p>
+                <p className="text-xs text-gray-700">
+                  Necessidade de acompanhamento pelas Corregedorias-Gerais e pela Corregedoria Nacional para assegurar 
+                  a implementação efetiva da prioridade absoluta em todos os órgãos de execução.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">📋 Principais Determinações da Recomendação</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação estabelece <strong>5 dimensões de garantia da prioridade absoluta</strong> (Art. 1º):
+            </p>
+
+            <div className="space-y-4">
+              {/* Dimensão 1 */}
+              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-5 rounded-lg border-l-4 border-indigo-600">
+                <div className="flex items-start">
+                  <div className="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">1</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-indigo-900 text-base mb-2">Tramitação Prioritária</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Todo procedimento extrajudicial ou processo judicial que verse sobre interesse de criança ou 
+                      adolescente deve ter <strong>tramitação prioritária</strong>, independentemente da área de atuação 
+                      (saúde, educação, trabalho, pessoa com deficiência, meio ambiente, criminal, família, etc.).
+                    </p>
+                    <div className="bg-white p-3 rounded border border-indigo-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Um TAC sobre poluição de rio que afeta escola infantil deve ter 
+                        prioridade de tramitação, mesmo sendo conduzido por Promotoria de Meio Ambiente.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 2 */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-lg border-l-4 border-green-600">
+                <div className="flex items-start">
+                  <div className="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">2</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-green-900 text-base mb-2">Precedência no Atendimento</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Crianças, adolescentes e seus responsáveis devem ter <strong>atendimento preferencial</strong> em 
+                      qualquer setor ou área de atuação do Ministério Público.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-green-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Mãe que busca vaga em creche deve ter prioridade no atendimento 
+                        da Promotoria, mesmo em dia de expediente regular com outros atendimentos agendados.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 3 */}
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-lg border-l-4 border-purple-600">
+                <div className="flex items-start">
+                  <div className="bg-purple-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">3</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-purple-900 text-base mb-2">Preferência nas Políticas Institucionais</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      A proteção à infância e juventude deve ter <strong>preferência na formulação e execução</strong> 
+                      dos Planejamentos Estratégicos e Planos Gerais de Atuação de todas as unidades e ramos do MP.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-purple-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Convergência com PNAE 2025:</strong> Esta recomendação reforça a prioridade da 
+                        Primeira Infância estabelecida no Plano Nacional de Atuação Estratégica (seção anterior).
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 4 */}
+              <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-lg border-l-4 border-orange-600">
+                <div className="flex items-start">
+                  <div className="bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">4</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-orange-900 text-base mb-2">Destinação Privilegiada de Recursos</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Recursos orçamentários do MP devem ser <strong>priorizados</strong> para áreas relacionadas à 
+                      proteção da infância e juventude, incluindo:
+                    </p>
+                    <ul className="text-xs text-gray-700 space-y-1 ml-4 mb-2">
+                      <li>• Expansão de Centros de Apoio Operacional (CAOPs)</li>
+                      <li>• Criação de Promotorias e Procuradorias especializadas</li>
+                      <li>• Ampliação de equipes técnicas multidisciplinares de apoio</li>
+                    </ul>
+                    <div className="bg-white p-3 rounded border border-orange-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Priorizar contratação de psicólogos e assistentes sociais 
+                        para apoio às Promotorias da Infância em detrimento de outras aquisições menos urgentes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 5 */}
+              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg border-l-4 border-teal-600">
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">5</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-teal-900 text-base mb-2">Atuação Articulada e Integrada</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Promotorias especializadas de Infância e Juventude devem atuar de forma <strong>articulada</strong> 
+                      com outros órgãos de execução (federal, trabalho, militar, saúde, educação, etc.) para resolução 
+                      célere e eficaz de questões que exijam atuação conjunta.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-teal-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Caso de trabalho infantil em propriedade rural: articulação 
+                        entre Promotoria da Infância + MPT + Promotoria Criminal para atuação coordenada.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-600">
+            <h3 className="text-lg font-bold text-red-900 mb-4">🚨 Prioridade Absoluta Reforçada (Art. 2º, §1º)</h3>
+            <p className="text-gray-700 mb-4">
+              Algumas situações exigem <strong>prioridade ainda mais reforçada</strong>, devendo ser tratadas de forma 
+              equivalente aos processos com réu preso:
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-yellow-500">
+                <div className="text-2xl mb-2">🏠</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Acolhimento Institucional/Familiar</h4>
+                <p className="text-xs text-gray-600">
+                  Crianças e adolescentes em situação de acolhimento (máximo 18 meses)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-orange-500">
+                <div className="text-2xl mb-2">🔨</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Trabalho Infantil</h4>
+                <p className="text-xs text-gray-600">
+                  Casos de exploração de trabalho infantil (violação grave)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-red-500">
+                <div className="text-2xl mb-2">🛡️</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Violência</h4>
+                <p className="text-xs text-gray-600">
+                  Casos de violência, especialmente quando demandarem depoimento especial (Lei 13.431/2017)
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-red-100 p-4 rounded-lg border border-red-300 mt-4">
+              <p className="text-sm text-red-900 font-semibold mb-2">
+                ⏱️ <strong>Prazos Máximos Reforçados:</strong>
+              </p>
+              <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                <li>• <strong>Ação de Destituição do Poder Familiar:</strong> 120 dias (art. 163, ECA)</li>
+                <li>• <strong>Recurso em 2º Grau:</strong> 60 dias (art. 199-D, ECA)</li>
+                <li>• <strong>Ação de Adoção:</strong> 120 dias (art. 47, §10, ECA)</li>
+                <li>• <strong>Acolhimento Institucional:</strong> Máximo de 18 meses (art. 19, §2º, ECA)</li>
+                <li>• <strong>Depoimento Especial:</strong> Agendamento com urgência de réu preso (Lei 13.431/2017)</li>
+              </ul>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+              <Gavel className="h-6 w-6 text-gray-700 mr-3" />
+              Depoimento Especial - Urgência Máxima (Art. 5º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação dedica atenção especial ao <strong>depoimento especial de crianças e adolescentes 
+              vítimas ou testemunhas de violência</strong> (Lei 13.431/2017):
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900 mb-2 text-sm">1. Produção Antecipada de Provas</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  Sempre que necessário o depoimento especial, o MP deve ajuizar com <strong>máxima brevidade</strong> 
+                  ação cautelar de produção antecipada de provas, especialmente nos casos obrigatórios (art. 11, §1º, I e II, Lei 13.431/2017).
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  <strong>Objetivo:</strong> Evitar revitimização, preservar qualidade da prova e prevenir contaminações da memória.
+                </p>
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                <h4 className="font-semibold text-purple-900 mb-2 text-sm">2. Agendamento Prioritário</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  A oitiva da criança ou adolescente deve ser agendada com <strong>prioridade absoluta</strong>, 
+                  em agenda específica e com a <strong>mesma urgência de processos de réu preso</strong>.
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  <strong>Evitar:</strong> Que a audiência seja agendada na pauta comum da Vara, causando violência institucional.
+                </p>
+              </div>
+
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900 mb-2 text-sm">3. Integração ao Procedimento Principal</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  Quando realizado o depoimento especial em produção antecipada, este deve integrar com 
+                  <strong> brevidade</strong> o procedimento que serviu de fundamento, priorizando medidas cabíveis 
+                  e resguardando sigilo (Resolução CNMP 287/2024).
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600">
+            <h3 className="text-lg font-bold text-amber-900 mb-4">🔍 Papel das Corregedorias (Art. 6º)</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação estabelece <strong>13 diretrizes</strong> para atuação das Corregedorias-Gerais do MP 
+              na fiscalização do cumprimento da prioridade absoluta:
+            </p>
+
+            <div className="bg-white p-4 rounded-lg">
+              <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-700">
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Avaliar garantia de prioridade absoluta</strong> na tramitação de procedimentos
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Observar parâmetros de resolutividade</strong> (Carta de Brasília, Rec. 2/2018)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar atuação extrajudicial</strong> (reuniões, visitas, palestras, projetos)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Verificar prioridade em Promotorias não especializadas</strong> (plenas/cumulativas)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Certificar aderência ao PNAE e Planejamento Estratégico</strong>
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Analisar observância de Resoluções CNMP</strong> (269/2023, 287/2024, 293/2024)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar uso de manuais e guias da CIJE/CNMP</strong> e COPEIJ/CNPG
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Reconhecer atuação estrutural</strong> (falta de vagas em creches, SAF, etc.)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Garantir participação de membro especializado</strong> nas correições
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar articulação intersetorial</strong> (fluxos, protocolos, prevenção)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Verificar tramitação prioritária e alocação de recursos</strong>
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Apurar receptividade à atuação integrada</strong> entre áreas diversas
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400 md:col-span-2">
+                  <strong>✓ Verificar condições estruturais mínimas</strong> para implementação (sugerindo melhorias)
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-bold text-green-900 mb-4">🎯 Convergência com a Primeira Infância</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação nº 06/2025 <strong>reforça e operacionaliza</strong> todas as diretrizes apresentadas neste Manual:
+            </p>
+
+            <div className="space-y-3">
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Expansão Qualificada de Creches e Pré-escolas</p>
+                  <p className="text-xs text-gray-600">
+                    Deve ter <strong>tramitação prioritária</strong> em TACs, ACPs e procedimentos extrajudiciais 
+                    (Dimensão 1 da Recomendação)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Prioridade nas Políticas Institucionais</p>
+                  <p className="text-xs text-gray-600">
+                    Alinha-se perfeitamente ao <strong>PNAE 2025</strong> que estabeleceu a Primeira Infância como 
+                    diretriz prioritária (Dimensão 3)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Atuação Estrutural Reconhecida</p>
+                  <p className="text-xs text-gray-600">
+                    As Corregedorias devem <strong>valorizar e reconhecer</strong> a atuação estrutural na falta de 
+                    vagas em creches/pré-escolas (Art. 6º, parágrafo único, VII)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Articulação Intersetorial</p>
+                  <p className="text-xs text-gray-600">
+                    Reforça a necessidade de <strong>convergência entre Promotorias</strong> (Educação, Infância, 
+                    Patrimônio Público) conforme preconizado no Manual CNMP (Dimensão 5)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Recursos Orçamentários Privilegiados</p>
+                  <p className="text-xs text-gray-600">
+                    Fortalece CAOPs de Educação e Infância, amplia equipes multidisciplinares (Dimensão 4)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-100 p-4 rounded-lg border border-green-300 mt-4">
+              <p className="text-sm text-green-900 font-semibold mb-2">
+                🌟 <strong>Impacto Prático:</strong>
+              </p>
+              <p className="text-sm text-gray-700">
+                Esta Recomendação cria uma <strong>obrigatoriedade institucional</strong> de tratar a educação infantil 
+                e todos os direitos da primeira infância com <strong>máxima prioridade</strong> em todas as unidades 
+                do MP brasileiro, reforçando a legitimidade e urgência das ações descritas neste Manual.
+              </p>
+            </div>
+          </Card>
+
+          <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+            <p className="text-sm text-gray-800 mb-2">
+              <strong>📄 Recomendação completa:</strong>
+            </p>
+            <p className="text-xs text-gray-600">
+              <strong>Recomendação de Caráter Geral CNMP nº 06/2025</strong> - Publicada em 28/08/2025 pela 
+              Corregedoria Nacional do Ministério Público. Disponível no Portal do CNMP.
+            </p>
+          </div>
+        </section>
+
         {/* Integração com DHS */}
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center">
             <Target className="h-8 w-8 text-primary-600 mr-3" />
-            8. Integração com o Desenvolvimento Harmônico e Sustentável (DHS)
+            9. Integração com o Desenvolvimento Harmônico e Sustentável (DHS)
           </h2>
 
           <Card className="bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600">
             <h3 className="text-lg font-bold text-teal-900 mb-4">🌱 Educação Infantil como Foco Prioritário do DHS</h3>
             <p className="text-gray-700 mb-4">
-              A expansão qualificada da educação infantil se enquadra perfeitamente nos <strong>critérios de priorização do DHS</strong>:
+              A expansão qualificada da educação infantil se enquadra perfeitamente nos <strong>critérios de priorização do DHS</strong> (Passo 1):
             </p>
 
             <div className="grid md:grid-cols-3 gap-4 mb-4">
@@ -1003,28 +1406,457 @@ export default function PrimeiraInfancia() {
                 </p>
               </div>
             </div>
+          </Card>
 
-            <div className="bg-teal-100 p-4 rounded-lg border border-teal-300">
-              <p className="text-sm text-teal-900 mb-2">
-                <strong>🔗 Aplicação da Matriz de Convergência:</strong>
+          {/* Matriz de Convergência - 6 Eixos */}
+          <Card className="mt-6">
+            <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+              <FileText className="h-6 w-6 text-primary-600 mr-3" />
+              Aplicação da Matriz de Convergência à Educação Infantil
+            </h3>
+            <p className="text-gray-700 mb-6">
+              A <strong>Matriz de Convergência</strong> é o modelo metodológico do DHS para planejar e gerir atividades 
+              de forma integrada e resolutiva. Ela possui <strong>6 eixos orientadores</strong> que, aplicados à educação infantil, 
+              resultam em uma atuação sistêmica e eficaz:
+            </p>
+
+            {/* Eixo I - Ambiente */}
+            <div className="mb-6 bg-gradient-to-r from-blue-50 to-cyan-50 p-5 rounded-lg border-l-4 border-blue-600">
+              <h4 className="font-bold text-blue-900 text-lg mb-3 flex items-center">
+                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">I</div>
+                Eixo I - Ambiente (Habitat de Atuação)
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Identificar o ambiente/território onde ocorrerá a intervenção.
               </p>
-              <ul className="text-xs text-gray-700 space-y-1 ml-4">
-                <li>• <strong>Atuação Interinstitucional:</strong> Articulação entre MP, Executivo, TCE, Conselhos de Educação e sociedade civil</li>
-                <li>• <strong>Planos Alinhados:</strong> Plano de Expansão municipal alinhado ao PNE, FUNDEB e CONAQUEI</li>
-                <li>• <strong>Fluxos Definidos:</strong> Desde o diagnóstico até a ampliação da oferta, com etapas claras e monitoramento</li>
-                <li>• <strong>Convergência Estrutural:</strong> Alinhamento de critérios de qualidade (DONQEEI), financiamento, fiscalização e incentivos</li>
-              </ul>
+              <div className="bg-white p-4 rounded border border-blue-200">
+                <p className="text-sm font-semibold text-blue-900 mb-2">📍 Aplicação na Educação Infantil:</p>
+                <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                  <li>• <strong>Município específico</strong> com déficit de vagas em creches/pré-escolas</li>
+                  <li>• <strong>Região/bairro</strong> com maior concentração de demanda reprimida (mapeamento territorial)</li>
+                  <li>• <strong>Rede municipal de ensino</strong> (diagnóstico de infraestrutura, recursos humanos, gestão)</li>
+                  <li>• <strong>Espaços de articulação</strong>: Conselho Municipal de Educação, Fórum de Educação, audiências públicas</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Eixo II - Atuação Interinstitucional */}
+            <div className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-lg border-l-4 border-green-600">
+              <h4 className="font-bold text-green-900 text-lg mb-3 flex items-center">
+                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">II</div>
+                Eixo II - Atuação Interinstitucional
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Promover a convergência entre instituições públicas, privadas e sociedade civil.
+              </p>
+              <div className="bg-white p-4 rounded border border-green-200">
+                <p className="text-sm font-semibold text-green-900 mb-2">🤝 Aplicação na Educação Infantil:</p>
+                <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-700">
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Executivo Municipal:</strong> Secretaria de Educação, Planejamento, Fazenda
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Tribunal de Contas:</strong> Fiscalização do FUNDEB e aplicação de recursos
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Conselho Municipal de Educação:</strong> Normatização e acompanhamento
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Defensoria Pública:</strong> Representação das famílias e litígios individuais
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Conselhos Tutelares e CMDCA:</strong> Proteção integral da criança
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Sociedade Civil:</strong> Associações de pais, movimentos sociais, academia
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Poder Legislativo:</strong> Orçamento, leis municipais, fiscalização
+                  </div>
+                  <div className="bg-green-50 p-2 rounded">
+                    <strong>Poder Judiciário:</strong> Ações estruturais, controle jurisdicional
+                  </div>
+                </div>
+                <p className="text-xs text-gray-600 mt-3 italic">
+                  💡 A articulação entre essas instituições multiplica a capacidade de resolução e evita ações isoladas e contraditórias.
+                </p>
+              </div>
+            </div>
+
+            {/* Eixo III - Atuação Institucional */}
+            <div className="mb-6 bg-gradient-to-r from-purple-50 to-indigo-50 p-5 rounded-lg border-l-4 border-purple-600">
+              <h4 className="font-bold text-purple-900 text-lg mb-3 flex items-center">
+                <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">III</div>
+                Eixo III - Atuação Institucional do MP
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Fortalecer a atuação interna e integrada do Ministério Público.
+              </p>
+              <div className="bg-white p-4 rounded border border-purple-200">
+                <p className="text-sm font-semibold text-purple-900 mb-2">🏛️ Aplicação na Educação Infantil:</p>
+                <ul className="text-xs text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>Convergência entre Promotorias:</strong> Educação + Infância + Defesa do Patrimônio Público + Defesa dos Direitos Humanos</li>
+                  <li>• <strong>Articulação com CAOP:</strong> Assessoria técnica especializada em educação</li>
+                  <li>• <strong>Intercâmbio entre comarcas:</strong> Compartilhar boas práticas, TACs-modelo, peças processuais</li>
+                  <li>• <strong>Capacitação contínua:</strong> Formação em políticas educacionais, financiamento (FUNDEB), jurisprudência (STF)</li>
+                  <li>• <strong>Instrumentos institucionais:</strong> Recomendações, TACs, Planos de Atuação integrados</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Eixo IV - Abordagens */}
+            <div className="mb-6 bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-lg border-l-4 border-orange-600">
+              <h4 className="font-bold text-orange-900 text-lg mb-3 flex items-center">
+                <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">IV</div>
+                Eixo IV - Abordagens (Consciência, Meios e Incentivos)
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Trabalhar três dimensões: conscientização sobre o problema, disponibilização de meios para solução e criação de incentivos.
+              </p>
+              <div className="space-y-3">
+                <div className="bg-white p-4 rounded border border-orange-200">
+                  <p className="text-sm font-semibold text-orange-900 mb-2">🧠 4.1 - Conscientização e Reconhecimento da Necessidade</p>
+                  <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                    <li>• Divulgar dados: magnitude do déficit (632 mil crianças em filas), impacto científico (neurociência, Curva de Heckman)</li>
+                    <li>• Evidenciar violação de direitos: CF/88, ECA, LDB, PNE, ODS 4</li>
+                    <li>• Sensibilizar gestores sobre o custo social do não atendimento e o benefício do investimento precoce</li>
+                    <li>• Campanhas de comunicação: "Primeira Infância Primeiro", "Primeiros Passos" (CNMP)</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-4 rounded border border-orange-200">
+                  <p className="text-sm font-semibold text-orange-900 mb-2">🛠️ 4.2 - Meios de Concretização</p>
+                  <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                    <li>• <strong>Financiamento:</strong> FUNDEB (mínimo 50% VAAT para educação infantil), Salário-Educação, PAR/FNDE</li>
+                    <li>• <strong>Infraestrutura:</strong> Retomada de obras paralisadas, construção de novas unidades, adequação de espaços</li>
+                    <li>• <strong>Recursos Humanos:</strong> Concursos públicos, formação continuada, plano de carreira</li>
+                    <li>• <strong>Gestão:</strong> Sistema de vagas único, critérios transparentes de matrícula, monitoramento de lista de espera</li>
+                    <li>• <strong>Metodologias:</strong> Manual CNMP, parâmetros DONQEEI, Planos de Expansão Qualificada</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white p-4 rounded border border-orange-200">
+                  <p className="text-sm font-semibold text-orange-900 mb-2">🎁 4.3 - Incentivos</p>
+                  <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                    <li>• <strong>Prêmios e reconhecimento:</strong> Destacar municípios que universalizam educação infantil com qualidade</li>
+                    <li>• <strong>Cooperação técnica:</strong> Apoio de universidades, consultorias, capacitações para gestores que aderirem aos planos</li>
+                    <li>• <strong>Evitar litígios:</strong> TACs que garantem segurança jurídica e previsibilidade ao gestor</li>
+                    <li>• <strong>Visibilidade positiva:</strong> Divulgação de casos de sucesso (São Paulo 150k vagas, Joinville 9k vagas)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Eixo V - Etapas */}
+            <div className="mb-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg border-l-4 border-teal-600">
+              <h4 className="font-bold text-teal-900 text-lg mb-3 flex items-center">
+                <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">V</div>
+                Eixo V - Etapas de Implementação (Passo 2.b)
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Seguir uma sequência lógica de atividades ordenadas e interligadas.
+              </p>
+              <div className="bg-white p-4 rounded border border-teal-200">
+                <p className="text-sm font-semibold text-teal-900 mb-3">📋 13 Atividades Adaptadas à Educação Infantil:</p>
+                <div className="space-y-2">
+                  {[
+                    {num: 1, titulo: 'Fomentar o DHS em Ambientes de Convergência', desc: 'Participar de reuniões do CME, Fóruns de Educação, audiências públicas sobre educação infantil'},
+                    {num: 2, titulo: 'Reunir Documentos e Elaborar Diagnósticos', desc: 'Censo Escolar, lista de espera, mapeamento de demanda, obras paralisadas, dados FUNDEB'},
+                    {num: 3, titulo: 'Executar os Encaminhamentos', desc: 'Notificações, requisições de informações, reuniões técnicas com Secretaria de Educação'},
+                    {num: 4, titulo: 'Criar Critérios e Fluxos Operacionais', desc: 'Definir parâmetros DONQEEI, fluxo de matrícula, gestão de filas, cronograma de expansão'},
+                    {num: 5, titulo: 'Formalizar Convergências', desc: 'Elaborar TAC com Plano de Expansão, Recomendações, Decretos Municipais sobre sistema de vagas'},
+                    {num: 6, titulo: 'Realizar Eventos Interinstitucionais', desc: 'Seminários sobre PNE, encontros com gestores, workshops sobre financiamento'},
+                    {num: 7, titulo: 'Realizar Capacitações Institucionais', desc: 'Formação de promotores, servidores municipais, conselheiros sobre educação infantil'},
+                    {num: 8, titulo: 'Criar Estruturas de Resolução de Problemas', desc: 'Comitê interinstitucional de monitoramento, Mesa de Diálogo, Grupo de Trabalho Técnico'},
+                    {num: 9, titulo: 'Promover Ações Contra Irregularidades', desc: 'Representações ao TCE (FUNDEB), ACPs estruturais, responsabilização de gestores omissos'},
+                    {num: 10, titulo: 'Implementar Estratégias de Comunicação e Formação', desc: 'Campanha "Creche é Direito", cartilhas para pais, transparência de dados'},
+                    {num: 11, titulo: 'Desenvolver Projetos e Políticas Públicas', desc: 'Induzir Plano Municipal de Educação, políticas de formação docente, padrões de qualidade'},
+                    {num: 12, titulo: 'Promover a Convergência Estrutural', desc: 'Alinhar planejamento, orçamento, indicadores, fiscalização, incentivos (ver detalhamento abaixo)'},
+                    {num: 13, titulo: 'Revisar e Aperfeiçoar Periodicamente', desc: 'Monitoramento anual do Plano de Expansão, ajustes de metas, avaliação de qualidade'}
+                  ].map((atividade) => (
+                    <div key={atividade.num} className="flex items-start bg-teal-50 p-3 rounded">
+                      <div className="bg-teal-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0">
+                        {atividade.num}
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-xs font-semibold text-gray-800">{atividade.titulo}</p>
+                        <p className="text-xs text-gray-600 mt-1">{atividade.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Eixo VI - Fundamento */}
+            <div className="mb-6 bg-gradient-to-r from-indigo-50 to-purple-50 p-5 rounded-lg border-l-4 border-indigo-600">
+              <h4 className="font-bold text-indigo-900 text-lg mb-3 flex items-center">
+                <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">VI</div>
+                Eixo VI - Fundamento (Critérios do DHS)
+              </h4>
+              <p className="text-sm text-gray-700 mb-3">
+                <strong>Definição:</strong> Sempre partir do foco prioritário considerando os critérios sistêmicos do DHS/PGS.
+              </p>
+              <div className="bg-white p-4 rounded border border-indigo-200">
+                <p className="text-sm font-semibold text-indigo-900 mb-2">⚖️ Aplicação na Educação Infantil:</p>
+                <ul className="text-xs text-gray-700 space-y-2 ml-4">
+                  <li>• <strong>Conveniência:</strong> Educação infantil é área com amadurecimento jurídico (STF, CNJ), disponibilidade de dados (Censo Escolar) e instrumentos consolidados (Manual CNMP)</li>
+                  <li>• <strong>Oportunidade:</strong> Campanhas nacionais (Primeiros Passos, PNAE 2025), janela demográfica favorável, FUNDEB reformulado</li>
+                  <li>• <strong>Urgência:</strong> 632 mil crianças em filas, janela crítica de desenvolvimento (0-6 anos), violação de direito fundamental</li>
+                  <li>• <strong>Pensamento Sistêmico:</strong> Compreender causas raízes (subfinanciamento, má gestão, falta de planejamento), não apenas sintomas (déficit de vagas)</li>
+                  <li>• <strong>Visão de Longo Prazo:</strong> Expansão sustentável (não apenas eleitoreira), com qualidade, equidade e permanência</li>
+                </ul>
+              </div>
             </div>
           </Card>
 
+          {/* Convergência Estrutural Detalhada */}
+          <Card className="mt-6 bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-yellow-600">
+            <h3 className="text-xl font-bold text-yellow-900 mb-4 flex items-center">
+              <Users className="h-6 w-6 mr-3" />
+              Convergência Estrutural na Educação Infantil
+            </h3>
+            <p className="text-gray-700 mb-4">
+              A <strong>Convergência Estrutural</strong> é o processo de alinhar sistematicamente as normativas e instrumentos 
+              diários para que fomentem, meçam e valorizem as atuações resolutivas. Na educação infantil, isso significa 
+              garantir que toda a "rotina institucional" impulsione a expansão qualificada:
+            </p>
+
+            <div className="bg-yellow-100 p-4 rounded-lg border border-yellow-300 mb-4">
+              <p className="text-sm text-yellow-900 font-semibold">
+                ⚠️ <strong>Princípio Fundamental:</strong> Se a estrutura (rotina) não for alterada, os comportamentos antigos persistirão. 
+                Não adianta criar planos se os incentivos, fiscalização e valoração continuarem premiando a inércia.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-bold text-gray-800 text-lg">8 Aspectos a serem Alinhados:</h4>
+
+              {/* Aspecto 1 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                <div className="flex items-start">
+                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-blue-900 mb-2">Planos e Planejamentos</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Garantir que o <strong>Plano Municipal de Educação (PME)</strong>, o 
+                      <strong> Plano Plurianual (PPA)</strong> e a <strong>Lei de Diretrizes Orçamentárias (LDO)</strong> contenham 
+                      metas quantitativas e qualitativas de expansão da educação infantil, alinhadas ao PNE e ao CONAQUEI.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Se o PME prevê universalização, mas o PPA não destina recursos, há incoerência estrutural.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 2 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                <div className="flex items-start">
+                  <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-green-900 mb-2">Critérios de Inspeções e Fiscalizações</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> O <strong>Tribunal de Contas</strong> deve fiscalizar não apenas se 
+                      o mínimo constitucional em educação foi aplicado, mas <strong>se os 50% do FUNDEB destinados à educação 
+                      infantil (VAAT) foram corretamente utilizados</strong> e se houve evolução no atendimento da demanda.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Critérios de auditoria devem incluir indicadores de acesso, qualidade (DONQEEI) e equidade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 3 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                <div className="flex items-start">
+                  <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-purple-900 mb-2">Fluxos Operacionais</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Estabelecer <strong>fluxo transparente de matrícula</strong>, com 
+                      cadastro único, critérios objetivos de priorização (vulnerabilidade social, proximidade) e 
+                      <strong> publicização mensal da lista de espera</strong>.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Fluxo claro evita clientelismo, favorecimentos e falta de transparência.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 4 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+                <div className="flex items-start">
+                  <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">4</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-orange-900 mb-2">Meios de Concretização e Realização</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Garantir recursos orçamentários específicos para <strong>obras de creches 
+                      (construção/reforma)</strong>, <strong>concursos públicos para professores e auxiliares</strong> e 
+                      <strong> programas de formação continuada</strong>.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Destinar 0,5% da receita municipal exclusivamente para expansão pode ser formalizado em lei.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 5 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+                <div className="flex items-start">
+                  <div className="bg-pink-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">5</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-pink-900 mb-2">Mensuração, Mapeamento e Indicadores</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Criar <strong>Painel Público de Monitoramento</strong> com indicadores 
+                      como: taxa de atendimento (0-3 e 4-5 anos), tamanho da fila de espera, número de vagas criadas/ano, 
+                      relação criança/educador, percentual de professores com formação adequada.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 "O que não é medido, não é gerenciado" - indicadores claros permitem cobrança objetiva.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 6 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-teal-500">
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">6</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-teal-900 mb-2">Modos de Valoração do Desempenho</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Incluir na <strong>avaliação de desempenho de secretários, diretores 
+                      e gestores</strong> critérios relacionados à ampliação do acesso e à melhoria da qualidade (não apenas 
+                      indicadores financeiros). Reconhecer publicamente municípios que atingirem metas.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Se o gestor é avaliado apenas por "economia", ele não priorizará expansão de vagas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 7 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+                <div className="flex items-start">
+                  <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">7</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-indigo-900 mb-2">Comunicação e Formação</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Realizar <strong>campanhas contínuas de conscientização</strong> sobre 
+                      o direito à educação infantil, importância da primeira infância e como buscar vagas. Formar gestores, 
+                      conselheiros e profissionais da educação sobre FUNDEB, PNE, DONQEEI.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Sociedade informada cobra mais; gestores capacitados implementam melhor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Aspecto 8 */}
+              <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                <div className="flex items-start">
+                  <div className="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">8</div>
+                  <div className="flex-1">
+                    <h5 className="font-semibold text-red-900 mb-2">Desenvolvimento de Incentivos</h5>
+                    <p className="text-xs text-gray-700 mb-2">
+                      <strong>Exemplo Prático:</strong> Criar <strong>"Prêmio Município Amigo da Primeira Infância"</strong>, 
+                      priorizar repasses estaduais/federais para municípios com planos de expansão, oferecer assistência técnica 
+                      (consultorias, capacitações) para gestões que se comprometerem com metas.
+                    </p>
+                    <p className="text-xs text-gray-600 italic">
+                      💡 Incentivos positivos são mais eficazes que apenas punições ou cobranças.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 bg-white p-4 rounded-lg border border-yellow-400">
+              <p className="text-sm text-gray-800 font-semibold mb-2">
+                🔗 <strong>Resultado da Convergência Estrutural:</strong>
+              </p>
+              <p className="text-xs text-gray-700">
+                Quando todos esses 8 aspectos estão alinhados, a expansão da educação infantil deixa de depender da 
+                "boa vontade" de um gestor específico e passa a ser <strong>impulsionada pela própria estrutura institucional</strong>. 
+                A sustentabilidade da política pública é garantida, independentemente de mudanças políticas.
+              </p>
+            </div>
+          </Card>
+
+          {/* Benefícios da Integração DHS */}
+          <Card className="mt-6 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-xl font-bold text-green-900 mb-4">✅ Benefícios da Integração DHS na Educação Infantil</h3>
+            
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h4 className="font-semibold text-green-800 mb-3 text-sm">Para as Instituições:</h4>
+                <ul className="text-xs text-gray-700 space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Redução da judicialização:</strong> Ações estruturais substituem milhares de processos individuais</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Eficiência institucional:</strong> Convergência entre MP, TCE, Executivo, Judiciário evita duplicidade</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Segurança jurídica:</strong> TACs e planos pactuados dão previsibilidade ao gestor</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Aprendizado institucional:</strong> Boas práticas documentadas e replicáveis</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Sustentabilidade:</strong> Políticas estruturais resistem a trocas de gestão</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded-lg shadow">
+                <h4 className="font-semibold text-green-800 mb-3 text-sm">Para Crianças, Famílias e Sociedade:</h4>
+                <ul className="text-xs text-gray-700 space-y-2">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Universalização do acesso:</strong> Todas as crianças 0-6 anos com vaga garantida</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Qualidade assegurada:</strong> Padrões DONQEEI, professores qualificados, infraestrutura adequada</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Equidade:</strong> Priorização de vulneráveis, combate a clientelismo e privilégios</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Desenvolvimento integral:</strong> Janela de oportunidade neurológica aproveitada (0-6 anos)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                    <span><strong>Retorno social:</strong> Redução de desigualdades, empoderamento feminino, melhor desempenho escolar futuro</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </Card>
+
+          {/* Link para Implementação */}
           <Card className="bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600 mt-6">
             <div className="flex items-start">
               <FileText className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="font-semibold text-amber-900 mb-2">📚 Saiba Mais sobre DHS</h4>
+                <h4 className="font-semibold text-amber-900 mb-2">📚 Aprofunde-se no DHS</h4>
                 <p className="text-sm text-gray-700 mb-3">
-                  Para compreender em detalhes a Matriz de Convergência e como aplicá-la ao contexto da educação infantil, 
-                  visite as páginas de metodologia e implementação deste guia.
+                  Para compreender em detalhes todos os aspectos da Matriz de Convergência, acesse o Guia de Implementação 
+                  com orientações gerais, passos práticos e documentos de referência.
                 </p>
                 <Link 
                   to="/implementacao" 
