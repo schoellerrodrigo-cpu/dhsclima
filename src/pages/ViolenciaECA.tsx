@@ -635,6 +635,410 @@ export default function ViolenciaECA() {
           </Card>
         </section>
 
+        {/* Recomendação CNMP nº 06/2025 */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Shield className="h-8 w-8 text-primary-600 mr-3" />
+            8.1. Recomendação de Caráter Geral nº 06/2025 do CNMP - Prioridade Absoluta
+          </h2>
+
+          <Card className="mb-6 bg-gradient-to-r from-red-50 to-rose-50 border-l-4 border-red-600">
+            <h3 className="text-xl font-bold text-red-900 mb-4">⚖️ Prioridade Absoluta na Defesa dos Direitos da Criança e do Adolescente</h3>
+            <p className="text-gray-700 mb-4">
+              Em <strong>28 de agosto de 2025</strong>, a Corregedoria Nacional do Ministério Público expediu a 
+              <strong> Recomendação de Caráter Geral nº 06/2025</strong>, determinando que todos os ramos e unidades do MP 
+              assegurem <strong>prioridade absoluta</strong> na atuação em defesa e promoção dos direitos de crianças e adolescentes.
+            </p>
+            <div className="bg-red-100 p-4 rounded-lg border border-red-300">
+              <p className="text-sm text-red-900 font-semibold mb-2">
+                📌 <strong>Fundamento Constitucional:</strong>
+              </p>
+              <p className="text-sm text-gray-700">
+                A Constituição Federal (art. 227) e o Estatuto da Criança e do Adolescente (art. 4º) estabelecem ser dever 
+                do Estado assegurar, com <strong>absoluta prioridade</strong>, os direitos da criança e do adolescente, 
+                colocando-os a salvo de toda forma de negligência, discriminação, exploração, violência, crueldade e opressão.
+              </p>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">🎯 Contexto e Motivação da Recomendação</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação surge em um contexto de fortalecimento institucional da proteção à infância e juventude, 
+              considerando:
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <p className="text-sm font-semibold text-blue-900 mb-2">📣 Campanha Primeiros Passos</p>
+                <p className="text-xs text-gray-700">
+                  Iniciativa da Presidência do CNMP voltada à promoção de ações articuladas com diversas instituições, 
+                  tendo como foco a proteção e o cuidado com a infância, com apoio da Corregedoria Nacional e da 
+                  Comissão de Infância, Juventude e Educação (CIJE).
+                </p>
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                <p className="text-sm font-semibold text-purple-900 mb-2">🤝 Atuação Integrada e Intersetorial</p>
+                <p className="text-xs text-gray-700">
+                  Reconhecimento de que a efetivação da prioridade absoluta demanda <strong>convergência entre todas 
+                  as áreas de atuação do MP</strong>, não apenas as Promotorias especializadas da Infância e Juventude.
+                </p>
+              </div>
+
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <p className="text-sm font-semibold text-green-900 mb-2">🔍 Monitoramento Permanente</p>
+                <p className="text-xs text-gray-700">
+                  Necessidade de acompanhamento pelas Corregedorias-Gerais e pela Corregedoria Nacional para assegurar 
+                  a implementação efetiva da prioridade absoluta em todos os órgãos de execução.
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">📋 Principais Determinações da Recomendação</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação estabelece <strong>5 dimensões de garantia da prioridade absoluta</strong> (Art. 1º):
+            </p>
+
+            <div className="space-y-4">
+              {/* Dimensão 1 */}
+              <div className="bg-gradient-to-r from-indigo-50 to-blue-50 p-5 rounded-lg border-l-4 border-indigo-600">
+                <div className="flex items-start">
+                  <div className="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">1</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-indigo-900 text-base mb-2">Tramitação Prioritária</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Todo procedimento extrajudicial ou processo judicial que verse sobre interesse de criança ou 
+                      adolescente deve ter <strong>tramitação prioritária</strong>, independentemente da área de atuação 
+                      (saúde, educação, trabalho, pessoa com deficiência, meio ambiente, criminal, família, etc.).
+                    </p>
+                    <div className="bg-white p-3 rounded border border-indigo-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Um procedimento criminal envolvendo abuso sexual contra 
+                        criança deve ter prioridade máxima, com agendamento de audiências e análise de provas de forma célere.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 2 */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-lg border-l-4 border-green-600">
+                <div className="flex items-start">
+                  <div className="bg-green-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">2</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-green-900 text-base mb-2">Precedência no Atendimento</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Crianças, adolescentes e seus responsáveis devem ter <strong>atendimento preferencial</strong> em 
+                      qualquer setor ou área de atuação do Ministério Público.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-green-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Família com criança vítima de violência doméstica deve ter 
+                        atendimento imediato na Promotoria, sem necessidade de agendamento prévio.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 3 */}
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-5 rounded-lg border-l-4 border-purple-600">
+                <div className="flex items-start">
+                  <div className="bg-purple-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">3</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-purple-900 text-base mb-2">Preferência nas Políticas Institucionais</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      A proteção à infância e juventude deve ter <strong>preferência na formulação e execução</strong> 
+                      dos Planejamentos Estratégicos e Planos Gerais de Atuação de todas as unidades e ramos do MP.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-purple-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Convergência com PNAE 2025:</strong> Esta recomendação reforça a prioridade da 
+                        Primeira Infância estabelecida no Plano Nacional de Atuação Estratégica.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 4 */}
+              <div className="bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-lg border-l-4 border-orange-600">
+                <div className="flex items-start">
+                  <div className="bg-orange-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">4</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-orange-900 text-base mb-2">Destinação Privilegiada de Recursos</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Recursos orçamentários do MP devem ser <strong>priorizados</strong> para áreas relacionadas à 
+                      proteção da infância e juventude, incluindo:
+                    </p>
+                    <ul className="text-xs text-gray-700 space-y-1 ml-4 mb-2">
+                      <li>• Expansão de Centros de Apoio Operacional (CAOPs)</li>
+                      <li>• Criação de Promotorias e Procuradorias especializadas</li>
+                      <li>• Ampliação de equipes técnicas multidisciplinares de apoio</li>
+                    </ul>
+                    <div className="bg-white p-3 rounded border border-orange-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Priorizar contratação de psicólogos e assistentes sociais 
+                        para apoio às Promotorias da Infância em detrimento de outras aquisições menos urgentes.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dimensão 5 */}
+              <div className="bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg border-l-4 border-teal-600">
+                <div className="flex items-start">
+                  <div className="bg-teal-600 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold mr-3 flex-shrink-0">5</div>
+                  <div className="flex-1">
+                    <h4 className="font-bold text-teal-900 text-base mb-2">Atuação Articulada e Integrada</h4>
+                    <p className="text-sm text-gray-700 mb-2">
+                      Promotorias especializadas de Infância e Juventude devem atuar de forma <strong>articulada</strong> 
+                      com outros órgãos de execução (federal, trabalho, militar, saúde, educação, etc.) para resolução 
+                      célere e eficaz de questões que exijam atuação conjunta.
+                    </p>
+                    <div className="bg-white p-3 rounded border border-teal-200 mt-2">
+                      <p className="text-xs text-gray-700">
+                        <strong>💡 Exemplo Prático:</strong> Caso de violência sexual em escola: articulação entre 
+                        Promotoria da Infância + Educação + Criminal para resposta coordenada e integral.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-red-50 to-pink-50 border-l-4 border-red-600">
+            <h3 className="text-lg font-bold text-red-900 mb-4">🚨 Prioridade Absoluta Reforçada (Art. 2º, §1º)</h3>
+            <p className="text-gray-700 mb-4">
+              Algumas situações exigem <strong>prioridade ainda mais reforçada</strong>, devendo ser tratadas de forma 
+              equivalente aos processos com réu preso:
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-yellow-500">
+                <div className="text-2xl mb-2">🏠</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Acolhimento Institucional/Familiar</h4>
+                <p className="text-xs text-gray-600">
+                  Crianças e adolescentes em situação de acolhimento (máximo 18 meses)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-orange-500">
+                <div className="text-2xl mb-2">🔨</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Trabalho Infantil</h4>
+                <p className="text-xs text-gray-600">
+                  Casos de exploração de trabalho infantil (violação grave)
+                </p>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow border-l-4 border-red-500">
+                <div className="text-2xl mb-2">🛡️</div>
+                <h4 className="font-semibold text-gray-800 mb-2 text-sm">Violência</h4>
+                <p className="text-xs text-gray-600">
+                  Casos de violência, especialmente quando demandarem depoimento especial (Lei 13.431/2017)
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-red-100 p-4 rounded-lg border border-red-300 mt-4">
+              <p className="text-sm text-red-900 font-semibold mb-2">
+                ⏱️ <strong>Prazos Máximos Reforçados:</strong>
+              </p>
+              <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                <li>• <strong>Ação de Destituição do Poder Familiar:</strong> 120 dias (art. 163, ECA)</li>
+                <li>• <strong>Recurso em 2º Grau:</strong> 60 dias (art. 199-D, ECA)</li>
+                <li>• <strong>Ação de Adoção:</strong> 120 dias (art. 47, §10, ECA)</li>
+                <li>• <strong>Acolhimento Institucional:</strong> Máximo de 18 meses (art. 19, §2º, ECA)</li>
+                <li>• <strong>Depoimento Especial:</strong> Agendamento com urgência de réu preso (Lei 13.431/2017)</li>
+              </ul>
+            </div>
+          </Card>
+
+          <Card className="mb-6">
+            <h3 className="text-lg font-bold text-gray-800 mb-4 flex items-center">
+              <Gavel className="h-6 w-6 text-gray-700 mr-3" />
+              Depoimento Especial - Urgência Máxima (Art. 5º)
+            </h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação dedica atenção especial ao <strong>depoimento especial de crianças e adolescentes 
+              vítimas ou testemunhas de violência</strong> (Lei 13.431/2017):
+            </p>
+
+            <div className="space-y-3">
+              <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                <h4 className="font-semibold text-blue-900 mb-2 text-sm">1. Produção Antecipada de Provas</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  Sempre que necessário o depoimento especial, o MP deve ajuizar com <strong>máxima brevidade</strong> 
+                  ação cautelar de produção antecipada de provas, especialmente nos casos obrigatórios (art. 11, §1º, I e II, Lei 13.431/2017).
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  <strong>Objetivo:</strong> Evitar revitimização, preservar qualidade da prova e prevenir contaminações da memória.
+                </p>
+              </div>
+
+              <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                <h4 className="font-semibold text-purple-900 mb-2 text-sm">2. Agendamento Prioritário</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  A oitiva da criança ou adolescente deve ser agendada com <strong>prioridade absoluta</strong>, 
+                  em agenda específica e com a <strong>mesma urgência de processos de réu preso</strong>.
+                </p>
+                <p className="text-xs text-gray-600 italic">
+                  <strong>Evitar:</strong> Que a audiência seja agendada na pauta comum da Vara, causando violência institucional.
+                </p>
+              </div>
+
+              <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                <h4 className="font-semibold text-green-900 mb-2 text-sm">3. Integração ao Procedimento Principal</h4>
+                <p className="text-xs text-gray-700 mb-2">
+                  Quando realizado o depoimento especial em produção antecipada, este deve integrar com 
+                  <strong> brevidade</strong> o procedimento que serviu de fundamento, priorizando medidas cabíveis 
+                  e resguardando sigilo (Resolução CNMP 287/2024).
+                </p>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="mb-6 bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600">
+            <h3 className="text-lg font-bold text-amber-900 mb-4">🔍 Papel das Corregedorias (Art. 6º)</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação estabelece <strong>13 diretrizes</strong> para atuação das Corregedorias-Gerais do MP 
+              na fiscalização do cumprimento da prioridade absoluta:
+            </p>
+
+            <div className="bg-white p-4 rounded-lg">
+              <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-700">
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Avaliar garantia de prioridade absoluta</strong> na tramitação de procedimentos
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Observar parâmetros de resolutividade</strong> (Carta de Brasília, Rec. 2/2018)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar atuação extrajudicial</strong> (reuniões, visitas, palestras, projetos)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Verificar prioridade em Promotorias não especializadas</strong> (plenas/cumulativas)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Certificar aderência ao PNAE e Planejamento Estratégico</strong>
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Analisar observância de Resoluções CNMP</strong> (269/2023, 287/2024, 293/2024)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar uso de manuais e guias da CIJE/CNMP</strong> e COPEIJ/CNPG
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Reconhecer atuação estrutural</strong> (violência, acolhimento, SAF, etc.)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Garantir participação de membro especializado</strong> nas correições
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Valorizar articulação intersetorial</strong> (fluxos, protocolos, prevenção)
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Verificar tramitação prioritária e alocação de recursos</strong>
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400">
+                  <strong>✓ Apurar receptividade à atuação integrada</strong> entre áreas diversas
+                </div>
+                <div className="bg-amber-50 p-3 rounded border-l-4 border-amber-400 md:col-span-2">
+                  <strong>✓ Verificar condições estruturais mínimas</strong> para implementação (sugerindo melhorias)
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+            <h3 className="text-lg font-bold text-green-900 mb-4">🎯 Convergência com o Enfrentamento à Violência</h3>
+            <p className="text-gray-700 mb-4">
+              A Recomendação nº 06/2025 <strong>reforça e operacionaliza</strong> todas as diretrizes apresentadas neste Guia:
+            </p>
+
+            <div className="space-y-3">
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Casos de Violência com Prioridade Máxima</p>
+                  <p className="text-xs text-gray-600">
+                    Processos envolvendo violência devem ter <strong>urgência de réu preso</strong>, especialmente 
+                    quando demandarem depoimento especial (Art. 2º, §1º)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Depoimento Especial como Prioridade</p>
+                  <p className="text-xs text-gray-600">
+                    Agendamento com <strong>máxima brevidade</strong> e produção antecipada de provas para evitar 
+                    revitimização (Art. 5º + Lei 13.431/2017)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Atuação Integrada Obrigatória</p>
+                  <p className="text-xs text-gray-600">
+                    Convergência entre Promotorias da Infância, Criminal, Violência Doméstica e outras áreas 
+                    para resposta coordenada (Dimensão 5)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Comitês de Gestão Colegiada Valorizados</p>
+                  <p className="text-xs text-gray-600">
+                    As Corregedorias devem <strong>reconhecer e valorizar</strong> a articulação intersetorial 
+                    e construção de fluxos integrados (Art. 6º, IX)
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-800">Recursos Privilegiados para Equipes Multidisciplinares</p>
+                  <p className="text-xs text-gray-600">
+                    Priorização orçamentária para psicólogos e assistentes sociais que atuam no atendimento 
+                    de vítimas de violência (Dimensão 4)
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-green-100 p-4 rounded-lg border border-green-300 mt-4">
+              <p className="text-sm text-green-900 font-semibold mb-2">
+                🌟 <strong>Impacto Prático:</strong>
+              </p>
+              <p className="text-sm text-gray-700">
+                Esta Recomendação cria uma <strong>obrigatoriedade institucional</strong> de tratar casos de violência 
+                contra crianças e adolescentes com <strong>máxima prioridade</strong> em todas as unidades do MP brasileiro, 
+                reforçando a legitimidade e urgência das ações integradas descritas neste Guia.
+              </p>
+            </div>
+          </Card>
+
+          <div className="bg-red-50 p-4 rounded-lg border-l-4 border-red-600">
+            <p className="text-sm text-gray-800 mb-2">
+              <strong>📄 Recomendação completa:</strong>
+            </p>
+            <p className="text-xs text-gray-600">
+              <strong>Recomendação de Caráter Geral CNMP nº 06/2025</strong> - Publicada em 28/08/2025 pela 
+              Corregedoria Nacional do Ministério Público. Disponível no Portal do CNMP.
+            </p>
+          </div>
+        </section>
+
         {/* Integração com DHS */}
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center">
