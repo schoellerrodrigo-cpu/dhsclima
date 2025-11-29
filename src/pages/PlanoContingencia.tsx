@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { AlertTriangle, Shield, Users, ClipboardCheck, FileText, Play, RefreshCw, CheckCircle, ChevronDown, ChevronUp, Download, Save, BarChart3, Calendar, MapPin, Phone, Mail, User } from 'lucide-react'
+import { AlertTriangle, Shield, Users, ClipboardCheck, FileText, Play, RefreshCw, CheckCircle, ChevronDown, ChevronUp, Download, Save, BarChart3, Calendar, MapPin, Phone, Mail, User, Target, ArrowRight } from 'lucide-react'
 import Card from '../components/Card'
 import Accordion from '../components/Accordion'
 import ProgressBar from '../components/ProgressBar'
@@ -1057,133 +1057,669 @@ BASE LEGAL:
         </div>
       </Card>
 
-      {/* Conclusão e Integração com DHS */}
-      <Card className="bg-gradient-to-r from-blue-50 to-green-50 border-2 border-blue-600">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">🔗 Integração com o DHS</h2>
-        <p className="text-gray-700 mb-4">
-          O guia de implementação da Matriz de Convergência do DHS via atuação resolutiva de PGS contribui para fomentar como foco prioritário a elaboração dos planos de contingência:
+      {/* NUPDECs - Núcleos Comunitários */}
+      <Card className="mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600">
+        <h3 className="text-lg font-bold text-blue-900 mb-3 flex items-center">
+          <Users className="h-6 w-6 mr-2" />
+          👥 NUPDECs - Núcleos Comunitários de Proteção e Defesa Civil
+        </h3>
+        
+        <div className="bg-white p-4 rounded-lg mb-3">
+          <p className="text-sm text-gray-700 mb-3">
+            <strong>Os NUPDECs são o elo mais importante do Sistema Nacional de Defesa Civil</strong>, formados por voluntários 
+            da própria comunidade que atuam como ponte entre a população local e os órgãos de Defesa Civil.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-3 mb-3">
+            <div className="bg-blue-50 p-3 rounded">
+              <p className="text-xs font-semibold text-blue-900 mb-2">🎯 Objetivos Principais:</p>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• <strong>Participação:</strong> Engajamento ativo da comunidade</li>
+                <li>• <strong>Prevenção:</strong> Cultura de resiliência e preparação</li>
+                <li>• Conectar comunidade, empresas, escolas e órgãos públicos</li>
+              </ul>
+            </div>
+            
+            <div className="bg-blue-50 p-3 rounded">
+              <p className="text-xs font-semibold text-blue-900 mb-2">⚡ Atividades Essenciais:</p>
+              <ul className="text-xs text-gray-700 space-y-1">
+                <li>• Mapeamento participativo de áreas de risco</li>
+                <li>• Monitoramento e alerta precoce de perigos</li>
+                <li>• Educação preventiva nas comunidades</li>
+                <li>• Resposta imediata em emergências</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="bg-indigo-50 p-3 rounded">
+            <p className="text-xs font-semibold text-indigo-900 mb-2">🌍 Apoio da OIM (Organização Internacional para as Migrações - ONU):</p>
+            <p className="text-xs text-gray-700 mb-2">
+              A OIM reconhece que <strong>desastres climáticos são grandes causadores de deslocamentos forçados</strong>. 
+              Por isso, apoia a criação e capacitação de NUPDECs como estratégia de gestão da migração ambiental.
+            </p>
+            <ul className="text-xs text-gray-700 space-y-1">
+              <li>• Treinamento em identificação de riscos e planos de contingência</li>
+              <li>• Definição de rotas de fuga e ações de segurança</li>
+              <li>• Fortalecimento da governança local do risco</li>
+              <li>• Redução da vulnerabilidade e necessidade de deslocamento</li>
+            </ul>
+          </div>
+        </div>
+        
+        <p className="text-xs text-gray-600 italic">
+          💡 <strong>Importância Estratégica:</strong> Os NUPDECs empoderam a comunidade para se autoproteger, 
+          reduzindo danos até a chegada das equipes especializadas e fortalecendo a resiliência local.
         </p>
-        
-        {/* Orientações Gerais da Matriz */}
-        <div className="mb-6">
-          <h3 className="text-lg font-bold text-gray-800 mb-3">📋 Orientações Gerais da Matriz</h3>
-          <div className="space-y-3">
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">I. Ambiente</h4>
-              <p className="text-sm text-gray-700">Escolher o ambiente/Habitat para atuação</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">II. Atuação Interinstitucional</h4>
-              <p className="text-sm text-gray-700">Fomentar a atuação interinstitucional e com a comunidade</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">III. Atuação Institucional</h4>
-              <p className="text-sm text-gray-700">Fomentar a atuação institucional</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">IV. Abordagens</h4>
-              <p className="text-sm text-gray-700">4.1- Conscientização/Necessidade, 4.2- Meios e 4.3- Incentivos</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">V. Etapas</h4>
-              <p className="text-sm text-gray-700">5.1- Escolher foco prioritário e 5.2- Mapear/aperfeiçoar/convergência</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-blue-300">
-              <h4 className="font-semibold text-blue-900">VI. Fundamento</h4>
-              <p className="text-sm text-gray-700">Sempre partir do foco prioritário levando em consideração os critérios do DHS/PGS</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Etapas Sugeridas para Implementação */}
-        <div className="mb-6">
-          <h3 className="text-lg font-bold text-gray-800 mb-3">🎯 Etapas Sugeridas para Implementação</h3>
-          <div className="space-y-3">
-            <div className="bg-white p-4 rounded-lg border border-green-300">
-              <h4 className="font-semibold text-green-900">1. Escolher o(s) Foco(s) Prioritário(s)</h4>
-              <p className="text-sm text-gray-700">Baseado em critérios de conveniência, oportunidade e urgência. Recomenda-se focar em problemas que causam alta judicialização ou calamidades.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-green-300">
-              <h4 className="font-semibold text-green-900">2.a. Mapear Necessidades, Possibilidades e Atividades</h4>
-              <p className="text-sm text-gray-700">Levantar o que é preciso fazer, os recursos disponíveis e as iniciativas já existentes relacionadas ao foco escolhido.</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg border border-green-300">
-              <h4 className="font-semibold text-green-900">2.b. Promover o Aperfeiçoamento das relações e/ou a Convergência Estrutural, por meio de atividades</h4>
-              <p className="text-sm text-gray-700">Executar uma série de atividades ordenadas para transformar as estruturas e processos.</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Documento Detalhado da Matriz */}
-        <div className="mb-6 bg-gray-50 border border-gray-300 rounded-lg p-4">
-          <p className="text-sm text-gray-700 mb-2">
-            <strong>Documento Detalhado:</strong> Acesse o material completo que descreve de forma detalhada todas as etapas e passos da Matriz de Convergência
-          </p>
-          <a
-            href="/documentos/matriz-convergencia-dhs-detalhado.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm underline"
-          >
-            <FileText className="h-4 w-4 mr-1" />
-            Visualizar Guia Completo da Matriz de Convergência (PDF)
-          </a>
-        </div>
-
-        {/* Atividades (Passo 2.b) */}
-        <div className="mb-6">
-          <h3 className="text-lg font-bold text-gray-800 mb-3">🔧 Atividades (Passo 2.b)</h3>
-          <div className="grid md:grid-cols-2 gap-3">
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>1.</strong> Fomentar o DHS em Ambientes de Convergência (ex. em audiências públicas, reuniões, comitês, etc.)</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>2.</strong> Reunir Documentos e Elaborar Diagnósticos</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>3.</strong> Executar os Encaminhamentos</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>4.</strong> ELABORAR PLANO DE CONTINGÊNCIA - de acordo com as 8 etapas</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>5.</strong> ELABORAR PLANO DE CONTINGÊNCIA - de acordo com as 8 etapas acima previstas</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>6.</strong> Realizar Eventos Interinstitucionais</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>7.</strong> Realizar Capacitações Institucionais</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>8.</strong> Criar Estruturas de Resolução de Problemas</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>9.</strong> Promover Ações Contra Irregularidades</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>10.</strong> Implementar Estratégias de Comunicação e Formação</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>11.</strong> Desenvolver Projetos e Políticas Públicas</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>12.</strong> Promover a Convergência Estrutural</p>
-            </div>
-            <div className="bg-white p-3 rounded-lg border border-purple-300">
-              <p className="text-sm text-gray-700"><strong>13.</strong> Revisar e Aperfeiçoar Periodicamente</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-6 bg-blue-100 border-l-4 border-blue-600 p-4">
-          <p className="text-sm text-gray-800">
-            <strong>💡 Dica:</strong> Utilize a <a href="/calculadora" className="text-blue-600 hover:underline font-medium">Calculadora DHS</a> para 
-            avaliar o grau de maturidade do seu município na gestão de riscos e desastres, 
-            complementando a elaboração do seu PLANCON.
-          </p>
-        </div>
       </Card>
+
+      {/* Conclusão e Integração com DHS */}
+      <section className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+          <Target className="h-8 w-8 text-primary-600 mr-3" />
+          🔗 Integração com o Desenvolvimento Harmônico e Sustentável (DHS)
+        </h2>
+
+        <Card className="bg-gradient-to-r from-teal-50 to-emerald-50 border-l-4 border-teal-600">
+          <h3 className="text-lg font-bold text-teal-900 mb-4">🌱 Planos de Contingência como Foco Prioritário do DHS</h3>
+          <p className="text-gray-700 mb-4">
+            A elaboração e implementação de <strong>Planos de Contingência (PLANCON)</strong> municipais se enquadra perfeitamente 
+            nos <strong>critérios de priorização do DHS</strong>:
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-2xl mb-2">⚖️</div>
+              <h4 className="font-semibold text-gray-800 mb-2">Alta Judicialização Potencial</h4>
+              <p className="text-xs text-gray-600">
+                Omissões na prevenção e resposta a desastres geram ações de reparação, responsabilização civil de gestores 
+                e litígios contra o poder público
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-2xl mb-2">🚨</div>
+              <h4 className="font-semibold text-gray-800 mb-2">Urgência e Calamidades</h4>
+              <p className="text-xs text-gray-600">
+                Eventos climáticos extremos causam mortes, desabrigados, colapso de serviços essenciais e perdas econômicas 
+                irreparáveis
+              </p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <div className="text-2xl mb-2">🌍</div>
+              <h4 className="font-semibold text-gray-800 mb-2">Impacto Social e Ambiental</h4>
+              <p className="text-xs text-gray-600">
+                Desastres afetam desproporcionalmente populações vulneráveis e comprometem a sustentabilidade ambiental 
+                de longo prazo
+              </p>
+            </div>
+          </div>
+        </Card>
+
+        {/* Matriz de Convergência - 6 Eixos */}
+        <Card className="mt-6">
+          <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center">
+            <FileText className="h-6 w-6 text-primary-600 mr-3" />
+            Aplicação da Matriz de Convergência aos Planos de Contingência
+          </h3>
+          <p className="text-gray-700 mb-6">
+            A <strong>Matriz de Convergência</strong> é o modelo metodológico do DHS para planejar e gerir atividades 
+            de forma integrada e resolutiva. Ela possui <strong>6 eixos orientadores</strong> que, aplicados à elaboração 
+            e implementação de PLANCONs, resultam em uma atuação sistêmica e eficaz na gestão de riscos e desastres:
+          </p>
+
+          {/* Eixo I - Ambiente */}
+          <div className="mb-6 bg-gradient-to-r from-blue-50 to-cyan-50 p-5 rounded-lg border-l-4 border-blue-600">
+            <h4 className="font-bold text-blue-900 text-lg mb-3 flex items-center">
+              <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">I</div>
+              Eixo I - Ambiente (Habitat de Atuação)
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Identificar o ambiente/território onde ocorrerá a intervenção para gestão de riscos e desastres.
+            </p>
+            <div className="bg-white p-4 rounded border border-blue-200">
+              <p className="text-sm font-semibold text-blue-900 mb-2">📍 Aplicação aos Planos de Contingência:</p>
+              <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                <li>• <strong>Município específico</strong> com histórico de desastres (enchentes, deslizamentos, secas)</li>
+                <li>• <strong>Bacias hidrográficas críticas</strong> com monitoramento prioritário</li>
+                <li>• <strong>Áreas urbanas vulneráveis</strong> (encostas, planícies de inundação, assentamentos precários)</li>
+                <li>• <strong>Espaços de articulação</strong>: COMDEC (Coordenadoria Municipal de Defesa Civil), Comitês de Bacia, Conselhos de Meio Ambiente</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Eixo II - Atuação Interinstitucional */}
+          <div className="mb-6 bg-gradient-to-r from-green-50 to-emerald-50 p-5 rounded-lg border-l-4 border-green-600">
+            <h4 className="font-bold text-green-900 text-lg mb-3 flex items-center">
+              <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">II</div>
+              Eixo II - Atuação Interinstitucional
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Promover a convergência entre instituições públicas, privadas, academia e sociedade civil.
+            </p>
+            <div className="bg-white p-4 rounded border border-green-200">
+              <p className="text-sm font-semibold text-green-900 mb-2">🤝 Aplicação aos Planos de Contingência:</p>
+              <div className="grid md:grid-cols-2 gap-3 text-xs text-gray-700">
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Defesa Civil:</strong> Municipal, Estadual, Nacional (CENAD)
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Corpo de Bombeiros:</strong> Busca, salvamento e combate a incêndios
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Órgãos Ambientais:</strong> Monitoramento (CEMADEN, INMET, ANA)
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Saúde:</strong> Hospitais, SAMU, Vigilância Sanitária
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Assistência Social:</strong> Abrigos, cadastro de vulneráveis
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Obras e Urbanismo:</strong> Infraestrutura, drenagem, contenção
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Comunidade:</strong> NUDEC, lideranças locais, voluntários
+                </div>
+                <div className="bg-green-50 p-2 rounded">
+                  <strong>Iniciativa Privada:</strong> Concessionárias (energia, água), empresas
+                </div>
+              </div>
+              <p className="text-xs text-gray-600 mt-3 italic">
+                💡 A articulação entre essas instituições garante resposta rápida e integrada em situações de emergência.
+              </p>
+            </div>
+          </div>
+
+          {/* Eixo III - Atuação Institucional do MP */}
+          <div className="mb-6 bg-gradient-to-r from-purple-50 to-indigo-50 p-5 rounded-lg border-l-4 border-purple-600">
+            <h4 className="font-bold text-purple-900 text-lg mb-3 flex items-center">
+              <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">III</div>
+              Eixo III - Atuação Institucional do MP
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Fortalecer a atuação interna e integrada do Ministério Público.
+            </p>
+            <div className="bg-white p-4 rounded border border-purple-200">
+              <p className="text-sm font-semibold text-purple-900 mb-2">🏛️ Aplicação aos Planos de Contingência:</p>
+              <ul className="text-xs text-gray-700 space-y-2 ml-4">
+                <li>• <strong>Convergência entre Promotorias:</strong> Meio Ambiente + Urbanismo + Defesa do Patrimônio Público + Direitos Humanos</li>
+                <li>• <strong>Articulação com CAOP:</strong> Centro de Apoio Operacional especializado em Meio Ambiente e Urbanismo</li>
+                <li>• <strong>Intercâmbio entre comarcas:</strong> Compartilhar modelos de TAC, Recomendações, peças técnicas sobre PLANCONs</li>
+                <li>• <strong>Capacitação contínua:</strong> Formação em gestão de riscos, mudanças climáticas, PNPDEC (Lei 12.608/2012)</li>
+                <li>• <strong>Instrumentos institucionais:</strong> Recomendações, TACs, ACPs estruturais, Inspeções coordenadas</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Eixo IV - Abordagens */}
+          <div className="mb-6 bg-gradient-to-r from-orange-50 to-amber-50 p-5 rounded-lg border-l-4 border-orange-600">
+            <h4 className="font-bold text-orange-900 text-lg mb-3 flex items-center">
+              <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">IV</div>
+              Eixo IV - Abordagens (Consciência, Meios e Incentivos)
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Trabalhar três dimensões: conscientização sobre riscos, disponibilização de meios para prevenção/resposta e criação de incentivos.
+            </p>
+            <div className="space-y-3">
+              <div className="bg-white p-4 rounded border border-orange-200">
+                <p className="text-sm font-semibold text-orange-900 mb-2">🧠 4.1 - Conscientização e Reconhecimento da Necessidade</p>
+                <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                  <li>• Divulgar dados: magnitude de desastres no Brasil (283 mortes em 2024, R$ 100bi prejuízos em 10 anos)</li>
+                  <li>• Evidenciar obrigatoriedade legal: Lei 12.608/2012, Lei 12.983/2014 (obriga municípios com áreas de risco)</li>
+                  <li>• Sensibilizar gestores sobre responsabilização civil/criminal por omissão</li>
+                  <li>• Campanhas: "Defesa Civil Salva Vidas", "Setembro Verde" (mês da Defesa Civil)</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded border border-orange-200">
+                <p className="text-sm font-semibold text-orange-900 mb-2">🛠️ 4.2 - Meios de Concretização</p>
+                <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                  <li>• <strong>Financiamento:</strong> Fundo Nacional de Defesa Civil, Fundo Clima, emendas parlamentares</li>
+                  <li>• <strong>Infraestrutura:</strong> Sirenes, pluviômetros, abrigos, rotas de evacuação sinalizadas</li>
+                  <li>• <strong>Recursos Humanos:</strong> Capacitação de servidores municipais, formação de voluntários (NUDEC)</li>
+                  <li>• <strong>Tecnologia:</strong> Sistemas de alerta via SMS, aplicativos, integração com CEMADEN/INMET</li>
+                  <li>• <strong>Metodologias:</strong> Modelos-padrão de PLANCON, manuais técnicos, softwares de simulação</li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-4 rounded border border-orange-200">
+                <p className="text-sm font-semibold text-orange-900 mb-2">🎁 4.3 - Incentivos</p>
+                <ul className="text-xs text-gray-700 space-y-1 ml-4">
+                  <li>• <strong>Prêmios e reconhecimento:</strong> Selo "Município Resiliente", destaque em ranking nacional</li>
+                  <li>• <strong>Cooperação técnica:</strong> Apoio de universidades, CEMADEN, Defesa Civil estadual/nacional</li>
+                  <li>• <strong>Evitar litígios:</strong> TACs que garantem segurança jurídica ao gestor que implementar PLANCON robusto</li>
+                  <li>• <strong>Visibilidade positiva:</strong> Divulgação de casos de sucesso (municípios que reduziram mortes/prejuízos)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Eixo V - Etapas */}
+          <div className="mb-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg border-l-4 border-teal-600">
+            <h4 className="font-bold text-teal-900 text-lg mb-3 flex items-center">
+              <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">V</div>
+              Eixo V - Etapas de Implementação
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Seguir uma sequência lógica de atividades ordenadas e interligadas.
+            </p>
+
+            {/* Etapas Sugeridas para Implementação */}
+            <div className="bg-white p-4 rounded border border-teal-200 mb-4">
+              <p className="text-sm font-semibold text-teal-900 mb-3">🎯 Etapas Sugeridas para Implementação:</p>
+              <div className="space-y-3">
+                <div className="bg-teal-50 p-3 rounded">
+                  <div className="flex items-start">
+                    <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                      1
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-gray-800 mb-2">Escolher o(s) Foco(s) Prioritário(s)</p>
+                      <p className="text-xs text-gray-600 mb-2">
+                        Baseado em critérios de conveniência, oportunidade e urgência.
+                      </p>
+                      <div className="mt-2 bg-white p-3 rounded border border-teal-200">
+                        <p className="text-xs font-semibold text-teal-800 mb-2">📊 Critérios para Priorização:</p>
+                        <ul className="text-xs text-gray-700 space-y-1 ml-3">
+                          <li>• <strong>Conveniência:</strong> Há base legal clara (Lei 12.608/2012, Estatuto da Cidade)? Existem instrumentos técnicos disponíveis? Há apoio institucional?</li>
+                          <li>• <strong>Oportunidade:</strong> O momento é favorável (eventos recentes, recursos disponíveis, agenda política)?</li>
+                          <li>• <strong>Urgência:</strong> Quantas vidas estão em risco imediato? Qual o potencial de danos econômicos? Há responsabilização pendente?</li>
+                        </ul>
+                        <p className="text-xs text-gray-600 mt-2 italic">
+                          <strong>Exemplos de Focos Prioritários:</strong> Municípios com histórico de deslizamentos, áreas de inundação recorrente, ocupações irregulares em áreas de risco, municípios sem PLANCON ou COMDEC ativo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-teal-50 p-3 rounded">
+                  <div className="flex items-start">
+                    <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                      2.a
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-gray-800 mb-2">Mapear Necessidades, Possibilidades e Atividades</p>
+                      <p className="text-xs text-gray-600 mb-2">
+                        Levantar o que é preciso fazer, os recursos disponíveis e as iniciativas já existentes relacionadas ao foco escolhido.
+                      </p>
+                      <div className="mt-2 bg-white p-3 rounded border border-teal-200">
+                        <p className="text-xs font-semibold text-teal-800 mb-2">🔍 Aspectos a Mapear:</p>
+                        <div className="space-y-2">
+                          <div>
+                            <p className="text-xs font-semibold text-gray-700">Necessidades:</p>
+                            <ul className="text-xs text-gray-600 ml-3 mt-1">
+                              <li>• Lacunas legais e normativas (PLANCON inexistente ou desatualizado)</li>
+                              <li>• Deficiências estruturais (COMDEC inativo, falta de mapeamento de riscos)</li>
+                              <li>• Carências de recursos humanos e materiais (equipes, equipamentos, treinamento)</li>
+                              <li>• Necessidades de infraestrutura (sistemas de alerta, abrigos, rotas de fuga)</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="text-xs font-semibold text-gray-700">Possibilidades:</p>
+                            <ul className="text-xs text-gray-600 ml-3 mt-1">
+                              <li>• Recursos federais disponíveis (Ministério da Integração, Defesa Civil Nacional)</li>
+                              <li>• Parcerias institucionais (universidades, ONGs, setor privado)</li>
+                              <li>• Capacitações oferecidas (cursos da ENAP, CEPED, academias de bombeiros)</li>
+                              <li>• Tecnologias acessíveis (sistemas de monitoramento, plataformas de gestão)</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <p className="text-xs font-semibold text-gray-700">Atividades Existentes:</p>
+                            <ul className="text-xs text-gray-600 ml-3 mt-1">
+                              <li>• Iniciativas municipais em andamento (obras de contenção, relocações)</li>
+                              <li>• Projetos regionais ou estaduais relacionados</li>
+                              <li>• Ações de órgãos federais no território (IBAMA, ICMBio, ANA)</li>
+                              <li>• Programas sociais que podem ser integrados (habitação, assistência social)</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-teal-50 p-3 rounded">
+                  <div className="flex items-start">
+                    <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                      2.b
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-sm font-semibold text-gray-800 mb-1">Promover o Aperfeiçoamento das relações estabelecidas e/ou a Convergência Estrutural, por meio de atividades ordenadas</p>
+                      <div className="mt-2 bg-white p-3 rounded border border-teal-300">
+                        <p className="text-xs text-gray-700 mb-2">
+                          📄 <strong>Documento Detalhado:</strong> Acesse o material completo que descreve de forma detalhada todas as etapas e passos da Matriz de Convergência.
+                        </p>
+                        <a
+                          href="/documentos/matriz-convergencia-dhs-detalhado.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-xs bg-teal-600 text-white px-3 py-2 rounded hover:bg-teal-700 transition-colors"
+                        >
+                          <FileText className="w-4 h-4 mr-2" />
+                          Visualizar Guia Completo da Matriz de Convergência (PDF)
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-4 rounded border border-teal-200">
+              <p className="text-sm font-semibold text-teal-900 mb-3">📋 Atividades (Passo 2.b) - 13 Atividades Adaptadas aos Planos de Contingência:</p>
+              <p className="text-xs text-gray-600 mb-3 italic">
+                O passo 2.b se desdobra em uma série de atividades ordenadas e interligadas:
+              </p>
+              <div className="space-y-2">
+                {[
+                  {num: 1, titulo: 'Fomentar o DHS em Ambientes de Convergência', desc: 'Participar de reuniões do COMDEC, Comitês de Bacia, audiências públicas sobre gestão de riscos'},
+                  {num: 2, titulo: 'Reunir Documentos e Elaborar Diagnósticos', desc: 'Mapas de risco, histórico de desastres, vulnerabilidades, capacidade de resposta, recursos disponíveis'},
+                  {num: 3, titulo: 'Executar os Encaminhamentos', desc: 'Notificações, requisições de informações, reuniões técnicas com Defesa Civil e órgãos municipais'},
+                  {num: 4, titulo: 'Criar Critérios e Fluxos Operacionais', desc: 'ELABORAR PLANO DE CONTINGÊNCIA com 8 etapas obrigatórias (cenários, monitoramento, evacuação, socorro, etc.)'},
+                  {num: 5, titulo: 'Formalizar Convergências', desc: 'TAC com cronograma de implementação do PLANCON, Recomendações, Decretos Municipais sobre estrutura de Defesa Civil'},
+                  {num: 6, titulo: 'Realizar Eventos Interinstitucionais', desc: 'Seminários sobre gestão de riscos, encontros regionais de Defesa Civil, workshops sobre mudanças climáticas'},
+                  {num: 7, titulo: 'Realizar Capacitações Institucionais', desc: 'Formação de promotores, servidores municipais, brigadistas sobre PNPDEC e elaboração de PLANCONs'},
+                  {num: 8, titulo: 'Criar Estruturas de Resolução de Problemas', desc: 'COMDEC fortalecido, Sala de Situação, Centro de Operações, Comitê Gestor Interinstitucional'},
+                  {num: 9, titulo: 'Promover Ações Contra Irregularidades', desc: 'Representações ao TCE, ACPs estruturais, responsabilização de gestores omissos na prevenção'},
+                  {num: 10, titulo: 'Implementar Estratégias de Comunicação e Formação', desc: 'Campanhas de educação para desastres, sistemas de alerta multicanal, transparência de dados'},
+                  {num: 11, titulo: 'Desenvolver Projetos e Políticas Públicas', desc: 'Induzir Plano Municipal de Redução de Riscos (PMRR), políticas de ordenamento territorial, infraestrutura verde'},
+                  {num: 12, titulo: 'Promover a Convergência Estrutural', desc: 'Alinhar planejamento, orçamento, indicadores, fiscalização, incentivos (ver detalhamento abaixo)'},
+                  {num: 13, titulo: 'Revisar e Aperfeiçoar Periodicamente', desc: 'Atualização anual do PLANCON, avaliação pós-evento (lições aprendidas), simulados periódicos'}
+                ].map((atividade) => (
+                  <div key={atividade.num} className="flex items-start bg-teal-50 p-3 rounded">
+                    <div className="bg-teal-600 text-white rounded-full w-7 h-7 flex items-center justify-center text-xs font-bold mr-3 flex-shrink-0">
+                      {atividade.num}
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-xs font-semibold text-gray-800">{atividade.titulo}</p>
+                      <p className="text-xs text-gray-600 mt-1">{atividade.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Eixo VI - Fundamento */}
+          <div className="mb-6 bg-gradient-to-r from-indigo-50 to-purple-50 p-5 rounded-lg border-l-4 border-indigo-600">
+            <h4 className="font-bold text-indigo-900 text-lg mb-3 flex items-center">
+              <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">VI</div>
+              Eixo VI - Fundamento (Critérios do DHS)
+            </h4>
+            <p className="text-sm text-gray-700 mb-3">
+              <strong>Definição:</strong> Sempre partir do foco prioritário considerando os critérios sistêmicos do DHS/PGS.
+            </p>
+            <div className="bg-white p-4 rounded border border-indigo-200">
+              <p className="text-sm font-semibold text-indigo-900 mb-2">⚖️ Aplicação aos Planos de Contingência:</p>
+              <ul className="text-xs text-gray-700 space-y-2 ml-4">
+                <li>• <strong>Conveniência:</strong> PLANCONs são exigência legal (Lei 12.608/2012), com instrumentos técnicos consolidados e apoio institucional disponível</li>
+                <li>• <strong>Oportunidade:</strong> Crescente frequência de eventos extremos, compromissos climáticos internacionais (ODS 11 e 13), recursos federais disponíveis</li>
+                <li>• <strong>Urgência:</strong> Vidas em risco, prejuízos bilionários, responsabilização civil/criminal de gestores por omissão</li>
+                <li>• <strong>Pensamento Sistêmico:</strong> Compreender causas raízes (ocupação irregular, mudanças climáticas, falta de planejamento), não apenas sintomas (desastres pontuais)</li>
+                <li>• <strong>Visão de Longo Prazo:</strong> Prevenção sustentável, adaptação climática, resiliência comunitária (não apenas resposta emergencial)</li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+
+        {/* Convergência Estrutural Detalhada */}
+        <Card className="mt-6 bg-gradient-to-r from-yellow-50 to-amber-50 border-l-4 border-yellow-600">
+          <h3 className="text-xl font-bold text-yellow-900 mb-4 flex items-center">
+            <Users className="h-6 w-6 mr-3" />
+            Convergência Estrutural na Gestão de Riscos e Desastres
+          </h3>
+          <p className="text-gray-700 mb-4">
+            A <strong>Convergência Estrutural</strong> é o processo de alinhar sistematicamente as normativas e instrumentos 
+            diários para que fomentem, meçam e valorizem as atuações resolutivas na gestão de riscos. Significa garantir que 
+            toda a "rotina institucional" impulsione a implementação efetiva dos PLANCONs:
+          </p>
+
+          <div className="bg-yellow-100 p-4 rounded-lg border border-yellow-300 mb-4">
+            <p className="text-sm text-yellow-900 font-semibold">
+              ⚠️ <strong>Princípio Fundamental:</strong> Se a estrutura (rotina) não for alterada, os comportamentos antigos persistirão. 
+              Não adianta criar PLANCONs se os incentivos, fiscalização e valoração continuarem premiando a omissão preventiva.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h4 className="font-bold text-gray-800 text-lg">8 Aspectos a serem Alinhados:</h4>
+
+            {/* Aspecto 1 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+              <div className="flex items-start">
+                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">1</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-blue-900 mb-2">Planos e Planejamentos</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Garantir que o <strong>Plano Diretor Municipal</strong>, o 
+                    <strong> Plano Plurianual (PPA)</strong> e a <strong>Lei de Diretrizes Orçamentárias (LDO)</strong> incorporem 
+                    metas de redução de riscos, adaptação climática e implementação do PLANCON.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Se o Plano Diretor permite ocupação de áreas de risco, o PLANCON será muito prejudicado.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 2 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+              <div className="flex items-start">
+                <div className="bg-green-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">2</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-green-900 mb-2">Critérios de Inspeções e Fiscalizações</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> O <strong>Tribunal de Contas</strong> deve fiscalizar não apenas execução orçamentária, 
+                    mas <strong>se o PLANCON existe, está atualizado e foi efetivamente implementado</strong> (simulados realizados, 
+                    sirenes funcionando, equipes treinadas).
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Critérios de auditoria devem incluir indicadores de prevenção e preparação, não apenas resposta.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 3 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+              <div className="flex items-start">
+                <div className="bg-purple-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">3</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-purple-900 mb-2">Fluxos Operacionais</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Estabelecer <strong>Procedimentos Operacionais Padrão (POP)</strong> claros para 
+                    acionamento de alertas, evacuação, ativação de abrigos, mobilização de equipes de resposta.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Fluxos claros evitam improviso, demora e duplicidade de esforços durante emergências.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 4 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500">
+              <div className="flex items-start">
+                <div className="bg-orange-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">4</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-orange-900 mb-2">Meios de Concretização e Realização</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Garantir recursos orçamentários específicos para <strong>infraestrutura de Defesa Civil 
+                    (sirenes, pluviômetros, abrigos)</strong>, <strong>capacitação de equipes</strong> e 
+                    <strong> manutenção de equipamentos</strong>.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Destinar rubrica permanente "Gestão de Riscos" no orçamento anual (não depender apenas de emendas emergenciais).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 5 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-pink-500">
+              <div className="flex items-start">
+                <div className="bg-pink-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">5</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-pink-900 mb-2">Mensuração, Mapeamento e Indicadores</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Criar <strong>Painel Público de Monitoramento</strong> com indicadores 
+                    como: número de simulados/ano, % população em áreas de risco capacitada, tempo médio de resposta, 
+                    mortes evitadas por evacuações preventivas.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 "O que não é medido, não é gerenciado" - indicadores claros permitem cobrança objetiva e melhoria contínua.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 6 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-teal-500">
+              <div className="flex items-start">
+                <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">6</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-teal-900 mb-2">Modos de Valoração do Desempenho</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Incluir na <strong>avaliação de desempenho de secretários, coordenadores 
+                    e agentes de Defesa Civil</strong> critérios relacionados à prevenção e preparação (não apenas resposta emergencial). 
+                    Reconhecer municípios que implementaram PLANCONs exemplares.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Se o gestor é avaliado/promovido apenas por "apagar incêndios", não priorizará prevenção.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 7 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-indigo-500">
+              <div className="flex items-start">
+                <div className="bg-indigo-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">7</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-indigo-900 mb-2">Comunicação e Formação</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Realizar <strong>campanhas contínuas de educação para desastres</strong> em escolas, 
+                    empresas e comunidades. Formar gestores, técnicos e lideranças comunitárias sobre gestão de riscos, 
+                    mudanças climáticas e PNPDEC.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 População informada colabora melhor; gestores capacitados implementam com qualidade.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Aspecto 8 */}
+            <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
+              <div className="flex items-start">
+                <div className="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">8</div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-red-900 mb-2">Desenvolvimento de Incentivos</h5>
+                  <p className="text-xs text-gray-700 mb-2">
+                    <strong>Exemplo Prático:</strong> Criar <strong>"Selo Município Resiliente"</strong>, 
+                    priorizar repasses estaduais/federais para municípios com PLANCONs robustos, oferecer assistência técnica 
+                    (treinamentos, consultorias) para gestões comprometidas com metas de redução de riscos.
+                  </p>
+                  <p className="text-xs text-gray-600 italic">
+                    💡 Incentivos positivos são mais eficazes que apenas punições ou fiscalização repressiva.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-white p-4 rounded-lg border border-yellow-400">
+            <p className="text-sm text-gray-800 font-semibold mb-2">
+              🔗 <strong>Resultado da Convergência Estrutural:</strong>
+            </p>
+            <p className="text-xs text-gray-700">
+              Quando todos esses 8 aspectos estão alinhados, a gestão de riscos e desastres deixa de depender da 
+              "boa vontade" de um gestor específico e passa a ser <strong>impulsionada pela própria estrutura institucional</strong>. 
+              A sustentabilidade da política pública é garantida, independentemente de mudanças políticas ou eventos extremos pontuais.
+            </p>
+          </div>
+        </Card>
+
+        {/* Benefícios da Integração DHS */}
+        <Card className="mt-6 bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600">
+          <h3 className="text-xl font-bold text-green-900 mb-4">✅ Benefícios da Integração DHS aos Planos de Contingência</h3>
+          
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow">
+              <h4 className="font-semibold text-green-800 mb-3 text-sm">Para as Instituições:</h4>
+              <ul className="text-xs text-gray-700 space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Redução de litígios:</strong> Prevenção reduz responsabilização civil de gestores, ACPs e TACs</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Eficiência institucional:</strong> Convergência entre MP, TCE, Defesa Civil, órgãos municipais evita duplicidade</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Segurança jurídica:</strong> TACs e PLANCONs formalizados dão previsibilidade ao gestor</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Aprendizado institucional:</strong> Boas práticas documentadas, lições aprendidas incorporadas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Sustentabilidade:</strong> Políticas estruturais resistem a trocas de gestão</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white p-4 rounded-lg shadow">
+              <h4 className="font-semibold text-green-800 mb-3 text-sm">Para População e Sociedade:</h4>
+              <ul className="text-xs text-gray-700 space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Proteção de vidas:</strong> Evacuações preventivas, alertas eficazes, infraestrutura resiliente</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Redução de prejuízos:</strong> Perdas materiais evitadas, recuperação mais rápida</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Equidade:</strong> Populações vulneráveis recebem atenção prioritária</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Participação comunitária:</strong> NUDEC, voluntários, co-responsabilização</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-600 mr-2 flex-shrink-0 mt-0.5" />
+                  <span><strong>Sustentabilidade ambiental:</strong> Adaptação climática, conservação de ecossistemas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </Card>
+
+        {/* Link para Implementação */}
+        <Card className="bg-gradient-to-r from-amber-50 to-yellow-50 border-l-4 border-amber-600 mt-6">
+          <div className="flex items-start">
+            <FileText className="h-6 w-6 text-amber-600 mr-3 flex-shrink-0 mt-1" />
+            <div>
+              <h4 className="font-semibold text-amber-900 mb-2">📚 Aprofunde-se no DHS</h4>
+              <p className="text-sm text-gray-700 mb-3">
+                Para compreender em detalhes todos os aspectos da Matriz de Convergência, acesse o Guia de Implementação 
+                com orientações gerais, passos práticos e documentos de referência.
+              </p>
+              <a 
+                href="/implementacao" 
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm underline"
+              >
+                <ArrowRight className="h-4 w-4 mr-1" />
+                Ir para Guia de Implementação do DHS
+              </a>
+            </div>
+          </div>
+        </Card>
+      </section>
 
       {/* Recomendações MP-RS e CNMP */}
       <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-l-4 border-green-600 mt-8">
