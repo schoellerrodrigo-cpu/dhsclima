@@ -212,50 +212,6 @@ export default function Metodologias() {
                 </div>
               </div>
             </Card>
-
-            <Card className="border-l-4 border-purple-500">
-              <h3 className="text-lg font-semibold mb-3 text-purple-900">🏛️ Gestão Pública - Diversos Estados</h3>
-              <div className="space-y-3">
-                <div>
-                  <strong className="text-gray-900">Problema:</strong>
-                  <p className="text-gray-700 text-sm">Falta de integração entre órgãos públicos</p>
-                </div>
-                <div>
-                  <strong className="text-gray-900">Solução PGS:</strong>
-                  <p className="text-gray-700 text-sm">Criação de Comitês Interinstitucionais e matrizes de convergência</p>
-                </div>
-                <div>
-                  <strong className="text-gray-900">Resultados:</strong>
-                  <ul className="text-gray-700 text-sm space-y-1 mt-1">
-                    <li>• Otimização de recursos públicos</li>
-                    <li>• Aumento da efetividade de políticas</li>
-                    <li>• Redução de sobreposições</li>
-                  </ul>
-                </div>
-              </div>
-            </Card>
-
-            <Card className="border-l-4 border-yellow-500">
-              <h3 className="text-lg font-semibold mb-3 text-yellow-900">🌍 Meio Ambiente - Projetos Regionais</h3>
-              <div className="space-y-3">
-                <div>
-                  <strong className="text-gray-900">Problema:</strong>
-                  <p className="text-gray-700 text-sm">Degradação ambiental e conflitos de uso do solo</p>
-                </div>
-                <div>
-                  <strong className="text-gray-900">Solução PGS:</strong>
-                  <p className="text-gray-700 text-sm">Convergência entre setor público, privado e comunidades locais</p>
-                </div>
-                <div>
-                  <strong className="text-gray-900">Resultados:</strong>
-                  <ul className="text-gray-700 text-sm space-y-1 mt-1">
-                    <li>• Recuperação de áreas degradadas</li>
-                    <li>• Geração de renda sustentável</li>
-                    <li>• Educação ambiental integrada</li>
-                  </ul>
-                </div>
-              </div>
-            </Card>
           </div>
 
           <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-l-4 border-purple-600">
@@ -299,11 +255,188 @@ export default function Metodologias() {
           </Card>
         </section>
 
+        {/* Recomendação nº 54/2017 do CNMP */}
+        <section className="mb-12">
+          <h2 className="section-subtitle flex items-center">
+            <Scale className="h-8 w-8 text-primary-600 mr-3" />
+            4. Recomendação nº 54/2017 do CNMP - Política Nacional de Fomento à Atuação Resolutiva
+          </h2>
+          
+          <Card className="bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-600">
+            <h3 className="text-lg font-bold text-purple-900 mb-4">📜 Marco Institucional do Ministério Público</h3>
+            
+            <div className="bg-white p-4 rounded-lg mb-4">
+              <p className="text-base text-gray-700 mb-3">
+                A <strong>Recomendação Nº 54/2017 do CNMP</strong> institui a <strong>Política Nacional de Fomento à Atuação Resolutiva</strong>, 
+                estabelecendo uma profunda mudança cultural: migração de uma atuação predominantemente formal e burocrática para um modelo 
+                focado na <strong>entrega de resultados concretos e socialmente relevantes</strong>.
+              </p>
+            </div>
+
+            {/* Conceito de Atuação Resolutiva */}
+            <div className="mb-4">
+              <h4 className="text-md font-bold text-purple-800 mb-3">🎯 O Que é Atuação Resolutiva?</h4>
+              <div className="bg-white p-4 rounded-lg">
+                <p className="text-base text-gray-700 mb-3">
+                  É a atuação por meio da qual o membro do Ministério Público:
+                </p>
+                <ul className="text-base text-gray-700 space-y-2 ml-4">
+                  <li>✅ <strong>Contribui decisivamente</strong> para prevenir ou solucionar de modo efetivo o conflito, problema ou controvérsia</li>
+                  <li>✅ Atua para <strong>prevenir, inibir ou reparar adequadamente</strong> a lesão ou ameaça a direitos</li>
+                  <li>✅ Busca <strong>efetivar as sanções</strong> aplicadas judicialmente, assegurando a máxima efetividade possível</li>
+                </ul>
+                <div className="bg-purple-50 p-3 rounded mt-3">
+                  <p className="text-sm text-purple-900 font-semibold">
+                    ⚠️ IMPORTANTE: A solução só é resolutiva quando <strong>efetivamente implementada</strong> 
+                    (não basta apenas o acordo celebrado ou provimento judicial, mesmo transitado em julgado).
+                  </p>
+                </div>
+                <div className="bg-indigo-50 p-3 rounded mt-3">
+                  <p className="text-sm text-indigo-900">
+                    <strong>Prioridade Extrajudicial:</strong> A via extrajudicial deve ser priorizada sempre que se mostrar 
+                    mais célere, econômica, implementável e capaz de satisfazer adequadamente as legítimas expectativas dos titulares dos direitos.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Eixo Estratégico */}
+            <div className="mb-4">
+              <h4 className="text-md font-bold text-purple-800 mb-3">🔗 Eixo Estratégico: Três Conceitos Interligados</h4>
+              
+              <div className="bg-indigo-50 p-4 rounded-lg border-l-4 border-indigo-600 mb-3">
+                <p className="text-sm text-gray-700 mb-2">
+                  Neste contexto, foi desenvolvida a <strong>Recomendação nº 54 do Conselho Nacional do Ministério Público</strong>, 
+                  que estabelece no § 4º do art. 1º:
+                </p>
+                <div className="bg-white p-3 rounded border-l-4 border-purple-400 mb-3">
+                  <p className="text-sm text-gray-800 italic">
+                    <strong>"§ 4º</strong> Sempre que possível, a atuação resolutiva de planejamento e de gestão sistêmicos deverá 
+                    promover a convergência estrutural, de modo a contribuir para o desenvolvimento harmônico e sustentável, 
+                    principalmente nas parcerias e nas redes de cooperação"
+                  </p>
+                </div>
+                <p className="text-sm text-gray-700">
+                  O documento estabelece um <strong>eixo estratégico fundamental</strong> que interliga três conceitos-chave: 
+                  o planejamento e gestão sistêmicos, a convergência estrutural e o desenvolvimento harmônico e sustentável. 
+                  A recomendação postula que uma atuação sistêmica, baseada em parcerias e redes de cooperação, promove a 
+                  convergência entre o Ministério Público e outros atores sociais (públicos e privados), contribuindo decisivamente 
+                  para a sustentabilidade e o desenvolvimento equilibrado. Para implementar essa política, o CNMP detalha uma série 
+                  de mecanismos, incluindo a redefinição dos critérios de avaliação de desempenho para valorizar a qualidade e a 
+                  resolutividade, o aumento da visibilidade das boas práticas, a criação de estruturas de apoio e a promoção de 
+                  capacitação contínua em áreas como negociação e mediação.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-3">
+                <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                  <p className="text-sm font-bold text-blue-900 mb-2">1️⃣ Planejamento e Gestão Sistêmicos</p>
+                  <p className="text-sm text-gray-700">
+                    Visão holística e integrada que considera múltiplas variáveis e atores envolvidos nas problemáticas sociais, 
+                    ambientais e econômicas.
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
+                  <p className="text-sm font-bold text-green-900 mb-2">2️⃣ Convergência Estrutural</p>
+                  <p className="text-sm text-gray-700 mb-2">
+                    Mecanismo de materialização do planejamento sistêmico:
+                  </p>
+                  <ul className="text-sm text-gray-600 space-y-1">
+                    <li>• Alinhamento institucional interno e externo</li>
+                    <li>• Parcerias com setores público e privado</li>
+                    <li>• Redes de cooperação com sociedade civil</li>
+                    <li>• Aperfeiçoamento de normativas</li>
+                  </ul>
+                </div>
+                <div className="bg-white p-4 rounded-lg border-l-4 border-teal-500">
+                  <p className="text-sm font-bold text-teal-900 mb-2">3️⃣ Desenvolvimento Harmônico e Sustentável</p>
+                  <p className="text-sm text-gray-700">
+                    Objetivo final: MP como indutor de políticas públicas e transformador social, promovendo desenvolvimento 
+                    equilibrado, justo e sustentável no longo prazo.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mecanismos de Implementação */}
+            <div className="mb-4">
+              <h4 className="text-md font-bold text-purple-800 mb-3">⚙️ Mecanismos para Implementação da Cultura de Resultados</h4>
+              
+              <div className="space-y-3">
+                {/* Visibilidade */}
+                <div className="bg-white p-4 rounded-lg">
+                  <p className="text-base font-semibold text-purple-900 mb-2">📊 Visibilidade e Reconhecimento:</p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Banco de dados nacional de atuações resolutivas (acesso público)</li>
+                      <li>• Publicações especializadas (livros, manuais, artigos)</li>
+                      <li>• Relatórios de produtividade com indicadores específicos</li>
+                    </ul>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Premiações para práticas resolutivas</li>
+                      <li>• Indicadores de resolutividade nos planos estratégicos</li>
+                      <li>• Consideração em processos de promoção na carreira</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Valorização Funcional */}
+                <div className="bg-white p-4 rounded-lg">
+                  <p className="text-base font-semibold text-purple-900 mb-2">🏆 Valorização Funcional:</p>
+                  <ul className="text-sm text-gray-700 space-y-1 ml-3">
+                    <li>• Critérios de <strong>qualidade</strong> (resolutividade) com mesma valorização que critérios de quantidade</li>
+                    <li>• Resultados socialmente relevantes e melhora em indicadores sociais considerados em promoções</li>
+                    <li>• Valorização da iniciativa preventiva e atuação de ofício</li>
+                    <li>• Mecanismos para menor dedicação a casos de baixa relevância em favor de projetos estratégicos</li>
+                  </ul>
+                </div>
+
+                {/* Apoio a Projetos */}
+                <div className="bg-white p-4 rounded-lg">
+                  <p className="text-base font-semibold text-purple-900 mb-2">🚀 Fomento à Atuação Estratégica por Projetos:</p>
+                  <div className="grid md:grid-cols-2 gap-2">
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Apoio técnico especializado (servidores, universidades)</li>
+                      <li>• Recursos orçamentários para equipamentos e tecnologias</li>
+                    </ul>
+                    <ul className="text-sm text-gray-700 space-y-1">
+                      <li>• Flexibilidade administrativa (prazos, formalidades)</li>
+                      <li>• Assessoria de comunicação social</li>
+                    </ul>
+                  </div>
+                </div>
+
+                {/* Capacitação */}
+                <div className="bg-white p-4 rounded-lg">
+                  <p className="text-base font-semibold text-purple-900 mb-2">📚 Capacitação e Estruturas de Apoio:</p>
+                  <ul className="text-sm text-gray-700 space-y-1 ml-3">
+                    <li>• Formação continuada em atuação resolutiva, negociação e mediação</li>
+                    <li>• Estruturas administrativas de apoio à atuação extrajudicial</li>
+                    <li>• Comitê Permanente Nacional de Fomento à Atuação Resolutiva</li>
+                    <li>• Redes de cooperação em âmbitos estadual e local</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Conclusão */}
+            <div className="bg-gradient-to-r from-purple-100 to-indigo-100 p-4 rounded-lg border-l-4 border-purple-700">
+              <p className="text-base font-bold text-purple-900 mb-2">💡 Significado Institucional</p>
+              <p className="text-sm text-gray-800">
+                A Recomendação Nº 54/2017 representa a <strong>transição de uma cultura de meios para uma cultura de resultados</strong>. 
+                Ao conectar a atuação resolutiva ao eixo estratégico de planejamento sistêmico, convergência estrutural e desenvolvimento 
+                sustentável, o CNMP oferece um roteiro para que o Ministério Público maximize sua <strong>efetividade social</strong>, 
+                tornando-se mais proativo, ágil e capaz de gerar transformações concretas na vida dos cidadãos.
+              </p>
+            </div>
+          </Card>
+        </section>
+
         {/* Recomendação CNMP 05/2025 */}
         <section className="mb-12">
           <h2 className="section-subtitle flex items-center">
             <Scale className="h-8 w-8 text-primary-600 mr-3" />
-            4. Recomendação CNMP nº 05/2025 - Processos Estruturais
+            5. Recomendação CNMP nº 05/2025 - Processos Estruturais
           </h2>
 
           <Card className="mb-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-blue-600">
@@ -562,6 +695,8 @@ export default function Metodologias() {
             </div>
           </Card>
         </section>
+
+
 
         {/* CTA */}
         <div className="text-center bg-gradient-to-r from-primary-600 to-accent-600 text-white p-8 rounded-xl">

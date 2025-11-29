@@ -1432,7 +1432,13 @@ BASE LEGAL:
                     </div>
                     <div className="flex-1">
                       <p className="text-xs font-semibold text-gray-800">{atividade.titulo}</p>
-                      <p className="text-xs text-gray-600 mt-1">{atividade.desc}</p>
+                      {atividade.num === 4 ? (
+                        <p className="text-xs text-gray-600 mt-1">
+                          <span className="text-sm font-bold">ELABORAR PLANO DE CONTINGÊNCIA com 8 etapas obrigatórias</span> (cenários, monitoramento, evacuação, socorro, etc.)
+                        </p>
+                      ) : (
+                        <p className="text-xs text-gray-600 mt-1">{atividade.desc}</p>
+                      )}
                     </div>
                   </div>
                 ))}

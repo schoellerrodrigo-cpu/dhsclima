@@ -1507,13 +1507,119 @@ export default function PrimeiraInfancia() {
             <div className="mb-6 bg-gradient-to-r from-teal-50 to-cyan-50 p-5 rounded-lg border-l-4 border-teal-600">
               <h4 className="font-bold text-teal-900 text-lg mb-3 flex items-center">
                 <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3">V</div>
-                Eixo V - Etapas de Implementação (Passo 2.b)
+                Eixo V - Etapas de Implementação
               </h4>
               <p className="text-sm text-gray-700 mb-3">
                 <strong>Definição:</strong> Seguir uma sequência lógica de atividades ordenadas e interligadas.
               </p>
+
+              {/* Etapas Sugeridas para Implementação */}
+              <div className="bg-white p-4 rounded border border-teal-200 mb-4">
+                <p className="text-sm font-semibold text-teal-900 mb-3">🎯 Etapas Sugeridas para Implementação:</p>
+                <div className="space-y-3">
+                  <div className="bg-teal-50 p-3 rounded">
+                    <div className="flex items-start">
+                      <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                        1
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-gray-800 mb-2">Escolher o(s) Foco(s) Prioritário(s)</p>
+                        <p className="text-xs text-gray-600 mb-2">
+                          Baseado em critérios de conveniência, oportunidade e urgência.
+                        </p>
+                        <div className="mt-2 bg-white p-3 rounded border border-teal-200">
+                          <p className="text-xs font-semibold text-teal-800 mb-2">📊 Critérios para Priorização na Educação Infantil:</p>
+                          <ul className="text-xs text-gray-700 space-y-1 ml-3">
+                            <li>• <strong>Conveniência:</strong> Existe jurisprudência consolidada (STF, CNJ)? Há dados disponíveis (Censo Escolar, filas de espera)? Instrumentos técnicos prontos (Manual CNMP)?</li>
+                            <li>• <strong>Oportunidade:</strong> Há campanhas nacionais ativas? Recursos do FUNDEB disponíveis? Janela demográfica favorável?</li>
+                            <li>• <strong>Urgência:</strong> Quantas crianças estão fora da creche/pré-escola? Qual o impacto do desenvolvimento (0-6 anos)? Há violação massiva de direitos?</li>
+                          </ul>
+                          <p className="text-xs text-gray-600 mt-2 italic">
+                            <strong>Exemplos de Focos Prioritários:</strong> Municípios com filas de espera extensas, baixa cobertura em creches (0-3 anos), ausência de Plano Municipal de Educação, má gestão do FUNDEB, obras de creches paralisadas.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-teal-50 p-3 rounded">
+                    <div className="flex items-start">
+                      <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                        2.a
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-gray-800 mb-2">Mapear Necessidades, Possibilidades e Atividades</p>
+                        <p className="text-xs text-gray-600 mb-2">
+                          Levantar o que é preciso fazer, os recursos disponíveis e as iniciativas já existentes relacionadas ao foco escolhido.
+                        </p>
+                        <div className="mt-2 bg-white p-3 rounded border border-teal-200">
+                          <p className="text-xs font-semibold text-teal-800 mb-2">🔍 Aspectos a Mapear:</p>
+                          <div className="space-y-2">
+                            <div>
+                              <p className="text-xs font-semibold text-gray-700">Necessidades:</p>
+                              <ul className="text-xs text-gray-600 ml-3 mt-1">
+                                <li>• Déficit de vagas por faixa etária (0-3 anos e 4-5 anos)</li>
+                                <li>• Infraestrutura inadequada (prédios em más condições, ausência de áreas de lazer)</li>
+                                <li>• Carência de profissionais qualificados (professores, auxiliares, nutricionistas)</li>
+                                <li>• Ausência de documentos normativos (Plano de Expansão, critérios de matrícula, DONQEEI)</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p className="text-xs font-semibold text-gray-700">Possibilidades:</p>
+                              <ul className="text-xs text-gray-600 ml-3 mt-1">
+                                <li>• Recursos do FUNDEB (25% para educação infantil)</li>
+                                <li>• Programas federais (PAC Educação, Brasil na Escola)</li>
+                                <li>• Parcerias com universidades para formação docente</li>
+                                <li>• Apoio técnico do FNDE, UNDIME, Instituto Alana</li>
+                              </ul>
+                            </div>
+                            <div>
+                              <p className="text-xs font-semibold text-gray-700">Atividades Existentes:</p>
+                              <ul className="text-xs text-gray-600 ml-3 mt-1">
+                                <li>• Obras de creches em andamento ou paralisadas</li>
+                                <li>• Programas municipais de busca ativa escolar</li>
+                                <li>• Ações do Conselho Municipal de Educação (CME)</li>
+                                <li>• Projetos de regularização de unidades conveniadas</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-teal-50 p-3 rounded">
+                    <div className="flex items-start">
+                      <div className="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold mr-3 flex-shrink-0">
+                        2.b
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-gray-800 mb-1">Promover o Aperfeiçoamento das relações estabelecidas e/ou a Convergência Estrutural, por meio de atividades ordenadas</p>
+                        <div className="mt-2 bg-white p-3 rounded border border-teal-300">
+                          <p className="text-xs text-gray-700 mb-2">
+                            📄 <strong>Documento Detalhado:</strong> Acesse o material completo que descreve de forma detalhada todas as etapas e passos da Matriz de Convergência.
+                          </p>
+                          <a
+                            href="/documentos/matriz-convergencia-dhs-detalhado.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-xs bg-teal-600 text-white px-3 py-2 rounded hover:bg-teal-700 transition-colors"
+                          >
+                            <FileText className="w-4 h-4 mr-2" />
+                            Visualizar Guia Completo da Matriz de Convergência (PDF)
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="bg-white p-4 rounded border border-teal-200">
-                <p className="text-sm font-semibold text-teal-900 mb-3">📋 13 Atividades Adaptadas à Educação Infantil:</p>
+                <p className="text-sm font-semibold text-teal-900 mb-3">📋 Atividades (Passo 2.b) - 13 Atividades Adaptadas à Educação Infantil:</p>
+                <p className="text-xs text-gray-600 mb-3 italic">
+                  O passo 2.b se desdobra em uma série de atividades ordenadas e interligadas:
+                </p>
                 <div className="space-y-2">
                   {[
                     {num: 1, titulo: 'Fomentar o DHS em Ambientes de Convergência', desc: 'Participar de reuniões do CME, Fóruns de Educação, audiências públicas sobre educação infantil'},
