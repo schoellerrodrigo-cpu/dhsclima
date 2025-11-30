@@ -1,0 +1,1038 @@
+import { useState, useEffect, useRef } from 'react'
+import { MessageCircle, X, Send, Bot, User, Minimize2, Maximize2, Trash2, ThumbsUp, ThumbsDown, Copy, RotateCcw, Sparkles } from 'lucide-react'
+import { useNavigate, useLocation } from 'react-router-dom'
+
+interface Message {
+  id: string
+  text: string
+  sender: 'user' | 'bot'
+  timestamp: Date
+  suggestions?: string[]
+  feedback?: 'positive' | 'negative' | null
+  copied?: boolean
+}
+
+interface KnowledgeBase {
+  keywords: string[]
+  response: string
+  links?: { text: string; path: string }[]
+  relatedQuestions?: string[]
+  category?: string
+  priority?: number
+  synonyms?: string[] // Palavras alternativas que ajudam a identificar a pergunta
+}
+
+interface ChatHistory {
+  messages: Message[]
+  timestamp: Date
+}
+
+export default function ChatBot() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isMinimized, setIsMinimized] = useState(false)
+  const [messages, setMessages] = useState<Message[]>([])
+  const [inputValue, setInputValue] = useState('')
+  const [isTyping, setIsTyping] = useState(false)
+  const [showSuggestions, setShowSuggestions] = useState(true)
+  const [conversationContext, setConversationContext] = useState<string[]>([])
+  const [unreadCount, setUnreadCount] = useState(0)
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  // Salvar e carregar histórico do localStorage
+  useEffect(() => {
+    const savedMessages = localStorage.getItem('dhs-chat-history')
+    if (savedMessages) {
+      try {
+        const parsed = JSON.parse(savedMessages)
+        if (parsed.length > 0 && Date.now() - new Date(parsed[0].timestamp).getTime() < 24 * 60 * 60 * 1000) {
+          // Carregar apenas se for menos de 24h
+          setMessages(parsed.map((m: any) => ({
+            ...m,
+            timestamp: new Date(m.timestamp)
+          })))
+    {
+      keywords: ['o que é dhs', 'dhs', 'desenvolvimento harmônico', 'conceito dhs', 'definição dhs', 'explique dhs', 'significa dhs'],
+      response: 'O **Desenvolvimento Harmônico e Sustentável (DHS)** é um novo paradigma que busca o equilíbrio entre três eixos fundamentais:\n\n🌱 **Social** - bem-estar e inclusão de todos\n💰 **Econômico** - prosperidade compartilhada e justa\n🌍 **Ambiental** - preservação e sustentabilidade\n\nDiferente do modelo atual que prioriza apenas o crescimento econômico (PIB), o DHS promove uma visão **sistêmica e integrada** do desenvolvimento.\n\n✨ **Princípios centrais:**\n• Pensamento sistêmico\n• Equilíbrio entre os três eixos\n• Convergência estrutural\n• Atuação resolutiva\n• Sustentabilidade de longo prazo',
+      category: 'conceitos',
+      priority: 10,
+      links: [
+        { text: 'Ver mais sobre Soluções', path: '/solucoes' },
+        { text: 'Entender o Diagnóstico', path: '/diagnostico' }
+      ],
+      relatedQuestions: ['Como implementar o DHS?', 'Quais são as metodologias?', 'O que é convergência estrutural?']
+    }, (messages.length > 0) {
+      localStorage.setItem('dhs-chat-history', JSON.stringify(messages))
+    }
+  }, [messages])
+
+  // Detectar mudança de página e oferecer ajuda contextual
+  useEffect(() => {
+    if (isOpen) return
+    
+    const pathMap: { [key: string]: string } = {
+      '/': 'Precisa de ajuda para navegar no DHS Guide?',
+      '/diagnostico': 'Quer entender melhor o diagnóstico da crise atual?',
+      '/solucoes': 'Tem dúvidas sobre as soluções DHS?',
+      '/metodologias': 'Posso explicar as metodologias em detalhes!',
+      '/implementacao': 'Precisa de ajuda com a implementação?',
+      '/plano-contingencia': 'Tem dúvidas sobre Planos de Contingência?',
+      '/primeira-infancia': 'Quer saber mais sobre Educação Infantil?',
+      '/violencia-eca': 'Posso explicar sobre proteção de crianças e ECA',
+      '/organizacoes-criminosas': 'Tem perguntas sobre combate ao crime organizado?',
+      '/cao-estrada': 'Precisa de informações sobre segurança em rodovias?',
+      '/calculadora': 'Precisa de ajuda com a Calculadora DHS?'
+    }
+
+    if (pathMap[location.pathname] && messages.length === 0) {
+      setTimeout(() => {
+        setUnreadCount(1)
+      }, 3000)
+    }
+  }, [location.pathname])
+
+  // Focar input quando abrir
+  useEffect(() => {
+    if (isOpen && !isMinimized) {
+      inputRef.current?.focus()
+      setUnreadCount(0)
+    }
+  }, [isOpen, isMinimized])
+
+  // Base de conhecimento completa e expandida do site
+  const knowledgeBase: KnowledgeBase[] = [
+    {
+      keywords: ['olá', 'oi', 'ola', 'bom dia', 'boa tarde', 'boa noite', 'hey', 'hello', 'opa', 'e aí', 'eai'],
+      response: 'Olá! Bem-vindo ao DHS Guide! 👋\n\nSou seu assistente virtual e estou aqui para ajudá-lo a entender o Desenvolvimento Harmônico e Sustentável.\n\nPosso responder perguntas sobre:',
+      category: 'saudação',
+      priority: 10,
+      suggestions: [
+        'O que é DHS?',
+        'Como implementar?',
+        'Plano de Contingência',
+        'Primeira Infância'
+      ]
+    },
+    {
+      keywords: ['o que é dhs', 'dhs', 'desenvolvimento harmônico', 'conceito dhs', 'definição dhs'],
+      response: 'O **Desenvolvimento Harmônico e Sustentável (DHS)** é um novo paradigma que busca o equilíbrio entre três eixos fundamentais:\n\n🌱 **Social** - bem-estar e inclusão\n💰 **Econômico** - prosperidade compartilhada\n🌍 **Ambiental** - preservação e sustentabilidade\n\nDiferente do modelo atual que prioriza apenas o crescimento econômico, o DHS promove uma visão sistêmica e integrada do desenvolvimento.',
+      links: [
+        { text: 'Ver mais sobre Soluções', path: '/solucoes' },
+        { text: 'Entender o Diagnóstico', path: '/diagnostico' }
+      ],
+    {
+      keywords: ['convergência estrutural', 'convergencia', 'alinhamento', 'integração setores', 'convergir', 'articulação'],
+      response: '**Convergência Estrutural** é o mecanismo pelo qual diferentes setores (público, privado e sociedade civil) alinham suas ações para objetivos comuns.\n\n📋 **Envolve 5 dimensões:**\n1️⃣ **Planejamento** - metas integradas\n2️⃣ **Orçamento** - recursos alinhados\n3️⃣ **Indicadores** - métricas compartilhadas\n4️⃣ **Fiscalização** - controle coordenado\n5️⃣ **Incentivos** - estímulos compatíveis\n\n🎯 É a ponte entre o planejamento sistêmico e o desenvolvimento sustentável real.\n\n💡 Exemplo prático: Diferentes órgãos trabalhando juntos para expandir vagas em creches (Educação + Saúde + Assistência + Ministério Público + sociedade civil).',
+      category: 'conceitos',
+      priority: 9,
+      links: [
+        { text: 'Ver Matriz de Convergência', path: '/implementacao' },
+        { text: 'Conhecer as Metodologias', path: '/metodologias' }
+      ],
+      relatedQuestions: ['Como promover convergência?', 'O que é a Matriz de Convergência?']
+    },  { text: 'Conhecer as Metodologias', path: '/metodologias' }
+      ]
+    },
+    {
+      keywords: ['plancon', 'plano contingência', 'plano de contingência', 'defesa civil', 'desastres', 'emergências', 'comdec'],
+      response: '**Plano de Contingência (PLANCON)** é um instrumento obrigatório para municípios enfrentarem desastres naturais.\n\n🛡️ **Elementos principais:**\n• Mapeamento de áreas de risco\n• Sistema de monitoramento e alerta\n• Rotas de evacuação\n• Abrigos temporários\n• Equipes de resposta (COMDEC)\n• NUPDECs (Núcleos Comunitários)\n\n⚠️ **Importância:** A Lei 12.608/2012 exige que municípios em área de risco tenham PLANCON atualizado.',
+      category: 'plancon',
+      priority: 9,
+      links: [
+        { text: 'Ver Guia Completo PLANCON', path: '/plano-contingencia' }
+      ],
+      relatedQuestions: ['Quais são os passos para fazer um PLANCON?', 'O que são NUPDECs?', 'Como mapear áreas de risco?']
+    },
+    {
+      keywords: ['passos plancon', 'passos plano contingência', 'como fazer plancon', 'elaborar plancon', 'etapas plancon', 'criar plano contingência', 'fazer plano contingencia', 'passos para fazer plancon', 'passos para fazer plano', 'etapas para fazer plancon'],
+      synonyms: ['quais passos', 'quais etapas', 'qual passo a passo', 'como elaborar', 'como criar', 'como desenvolver', 'procedimento', 'metodologia', 'roteiro'],
+      response: '**Passos para Elaborar um Plano de Contingência (PLANCON):**\n\n📋 **1. DIAGNÓSTICO**\n   • Identificar áreas de risco (enchentes, deslizamentos)\n   • Mapear população vulnerável\n   • Levantar infraestrutura crítica\n   • Analisar histórico de desastres\n\n🗺️ **2. MAPEAMENTO**\n   • Cartografia de riscos\n   • Rotas de fuga e evacuação\n   • Localização de abrigos\n   • Pontos de encontro\n\n👥 **3. ESTRUTURAÇÃO**\n   • Criar/fortalecer COMDEC\n   • Formar NUPDECs comunitários\n   • Definir responsabilidades\n   • Estabelecer hierarquia de comando\n\n📡 **4. SISTEMA DE ALERTA**\n   • Monitoramento meteorológico\n   • Protocolos de acionamento\n   • Canais de comunicação\n   • Sirenes e avisos\n\n🏃 **5. PROCEDIMENTOS**\n   • Protocolos de evacuação\n   • Gestão de abrigos\n   • Distribuição de recursos\n   • Assistência emergencial\n\n🎓 **6. CAPACITAÇÃO**\n   • Treinamento de equipes\n   • Exercícios simulados\n   • Educação da população\n\n📊 **7. DOCUMENTAÇÃO**\n   • Registrar tudo em documento formal\n   • Aprovação pelo COMDEC\n   • Divulgação ampla\n\n🔄 **8. ATUALIZAÇÃO**\n   • Revisão periódica\n   • Ajustes pós-eventos\n   • Melhoria contínua',
+      category: 'plancon',
+      priority: 10,
+      links: [
+        { text: 'Ver Guia Detalhado', path: '/plano-contingencia' },
+        { text: 'Usar Matriz de Convergência', path: '/implementacao' }
+      ],
+      relatedQuestions: ['Como mapear áreas de risco?', 'O que é COMDEC?', 'Como treinar equipes?']
+    },
+    {
+      keywords: ['mapear risco', 'mapeamento risco', 'identificar risco', 'áreas vulneráveis', 'cartografia risco', 'como mapear risco', 'mapear áreas risco'],
+      response: '**Como Mapear Áreas de Risco:**\n\n🗺️ **1. LEVANTAMENTO GEOGRÁFICO**\n   • Topografia do município\n   • Bacias hidrográficas\n   • Encostas e morros\n   • Áreas de preservação\n\n📊 **2. ANÁLISE HISTÓRICA**\n   • Desastres anteriores\n   • Pontos críticos recorrentes\n   • Danos registrados\n   • Padrões sazonais\n\n🏘️ **3. VISTORIAS IN LOCO**\n   • Defesa Civil + técnicos\n   • Registros fotográficos\n   • Entrevistas com moradores\n   • Identificação de vulnerabilidades\n\n📈 **4. CLASSIFICAÇÃO DE RISCO**\n   • Muito alto (R4)\n   • Alto (R3)\n   • Médio (R2)\n   • Baixo (R1)\n\n🎨 **5. PRODUÇÃO CARTOGRÁFICA**\n   • Mapas temáticos por tipo de risco\n   • Sobreposição de camadas\n   • Georreferenciamento\n   • Sistema de cores\n\n👥 **6. PARTICIPAÇÃO COMUNITÁRIA**\n   • NUPDECs identificam locais\n   • Conhecimento local\n   • Validação dos mapas',
+      category: 'plancon',
+      priority: 8,
+      links: [
+        { text: 'Ver mais sobre PLANCON', path: '/plano-contingencia' }
+      ],
+      relatedQuestions: ['O que são NUPDECs?', 'Como criar COMDEC?']
+    },
+    {
+      keywords: ['nupdec', 'nudec', 'núcleos comunitários', 'defesa civil comunitária', 'voluntários'],
+      response: '**NUPDECs** (Núcleos Comunitários de Proteção e Defesa Civil) são grupos de voluntários da própria comunidade.\n\n👥 **Função:**\n• Elo entre população e Defesa Civil\n• Mapeamento participativo de riscos\n• Monitoramento local de perigos\n• Educação preventiva\n• Resposta imediata em emergências\n\n🌍 A OIM/ONU apoia os NUPDECs como ferramenta de gestão de migração ambiental.',
+      category: 'plancon',
+      priority: 8,
+      links: [
+        { text: 'Saber mais sobre NUPDECs', path: '/plano-contingencia' }
+      ],
+      relatedQuestions: ['Como criar um NUPDEC?', 'Quem pode participar?']
+    },
+    {
+      keywords: ['criar nupdec', 'formar nupdec', 'organizar nupdec', 'montar núcleo comunitário', 'como criar nupdec'],
+      response: '**Como Criar um NUPDEC:**\n\n1️⃣ **MOBILIZAÇÃO**\n   • Identificar lideranças locais\n   • Reunir moradores interessados\n   • Apresentar proposta à comunidade\n\n2️⃣ **FORMALIZAÇÃO**\n   • Registrar junto à Defesa Civil\n   • Definir coordenação\n   • Estabelecer área de atuação\n\n3️⃣ **CAPACITAÇÃO**\n   • Treinamento pela Defesa Civil\n   • Primeiros socorros\n   • Identificação de riscos\n   • Protocolos de emergência\n\n4️⃣ **MAPEAMENTO**\n   • Identificar áreas vulneráveis\n   • Cadastrar famílias em risco\n   • Documentar pontos críticos\n\n5️⃣ **PLANEJAMENTO**\n   • Rotas de fuga\n   • Pontos de encontro\n   • Sistema de comunicação\n\n6️⃣ **ATUAÇÃO**\n   • Monitoramento preventivo\n   • Educação comunitária\n   • Resposta a emergências',
+      category: 'plancon',
+      priority: 7,
+      links: [
+        { text: 'Ver página PLANCON', path: '/plano-contingencia' }
+      ]
+    },priority: 10,
+      links: [
+        { text: 'Ver Guia Detalhado', path: '/plano-contingencia' },
+        { text: 'Usar Matriz de Convergência', path: '/implementacao' }
+      ],
+      relatedQuestions: ['Como mapear áreas de risco?', 'O que é COMDEC?', 'Como treinar equipes?']
+    },
+    {
+      keywords: ['mapear risco', 'mapeamento risco', 'identificar risco', 'áreas vulneráveis', 'cartografia risco'],
+      response: '**Como Mapear Áreas de Risco:**\n\n🗺️ **1. LEVANTAMENTO GEOGRÁFICO**\n   • Topografia do município\n   • Bacias hidrográficas\n   • Encostas e morros\n   • Áreas de preservação\n\n📊 **2. ANÁLISE HISTÓRICA**\n   • Desastres anteriores\n   • Pontos críticos recorrentes\n   • Danos registrados\n   • Padrões sazonais\n\n🏘️ **3. VISTORIAS IN LOCO**\n   • Defesa Civil + técnicos\n   • Registros fotográficos\n   • Entrevistas com moradores\n   • Identificação de vulnerabilidades\n\n📈 **4. CLASSIFICAÇÃO DE RISCO**\n   • Muito alto (R4)\n   • Alto (R3)\n   • Médio (R2)\n   • Baixo (R1)\n\n🎨 **5. PRODUÇÃO CARTOGRÁFICA**\n   • Mapas temáticos por tipo de risco\n   • Sobreposição de camadas\n   • Georreferenciamento\n   • Sistema de cores\n\n👥 **6. PARTICIPAÇÃO COMUNITÁRIA**\n   • NUPDECs identificam locais\n   • Conhecimento local\n   • Validação dos mapas',
+      category: 'plancon',
+    {
+      keywords: ['primeira infância', 'educação infantil', 'creche', 'pré-escola', 'fundeb', 'vagas'],
+      response: '**Primeira Infância e Educação Infantil** (0 a 6 anos) são prioridades absolutas no Brasil.\n\n🎯 **Principais questões:**\n• Déficit de vagas em creches\n• Filas de espera\n• Qualidade do atendimento (DONQEEI)\n• Financiamento (FUNDEB)\n• Marco Legal da Primeira Infância\n\n📊 **Dados:** Cerca de 632 mil crianças aguardam vaga em creche no Brasil.',
+      category: 'educação',
+      priority: 9,
+      links: [
+        { text: 'Ver página completa', path: '/primeira-infancia' }
+      ],
+      relatedQuestions: ['Como expandir vagas?', 'O que é DONQEEI?', 'Passos para ampliar educação infantil?']
+    },
+    {
+      keywords: ['expandir vagas', 'ampliar creche', 'aumentar vagas', 'como expandir educação infantil', 'passos expandir vagas'],
+      response: '**Passos para Expandir Vagas em Educação Infantil:**\n\n📊 **1. DIAGNÓSTICO**\n   • Levantar demanda real\n   • Mapear fila de espera\n   • Identificar bairros críticos\n   • Analisar capacidade atual\n\n💰 **2. PLANEJAMENTO ORÇAMENTÁRIO**\n   • Calcular custo por vaga\n   • Identificar fontes (FUNDEB, convênios)\n   • Projetar investimento necessário\n   • Planejar manutenção\n\n🏗️ **3. INFRAESTRUTURA**\n   • Construir novas unidades\n   • Adaptar espaços existentes\n   • Garantir acessibilidade\n   • Seguir DONQEEI\n\n👨‍🏫 **4. RECURSOS HUMANOS**\n   • Realizar concursos\n   • Capacitar profissionais\n   • Respeitar razão criança/educador\n   • Plano de carreira\n\n⚖️ **5. CONVERGÊNCIA ESTRUTURAL**\n   • Articular Educação + Saúde + Assistência\n   • Envolver Ministério Público\n   • Mobilizar sociedade civil\n   • Buscar parcerias\n\n📋 **6. GESTÃO DE FILA**\n   • Critérios transparentes\n   • Sistema informatizado\n   • Priorização legal (vulnerabilidade)\n   • Atualização constante\n\n📈 **7. MONITORAMENTO**\n   • Indicadores de acesso\n   • Qualidade do atendimento\n   • Satisfação das famílias\n   • Ajustes contínuos',
+      category: 'educação',
+      priority: 10,
+      links: [
+        { text: 'Ver Guia Completo', path: '/primeira-infancia' },
+        { text: 'Usar Matriz de Convergência', path: '/implementacao' }
+      ],
+      relatedQuestions: ['O que é FUNDEB?', 'Quanto custa uma vaga?', 'O que é DONQEEI?']
+    {
+      keywords: ['donqeei', 'qualidade educação infantil', 'parâmetros', 'razão criança educador'],
+      response: '**DONQEEI** = Documentos Orientadores de Normas e Qualidade da Educação Infantil\n\n📏 **Estabelece padrões como:**\n• Razão criança/educador por idade\n• Infraestrutura adequada\n• Formação de professores\n• Alimentação e nutrição\n• Currículo e pedagogia\n\n👶 **Exemplos de razão criança/educador:**\n• 0-12 meses: 5 bebês por educador\n• 1-2 anos: 8 crianças por educador\n• 2-3 anos: 12 crianças por educador\n• 3-4 anos: 15 crianças por educador',
+      category: 'educação',
+      priority: 7,
+      links: [
+        { text: 'Ver parâmetros completos', path: '/primeira-infancia' }
+      ]
+    },
+    {
+      keywords: ['fundeb', 'financiamento educação', 'recursos educação', 'orçamento educação'],
+      response: '**FUNDEB** = Fundo de Manutenção e Desenvolvimento da Educação Básica\n\n💰 **Características:**\n• Principal fonte de financiamento da educação\n• Distribuição por nº de matrículas\n• Educação infantil tem valor diferenciado\n• Complementação da União\n• Controle social obrigatório\n\n📊 **Aplicação:**\n• Mínimo 60% em remuneração de profissionais\n• 40% em outras despesas educacionais\n• Vedado desvio de finalidade\n\n✅ Ferramenta essencial para expandir vagas em creches e pré-escolas.',
+      category: 'educação',
+      priority: 7,
+      links: [
+        { text: 'Ver mais sobre Primeira Infância', path: '/primeira-infancia' }
+      ]
+    },keywords: ['primeira infância', 'educação infantil', 'creche', 'pré-escola', 'fundeb', 'vagas'],
+      response: '**Primeira Infância e Educação Infantil** (0 a 6 anos) são prioridades absolutas no Brasil.\n\n🎯 **Principais questões:**\n• Déficit de vagas em creches\n• Filas de espera\n• Qualidade do atendimento (DONQEEI)\n• Financiamento (FUNDEB)\n• Marco Legal da Primeira Infância\n\n📊 **Dados:** Cerca de 632 mil crianças aguardam vaga em creche no Brasil.',
+      links: [
+    {
+      keywords: ['violência', 'eca', 'estatuto criança', 'abuso', 'negligência', 'conselho tutelar'],
+      response: '**Violência contra Crianças e Adolescentes** é uma grave violação de direitos.\n\n⚠️ **Tipos de violência:**\n• Física e psicológica\n• Sexual e exploração\n• Negligência e abandono\n• Trabalho infantil\n• Bullying e cyberbullying\n\n📞 **Denuncie:** Disque 100 ou Conselho Tutelar\n\n🛡️ O ECA garante proteção integral e absoluta prioridade.',
+      category: 'proteção',
+      priority: 9,
+      links: [
+        { text: 'Conhecer o ECA', path: '/violencia-eca' }
+    {
+      keywords: ['crime organizado', 'facções', 'pcc', 'tráfico', 'lavagem dinheiro', 'segurança'],
+      response: '**Combate a Organizações Criminosas** exige atuação estrutural e sistêmica.\n\n🎯 **Principais frentes:**\n• Investigação e inteligência\n• Repressão qualificada (GAECO, DRACO)\n• Prevenção e políticas públicas\n• Lavagem de dinheiro\n• Sistema prisional\n\n⚖️ Legislação: Leis 12.850/2013 e 12.694/2012',
+      category: 'segurança',
+      priority: 8,
+      links: [
+        { text: 'Saber mais', path: '/organizacoes-criminosas' }
+      ],
+      relatedQuestions: ['Como combater o crime organizado?', 'O que é GAECO?']
+    },
+    {
+      keywords: ['combater crime', 'enfrentar crime organizado', 'estratégias crime', 'ações crime organizado'],
+      response: '**Estratégias para Combater Crime Organizado:**\n\n🔍 **1. INTELIGÊNCIA**\n   • Investigação profunda\n   • Interceptação telefônica\n   • Infiltração de agentes\n   • Colaboração premiada\n\n💰 **2. SEGUIR O DINHEIRO**\n   • Rastreamento financeiro\n   • Bloqueio de bens\n   • Combate à lavagem\n   • Recuperação de ativos\n\n⚖️ **3. ATUAÇÃO JURÍDICA**\n   • GAECO (Grupo de Combate)\n   • Denúncias robustas\n   • Medidas cautelares\n   • Condenações exemplares\n\n🛡️ **4. PREVENÇÃO**\n   • Políticas sociais\n   • Educação e oportunidades\n   • Fortalecimento comunitário\n   • Redução de vulnerabilidades\n\n🤝 **5. CONVERGÊNCIA INSTITUCIONAL**\n   • Polícia + MP + Judiciário\n   • Integração de dados\n   • Protocolos unificados\n   • Cooperação internacional\n\n🔒 **6. SISTEMA PRISIONAL**\n   • Isolamento de lideranças\n   • Impedir comando de dentro\n   • Ressocialização efetiva',
+      category: 'segurança',
+      priority: 8,
+      links: [
+        { text: 'Ver página completa', path: '/organizacoes-criminosas' }
+      ]
+    },category: 'proteção',
+      priority: 8,
+      links: [
+        { text: 'Ver mais sobre ECA', path: '/violencia-eca' }
+      ]
+    },response: '**DONQEEI** = Documentos Orientadores de Normas e Qualidade da Educação Infantil\n\n📏 **Estabelece padrões como:**\n• Razão criança/educador por idade\n• Infraestrutura adequada\n• Formação de professores\n• Alimentação e nutrição\n• Currículo e pedagogia\n\nExemplo: Para bebês 0-12 meses = 5 bebês por educador(a)',
+      links: [
+        { text: 'Ver parâmetros completos', path: '/primeira-infancia' }
+      ]
+    },
+    {
+      keywords: ['violência', 'eca', 'estatuto criança', 'abuso', 'negligência', 'conselho tutelar'],
+      response: '**Violência contra Crianças e Adolescentes** é uma grave violação de direitos.\n\n⚠️ **Tipos de violência:**\n• Física e psicológica\n• Sexual e exploração\n• Negligência e abandono\n• Trabalho infantil\n• Bullying e cyberbullying\n\n📞 **Denuncie:** Disque 100 ou Conselho Tutelar\n\n🛡️ O ECA garante proteção integral e absoluta prioridade.',
+      links: [
+        { text: 'Conhecer o ECA', path: '/violencia-eca' }
+      ]
+    },
+    {
+      keywords: ['calculadora', 'avaliar', 'medir impacto', 'análise', 'usar calculadora', 'como usar calculadora'],
+      response: '**Calculadora DHS** permite avaliar projetos e políticas nos três eixos:\n\n📊 **Avalia impactos em:**\n• Eixo Social\n• Eixo Econômico  \n• Eixo Ambiental\n\n🎯 **Como usar:**\n1. Acesse a Calculadora\n2. Insira dados do projeto/política\n3. Avalie impacto em cada eixo (0-10)\n4. Veja resultado visual\n5. Identifique desequilíbrios\n6. Ajuste para maior harmonia\n\n✅ Resultado ideal: equilíbrio entre os três eixos.',
+      category: 'ferramentas',
+      priority: 7,
+      links: [
+        { text: 'Usar Calculadora', path: '/calculadora' }
+      ]
+    },
+    {
+      keywords: ['acidentes', 'trânsito', 'rodovia', 'cão estrada', 'animais soltos', 'br'],
+      response: '**Cão na Estrada** - Prevenção de acidentes com animais em rodovias\n\n🚗 **Problema:**\n• Animais soltos causam acidentes graves\n• Mortes e feridos\n• Responsabilidade de concessionárias\n\n✅ **Soluções:**\n• Cercas e telas de proteção\n• Fiscalização e recolhimento\n• Posse responsável\n• Atuação do MP',
+      links: [
+        { text: 'Ver detalhes', path: '/cao-estrada' }
+      ]
+    },
+    {
+    {
+      keywords: ['como implementar', 'implementação', 'passo a passo', 'começar', 'aplicar', 'implementar dhs'],
+      response: '**Como Implementar o DHS - Passo a Passo:**\n\n1️⃣ **Escolher Foco Prioritário**\n   • Conveniência, oportunidade, urgência\n\n2️⃣ **Mapear Necessidades e Possibilidades**\n   • Diagnóstico situacional\n\n3️⃣ **Promover Convergência Estrutural**\n   • 13 atividades ordenadas\n   • Matriz de Convergência\n\nExistem casos práticos em educação infantil, PLANCONs e outras áreas.',
+      category: 'implementação',
+      priority: 10,
+      links: [
+        { text: 'Ver Guia Completo', path: '/implementacao' }
+      ],
+      relatedQuestions: ['Quais são as 13 atividades?', 'O que é a Matriz de Convergência?', 'Casos práticos de implementação?']
+    },
+    {
+      keywords: ['13 atividades', 'treze atividades', 'atividades convergência', 'etapas implementação'],
+      response: '**13 Atividades para Convergência Estrutural:**\n\n1️⃣ Definir objetivo comum\n2️⃣ Mapear atores e recursos\n3️⃣ Diagnosticar situação atual\n4️⃣ Estabelecer metas compartilhadas\n5️⃣ Alinhar planejamentos setoriais\n6️⃣ Integrar orçamentos\n7️⃣ Definir indicadores comuns\n8️⃣ Estabelecer governança\n9️⃣ Criar canais de comunicação\n🔟 Implementar ações coordenadas\n1️⃣1️⃣ Monitorar progresso conjunto\n1️⃣2️⃣ Avaliar resultados integrados\n1️⃣3️⃣ Ajustar e aprimorar continuamente\n\n✅ Cada atividade possui passos detalhados na Matriz de Convergência.',
+      category: 'implementação',
+      priority: 9,
+      links: [
+        { text: 'Ver Matriz Detalhada', path: '/implementacao' }
+      ]
+    },
+    {
+      keywords: ['casos práticos', 'exemplos', 'aplicação prática', 'casos reais', 'exemplos dhs'],
+      response: '**Casos Práticos de Implementação DHS:**\n\n🎓 **EDUCAÇÃO INFANTIL**\n   • Expansão de vagas em creches\n   • Convergência: Educação + Saúde + Assistência + MP\n   • Resultado: Redução de fila e qualidade\n\n🛡️ **PLANOS DE CONTINGÊNCIA**\n   • Proteção contra desastres naturais\n   • Convergência: Defesa Civil + Saúde + Habitação + Comunidade\n   • Resultado: Comunidades resilientes\n\n🚸 **PROTEÇÃO À INFÂNCIA**\n   • Combate à violência contra crianças\n   • Convergência: Educação + Saúde + Justiça + Assistência\n   • Resultado: Rede de proteção efetiva\n\n🌍 **MEIO AMBIENTE**\n   • Gestão sustentável de recursos\n   • Convergência: Ambiente + Economia + Comunidades\n   • Resultado: Desenvolvimento sustentável\n\nTodos seguem a mesma metodologia de convergência estrutural.',
+      category: 'implementação',
+      priority: 8,
+      links: [
+        { text: 'Ver Implementação', path: '/implementacao' },
+        { text: 'PLANCON', path: '/plano-contingencia' },
+        { text: 'Primeira Infância', path: '/primeira-infancia' }
+      ]
+    },
+      keywords: ['cnmp', 'recomendação 54', '54/2017', 'ministério público', 'atuação resolutiva'],
+      response: '**Recomendação CNMP 54/2017** instituiu a Política Nacional de Fomento à Atuação Resolutiva.\n\n🎯 **Mudança de paradigma:**\nDe uma cultura burocrática → Para foco em RESULTADOS concretos\n\n✅ **Atuação resolutiva:**\n• Prevenir/solucionar conflitos efetivamente\n• Priorizar vias extrajudiciais\n• Promover convergência estrutural\n• Contribuir para desenvolvimento sustentável',
+      links: [
+        { text: 'Ver detalhes completos', path: '/metodologias' }
+      ]
+    },
+    {
+      keywords: ['como implementar', 'implementação', 'passo a passo', 'começar', 'aplicar'],
+      response: '**Como Implementar o DHS - Passo a Passo:**\n\n1️⃣ **Escolher Foco Prioritário**\n   • Conveniência, oportunidade, urgência\n\n2️⃣ **Mapear Necessidades e Possibilidades**\n   • Diagnóstico situacional\n\n3️⃣ **Promover Convergência Estrutural**\n   • 13 atividades ordenadas\n   • Matriz de Convergência\n\nExistem casos práticos em educação infantil, PLANCONs e outras áreas.',
+      links: [
+        { text: 'Ver Guia Completo', path: '/implementacao' }
+      ]
+    },
+    {
+      keywords: ['calculadora', 'avaliar', 'medir impacto', 'análise'],
+      response: '**Calculadora DHS** permite avaliar projetos e políticas nos três eixos:\n\n📊 **Avalia impactos em:**\n• Eixo Social\n• Eixo Econômico  \n• Eixo Ambiental\n\nGera resultado visual do equilíbrio e sustentabilidade.',
+      links: [
+        { text: 'Usar Calculadora', path: '/calculadora' }
+      ]
+    },
+    {
+      keywords: ['recursos', 'documentos', 'pdf', 'material', 'downloads'],
+      response: '**Recursos e Documentos disponíveis:**\n\n📄 PDFs técnicos e guias\n🌍 Acordos internacionais (ODS, Agenda 2030)\n⚖️ Legislação e normativas\n🔧 Ferramentas práticas\n\nTodo material está organizado por tema.',
+      category: 'recursos',
+      priority: 6,
+      links: [
+        { text: 'Acessar Recursos', path: '/recursos' }
+      ]
+    },
+    {
+      keywords: ['ods', 'objetivos desenvolvimento sustentável', 'agenda 2030', 'onu'],
+      response: '**ODS - Objetivos de Desenvolvimento Sustentável**\n\n🌍 **17 objetivos da ONU para 2030:**\n\n1. Erradicação da pobreza\n2. Fome zero\n3. Saúde e bem-estar\n4. Educação de qualidade\n5. Igualdade de gênero\n6. Água potável e saneamento\n7. Energia limpa\n8. Trabalho decente\n9. Inovação e infraestrutura\n10. Redução das desigualdades\n11. Cidades sustentáveis\n12. Consumo responsável\n13. Ação contra mudança climática\n14. Vida na água\n15. Vida terrestre\n16. Paz e justiça\n17. Parcerias pelas metas\n\n✅ O DHS alinha-se perfeitamente com os ODS, promovendo implementação integrada.',
+      category: 'conceitos',
+      priority: 7,
+      links: [
+        { text: 'Ver Recursos', path: '/recursos' }
+      ]
+    },
+    {
+      keywords: ['tac', 'termo ajustamento conduta', 'acordo', 'compromisso'],
+      response: '**TAC - Termo de Ajustamento de Conduta**\n\n📝 **O que é:**\nInstrumento pelo qual o responsável por dano ou irregularidade se compromete a regularizar a situação.\n\n✅ **Vantagens:**\n• Evita judicialização\n• Solução mais rápida\n• Economia de recursos\n• Foco no resultado prático\n\n⚖️ **Características:**\n• Título executivo extrajudicial\n• Obrigações claras e mensuráveis\n• Prazo definido\n• Multa por descumprimento\n• Fiscalização pelo MP\n\n🎯 **Aplicações no DHS:**\n• Expansão de vagas em creches\n• Implementação de PLANCONs\n• Adequação ambiental\n• Proteção de direitos',
+      category: 'instrumentos',
+      priority: 6,
+      links: [
+        { text: 'Ver Metodologias', path: '/metodologias' }
+      ]
+    },
+    {
+      keywords: ['comdec', 'coordenadoria defesa civil', 'coordenação municipal'],
+      response: '**COMDEC - Coordenadoria Municipal de Defesa Civil**\n\n🏛️ **O que é:**\nÓrgão municipal responsável por coordenar ações de defesa civil.\n\n👥 **Funções:**\n• Elaborar e atualizar PLANCON\n• Coordenar NUPDECs\n• Monitorar áreas de risco\n• Acionar alertas\n• Coordenar evacuações\n• Gerir abrigos emergenciais\n• Articular resposta a desastres\n\n⚖️ **Composição:**\n• Representantes de diversos órgãos\n• Sociedade civil\n• Coordenador técnico\n\n✅ Essencial para gestão de riscos e desastres.',
+      category: 'plancon',
+      priority: 7,
+      links: [
+        { text: 'Ver PLANCON', path: '/plano-contingencia' }
+      ]
+    },
+    {
+      keywords: ['ajuda', 'help', 'não entendi', 'dúvida', 'como funciona', 'me ajude', 'preciso ajuda', 'temas', 'assuntos'],
+      response: 'Posso ajudar você com informações sobre:\n\n📚 **Conceitos:** DHS, Convergência Estrutural, PGS, Pensamento Sistêmico\n🛠️ **Implementação:** Passo a passo, casos práticos, Matriz de Convergência\n📋 **Temas específicos:** Educação Infantil, Planos de Contingência, Violência ECA, Crime Organizado\n⚖️ **Instrumentos jurídicos:** Recomendações CNMP, TACs, Resoluções\n🌍 **Meio Ambiente:** Desastres naturais, mudanças climáticas\n🚸 **Proteção:** Crianças, adolescentes, primeira infância\n\n💬 **Dicas de uso:**\n• Faça perguntas diretas e específicas\n• Use palavras-chave do tema de interesse\n• Clique nas sugestões de perguntas\n• Explore os links para mais detalhes',
+      category: 'ajuda',
+      priority: 8,
+      suggestions: [
+        'O que é DHS?',
+        'Como fazer PLANCON?',
+        'Educação Infantil',
+        'Metodologias'
+      ]
+    },
+    {
+      keywords: ['obrigado', 'obrigada', 'valeu', 'agradeço', 'muito obrigado', 'thanks', 'grato'],
+      response: 'Por nada! 😊 Fico feliz em ajudar!\n\nSe tiver mais alguma dúvida sobre o DHS ou qualquer tema do site, estou à disposição.\n\n💡 Você também pode:\n• Explorar as páginas pelo menu superior\n• Usar a ferramenta de busca (🔍)\n• Usar a Calculadora DHS\n• Baixar documentos em PDF',
+      category: 'cortesia',
+      priority: 5,
+      suggestions: [
+        'Quero saber mais sobre outro tema',
+        'Como navegar no site?'
+      ]
+    },
+    {
+      keywords: ['tchau', 'até logo', 'bye', 'até mais', 'adeus', 'vou sair', 'fim'],
+      response: 'Até logo! 👋\n\nEspero ter ajudado você a entender melhor o Desenvolvimento Harmônico e Sustentável.\n\nVolte sempre que precisar! O chat salva nosso histórico por 24h para continuarmos de onde paramos.\n\n🌱 Juntos podemos construir um futuro mais sustentável!',
+      category: 'despedida',
+      priority: 5
+    },
+    {
+      keywords: ['matriz convergência', 'matriz', 'guia implementação', 'ferramenta prática'],
+      response: '**Matriz de Convergência DHS** é uma ferramenta prática para implementação estruturada.\n\n📊 **Estrutura:**\n• 13 atividades ordenadas\n• Cada atividade com passos claros\n• Responsáveis e prazos\n• Indicadores de progresso\n\n🎯 **Aplicação:**\nPode ser usada em diversos contextos (educação infantil, defesa civil, saúde, etc.)\n\n📥 Disponível em PDF detalhado para download.',
+      category: 'implementação',
+      priority: 8,
+      links: [
+        { text: 'Ver Guia de Implementação', path: '/implementacao' }
+      ],
+      relatedQuestions: ['Quais são as 13 atividades?', 'Como usar a matriz?']
+    },
+    {
+      keywords: ['pensamento sistêmico', 'sistemico', 'visão holística', 'complexidade', 'interconexões'],
+      response: '**Pensamento Sistêmico** é a base do DHS - olhar para o TODO e as INTERCONEXÕES.\n\n🔄 **Princípios:**\n• Tudo está interconectado\n• Ações geram efeitos em cascata\n• Foco nas relações, não só nos elementos\n• Identificar padrões e feedbacks\n\n⚠️ **Problema atual:**\nAbordagens fragmentadas tratam sintomas, não causas raízes.\n\n✅ **Solução DHS:**\nVisão integrada que aborda problemas de forma estrutural.',
+      category: 'conceitos',
+      priority: 8,
+      links: [
+        { text: 'Entender o Diagnóstico', path: '/diagnostico' },
+        { text: 'Ver Soluções', path: '/solucoes' }
+      ]
+    },
+    {
+      keywords: ['pgs', 'planejamento gestão sistêmicos', 'planejamento sistemico'],
+      response: '**PGS** (Planejamento e Gestão Sistêmicos) é uma metodologia estruturada.\n\n📋 **Etapas:**\n1️⃣ Diagnóstico sistêmico\n2️⃣ Definição de objetivos integrados\n3️⃣ Mapeamento de atores e recursos\n4️⃣ Planejamento coordenado\n5️⃣ Implementação convergente\n6️⃣ Monitoramento e avaliação\n\n🎯 Diferencial: Considera interconexões e promove alinhamento entre todos os envolvidos.',
+      category: 'metodologias',
+      priority: 8,
+      links: [
+        { text: 'Ver Metodologias', path: '/metodologias' }
+      ]
+    },
+    {
+      keywords: ['nmc', 'comunicação não violenta', 'comunicacao nao violenta', 'cnv'],
+      response: '**NMC** (Comunicação Não-Violenta) é fundamental para promover convergência.\n\n💬 **4 Componentes:**\n1️⃣ **Observação** - fatos sem julgamento\n2️⃣ **Sentimento** - expressão emocional\n3️⃣ **Necessidade** - valores subjacentes\n4️⃣ **Pedido** - ação concreta\n\n✅ **Benefícios:**\n• Reduz conflitos\n• Facilita diálogo\n• Promove empatia\n• Aumenta efetividade das negociações',
+      category: 'metodologias',
+  const findBestResponse = (userInput: string): KnowledgeBase | null => {
+    const input = userInput.toLowerCase().trim()
+    
+    // Buscar correspondência exata ou parcial com contexto
+    let bestMatch: KnowledgeBase | null = null
+    let maxScore = 0
+
+    knowledgeBase.forEach(kb => {
+      let score = 0
+      
+      // Pontuação base por palavra-chave encontrada
+      kb.keywords.forEach(keyword => {
+        if (input.includes(keyword)) {
+          score += keyword.length * 2 // Palavras mais longas têm mais peso
+          
+          // Bonus se for correspondência exata
+          if (input === keyword) {
+            score += 10
+          }
+          
+          // Bonus se a palavra-chave estiver no início
+          if (input.startsWith(keyword)) {
+            score += 5
+          }
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return
+
+    const userText = inputValue.trim()
+    addUserMessage(userText)
+    setInputValue('')
+    setIsTyping(true)
+    setShowSuggestions(false)
+
+    // Simular digitação do bot com tempo variável baseado no tamanho da resposta
+    const typingDelay = Math.min(userText.length * 50 + 800, 2000)
+    
+    setTimeout(() => {
+      const response = findBestResponse(userText)
+      
+      if (response) {
+        // Adicionar categoria ao contexto
+        if (response.category) {
+          setConversationContext(prev => [...prev, response.category!].slice(-3))
+        }
+        
+        let fullResponse = response.response
+
+        if (response.links && response.links.length > 0) {
+          fullResponse += '\n\n🔗 **Links úteis:**'
+          // Links serão renderizados separadamente
+        }
+
+        addBotMessage(fullResponse, response.relatedQuestions)
+        
+        // Adicionar links como mensagem separada se houver
+        if (response.links && response.links.length > 0) {
+          setTimeout(() => {
+            const linksMessage: Message = {
+              id: (Date.now() + 1).toString(),
+              text: 'links',
+              sender: 'bot',
+              timestamp: new Date()
+            }
+            setMessages(prev => [...prev, linksMessage])
+          }, 500)
+        }
+      } else {
+        // Resposta mais inteligente quando não encontra correspondência
+        const suggestions = [
+          'O que é DHS?',
+          'Como implementar?',
+          'Plano de Contingência',
+          'Primeira Infância'
+        ]
+        
+        // Tentar sugerir baseado em palavras da pergunta
+        if (userText.match(/educa|creche|criança|escola|infância/i)) {
+          suggestions[3] = 'Educação Infantil'
+          suggestions[1] = 'O que é DONQEEI?'
+        } else if (userText.match(/desastre|emergência|risco|alerta/i)) {
+          suggestions[2] = 'O que são NUPDECs?'
+          suggestions[3] = 'Como fazer PLANCON?'
+        } else if (userText.match(/crime|tráfico|violência|segurança/i)) {
+          suggestions[2] = 'Crime Organizado'
+          suggestions[3] = 'Violência contra crianças'
+        }
+        
+        addBotMessage(
+          'Desculpe, não encontrei uma resposta específica para sua pergunta. 🤔\n\n💡 **Tente:**\n• Reformular com palavras-chave diferentes\n• Ser mais específico\n• Escolher um tema abaixo\n• Usar a busca (🔍) no topo da página\n\n📚 Principais temas: DHS, PLANCON, Educação Infantil, ECA, Crime Organizado, Metodologias, Implementação',
+          suggestions
+        )
+      }
+      
+      setIsTyping(false)
+      setShowSuggestions(true)
+    }, typingDelay)
+  }   timestamp: new Date().toISOString()
+    }
+    
+    const savedFeedback = localStorage.getItem('dhs-chat-feedback') || '[]'
+    const feedbackArray = JSON.parse(savedFeedback)
+    feedbackArray.push(feedbackData)
+    localStorage.setItem('dhs-chat-feedback', JSON.stringify(feedbackArray))
+  }
+
+  const copyMessage = (messageId: string, text: string) => {
+    navigator.clipboard.writeText(text)
+    setMessages(prev => prev.map(msg => 
+      msg.id === messageId ? { ...msg, copied: true } : msg
+    ))
+    
+    setTimeout(() => {
+      setMessages(prev => prev.map(msg => 
+        msg.id === messageId ? { ...msg, copied: false } : msg
+      ))
+    }, 2000)
+  }     addBotMessage(
+          'Olá! 👋 Sou o assistente virtual do DHS Guide.\n\nEstou aqui para ajudá-lo a entender o Desenvolvimento Harmônico e Sustentável e todos os temas do site.\n\nComo posso ajudar você hoje?',
+          [
+            'O que é DHS?',
+            'Como implementar?',
+            'Plano de Contingência',
+            'Primeira Infância'
+          ]
+        )
+      }, 500)
+    }
+  }, [isOpen])
+
+  const addBotMessage = (text: string, suggestions?: string[]) => {
+    const botMessage: Message = {
+      id: Date.now().toString(),
+      text,
+      sender: 'bot',
+      timestamp: new Date(),
+      suggestions
+    }
+    setMessages(prev => [...prev, botMessage])
+  }
+
+  const addUserMessage = (text: string) => {
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text,
+      sender: 'user',
+      timestamp: new Date()
+    }
+    setMessages(prev => [...prev, userMessage])
+  }
+
+  const findBestResponse = (userInput: string): KnowledgeBase | null => {
+    const input = userInput.toLowerCase().trim()
+    
+    // Normalizar texto removendo acentos para melhor busca
+    const normalizeText = (text: string) => {
+      return text
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+    }
+    
+    const normalizedInput = normalizeText(input)
+    
+    // Buscar correspondência exata ou parcial com contexto
+    let bestMatch: KnowledgeBase | null = null
+    let maxScore = 0
+
+    knowledgeBase.forEach(kb => {
+      let score = 0
+      
+      // Pontuação base por palavra-chave encontrada
+      kb.keywords.forEach(keyword => {
+        const normalizedKeyword = normalizeText(keyword)
+        
+        // Correspondência exata
+        if (input.includes(keyword) || normalizedInput.includes(normalizedKeyword)) {
+          score += keyword.length * 3 // Palavras mais longas têm mais peso
+          
+          // Bonus se for correspondência exata completa
+          if (input === keyword || normalizedInput === normalizedKeyword) {
+            score += 20
+          }
+          
+          // Bonus se a palavra-chave estiver no início
+          if (input.startsWith(keyword) || normalizedInput.startsWith(normalizedKeyword)) {
+            score += 10
+          }
+          
+          // Bonus para frases múltiplas (passos, como fazer, etc)
+          if (keyword.split(' ').length > 2) {
+            score += 5
+          }
+        }
+        
+        // Busca por palavras individuais da keyword
+        const keywordWords = normalizedKeyword.split(' ')
+        const inputWords = normalizedInput.split(' ')
+        let matchedWords = 0
+        
+        keywordWords.forEach(kw => {
+          if (kw.length > 3 && inputWords.some(iw => iw.includes(kw) || kw.includes(iw))) {
+            matchedWords++
+          }
+        })
+        
+        // Bonus se múltiplas palavras da keyword correspondem
+        if (matchedWords > 1) {
+          score += matchedWords * 2
+        }
+      })
+      
+      // Verificar sinônimos para melhorar a detecção
+      if (kb.synonyms) {
+        kb.synonyms.forEach(synonym => {
+          const normalizedSynonym = normalizeText(synonym)
+          if (normalizedInput.includes(normalizedSynonym)) {
+            score += 3
+          }
+        })
+      }
+      
+      // Bonus por prioridade da base de conhecimento
+      if (kb.priority) {
+        score += kb.priority
+      }
+      
+      // Bonus por contexto da conversa
+      if (conversationContext.length > 0) {
+        const lastContext = conversationContext[conversationContext.length - 1]
+        if (kb.category === lastContext) {
+          score += 5
+        }
+      }
+      
+      if (score > maxScore) {
+        maxScore = score
+        bestMatch = kb
+      }
+    })
+
+    return maxScore > 0 ? bestMatch : null
+  }
+
+  const handleSendMessage = () => {
+    if (!inputValue.trim()) return
+
+    const userText = inputValue.trim()
+    addUserMessage(userText)
+    setInputValue('')
+    setIsTyping(true)
+
+    // Simular digitação do bot
+    setTimeout(() => {
+      const response = findBestResponse(userText)
+      
+  return (
+    <>
+      {/* Botão flutuante */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:from-primary-700 hover:to-primary-800 transition-all hover:scale-110 z-50 group animate-bounce"
+          style={{ animationDuration: '3s' }}
+          title="Abrir assistente DHS"
+        >
+          <MessageCircle className="w-6 h-6" />
+          {unreadCount > 0 && (
+            <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold shadow-md">
+              {unreadCount}
+            </span>
+          )}
+          <Sparkles className="absolute -top-1 -left-1 w-4 h-4 text-yellow-300 animate-pulse" />
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-xl">
+            💬 Precisa de ajuda? Clique aqui!
+            <div className="absolute top-full right-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+          </div>
+        </button>
+      )}      timestamp: new Date()
+            {/* Header */}
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 rounded-t-lg flex items-center justify-between shadow-md">
+              <div className="flex items-center gap-3">
+                <div className="bg-white p-2 rounded-full relative">
+                  <Bot className="w-5 h-5 text-primary-600" />
+                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+                </div>
+                <div>
+                  <h3 className="font-semibold flex items-center gap-2">
+                    Assistente DHS
+                    <Sparkles className="w-4 h-4 text-yellow-300" />
+                  </h3>
+                  <p className="text-xs text-primary-100">🟢 Online • Sempre disponível</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-1">
+                {messages.length > 1 && (
+                  <button
+                    onClick={clearChat}
+                    className="p-1.5 hover:bg-primary-500 rounded transition-colors"
+                    title="Limpar conversa"
+                  >
+                    <Trash2 className="w-4 h-4" />
+                  </button>
+                )}
+                <button
+                  onClick={() => setIsMinimized(!isMinimized)}
+                  className="p-1.5 hover:bg-primary-500 rounded transition-colors"
+                  title={isMinimized ? "Expandir" : "Minimizar"}
+                >
+                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                </button>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-1.5 hover:bg-primary-500 rounded transition-colors"
+                  title="Fechar"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+            </div>e)
+  }
+
+  const formatMessage = (text: string) => {
+    // Formatar markdown básico
+    const lines = text.split('\n')
+    return lines.map((line, i) => {
+      // Negrito
+      line = line.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      // Itálico
+      line = line.replace(/\*(.+?)\*/g, '<em>$1</em>')
+      
+      return <div key={i} dangerouslySetInnerHTML={{ __html: line }} />
+    })
+  }
+
+  const renderMessageContent = (message: Message) => {
+    if (message.text === 'links' && message.sender === 'bot') {
+      // Buscar links da última resposta
+      const lastUserMessage = [...messages].reverse().find(m => m.sender === 'user')
+      if (lastUserMessage) {
+        const response = findBestResponse(lastUserMessage.text)
+        if (response?.links) {
+          return (
+            <div className="flex flex-col gap-2">
+              {response.links.map((link, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleLinkClick(link.path)}
+                  className="text-left px-3 py-2 bg-primary-50 text-primary-700 rounded hover:bg-primary-100 transition-colors text-sm flex items-center gap-2"
+                >
+                  <span>→</span>
+                  <span>{link.text}</span>
+                </button>
+              ))}
+            </div>
+          )
+        }
+      }
+      return null
+    }
+
+    return (
+      <div className="whitespace-pre-wrap text-sm">
+        {formatMessage(message.text)}
+      </div>
+    )
+  }
+
+  return (
+    <>
+      {/* Botão flutuante */}
+      {!isOpen && (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 bg-primary-600 text-white p-4 rounded-full shadow-lg hover:bg-primary-700 transition-all hover:scale-110 z-50 group"
+          title="Abrir chat"
+        >
+          <MessageCircle className="w-6 h-6" />
+          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+            !
+          </span>
+          <div className="absolute bottom-full right-0 mb-2 px-3 py-1 bg-gray-900 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">
+            Precisa de ajuda? Clique aqui!
+          </div>
+        </button>
+      )}
+
+      {/* Janela do chat */}
+      {isOpen && (
+        <div className={`fixed ${isMinimized ? 'bottom-6 right-6' : 'bottom-6 right-6'} z-50 transition-all ${isMinimized ? 'w-80' : 'w-96'}`}>
+          <div className={`bg-white rounded-lg shadow-2xl flex flex-col ${isMinimized ? 'h-14' : 'h-[600px]'} transition-all`}>
+            {/* Header */}
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 rounded-t-lg flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="bg-white p-2 rounded-full">
+                  <Bot className="w-5 h-5 text-primary-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold">Assistente DHS</h3>
+                        {/* Message bubble */}
+                        <div className="flex-1">
+                          <div className={`rounded-lg p-3 ${
+                            message.sender === 'user'
+                              ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-md'
+                              : 'bg-white text-gray-800 shadow-sm border border-gray-200'
+                          }`}>
+                            {renderMessageContent(message)}
+                          </div>
+
+                          {/* Bot message actions */}
+                          {message.sender === 'bot' && message.text !== 'links' && (
+                            <div className="mt-1 flex items-center gap-2 text-xs">
+                              <button
+                                onClick={() => copyMessage(message.id, message.text)}
+                                className="flex items-center gap-1 text-gray-500 hover:text-primary-600 transition-colors"
+                                title="Copiar mensagem"
+                              >
+                                <Copy className="w-3 h-3" />
+                                {message.copied ? (
+                                  <span className="text-green-600">Copiado!</span>
+                                ) : (
+                                  <span>Copiar</span>
+                                )}
+                              </button>
+                              <span className="text-gray-300">•</span>
+                              <button
+                                onClick={() => handleFeedback(message.id, 'positive')}
+                                className={`flex items-center gap-1 transition-colors ${
+                                  message.feedback === 'positive'
+                                    ? 'text-green-600'
+                                    : 'text-gray-500 hover:text-green-600'
+                                }`}
+                                title="Resposta útil"
+                              >
+                                <ThumbsUp className="w-3 h-3" />
+                              </button>
+                              <button
+                                onClick={() => handleFeedback(message.id, 'negative')}
+                                className={`flex items-center gap-1 transition-colors ${
+                                  message.feedback === 'negative'
+                                    ? 'text-red-600'
+                                    : 'text-gray-500 hover:text-red-600'
+                                }`}
+                                title="Resposta não útil"
+                              >
+                                <ThumbsDown className="w-3 h-3" />
+                              </button>
+                            </div>
+                          )}
+                {/* Quick suggestions antes do input */}
+                {messages.length === 0 && (
+                  <div className="px-4 py-2 bg-gradient-to-r from-primary-50 to-blue-50 border-t border-gray-200">
+                    <p className="text-xs font-semibold text-gray-700 mb-2">💡 Perguntas frequentes:</p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {['O que é DHS?', 'PLANCON', 'Educação Infantil', 'Como implementar?'].map((q, i) => (
+                        <button
+                          key={i}
+                          onClick={() => handleSuggestionClick(q)}
+                          className="text-xs px-2 py-1 bg-white text-primary-700 rounded-md hover:bg-primary-100 transition-colors border border-primary-200 shadow-sm"
+                        >
+                          {q}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Input */}
+                <div className="p-4 border-t border-gray-200 bg-gradient-to-r from-gray-50 to-white rounded-b-lg">
+                  <div className="flex gap-2">
+                    <input
+                      ref={inputRef}
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={(e) => e.key === 'Enter' && !e.shiftKey && handleSendMessage()}
+                      placeholder="Digite sua pergunta sobre DHS..."
+                      className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm shadow-sm"
+                    />
+                    <button
+                      onClick={handleSendMessage}
+                      disabled={!inputValue.trim() || isTyping}
+                      className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-2.5 rounded-lg hover:from-primary-700 hover:to-primary-800 transition-all disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed shadow-md hover:shadow-lg disabled:shadow-none"
+                      title="Enviar mensagem"
+                    >
+                      <Send className="w-5 h-5" />
+                    </button>
+                  </div>
+                  <div className="flex items-center justify-between mt-2">
+                    <p className="text-xs text-gray-500">
+                      ⏎ Enter para enviar
+                    </p>
+                    {messages.length > 0 && (
+                      <p className="text-xs text-gray-400">
+                        💾 Histórico salvo por 24h
+                      </p>
+                    )}
+                  </div>
+                </div>iv
+                      key={message.id}
+                      className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                    >
+                      <div className={`flex gap-2 max-w-[85%] ${message.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
+                        {/* Avatar */}
+                        <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center ${
+                          message.sender === 'user' ? 'bg-primary-600' : 'bg-gray-300'
+                        }`}>
+                          {message.sender === 'user' ? (
+                            <User className="w-5 h-5 text-white" />
+                          ) : (
+                            <Bot className="w-5 h-5 text-gray-700" />
+                          )}
+                        </div>
+
+                        {/* Message bubble */}
+                        <div>
+                          <div className={`rounded-lg p-3 ${
+                            message.sender === 'user'
+                              ? 'bg-primary-600 text-white'
+                              : 'bg-white text-gray-800 shadow-sm border border-gray-200'
+                          }`}>
+                            {renderMessageContent(message)}
+                          </div>
+
+                          {/* Suggestions */}
+                          {message.suggestions && message.suggestions.length > 0 && (
+                            <div className="mt-2 flex flex-wrap gap-2">
+                              {message.suggestions.map((suggestion, idx) => (
+                                <button
+                                  key={idx}
+                                  onClick={() => handleSuggestionClick(suggestion)}
+                                  className="text-xs px-3 py-1 bg-gray-100 text-gray-700 rounded-full hover:bg-primary-100 hover:text-primary-700 transition-colors border border-gray-300"
+                                >
+                                  {suggestion}
+                                </button>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  {/* Typing indicator */}
+                  {isTyping && (
+                    <div className="flex justify-start">
+                      <div className="flex gap-2">
+                        <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
+                          <Bot className="w-5 h-5 text-gray-700" />
+                        </div>
+                        <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                          <div className="flex gap-1">
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
+                            <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div ref={messagesEndRef} />
+                </div>
+
+                {/* Input */}
+                <div className="p-4 border-t border-gray-200 bg-white rounded-b-lg">
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
+                      placeholder="Digite sua pergunta..."
+                      className="flex-1 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 text-sm"
+                    />
+                    <button
+                      onClick={handleSendMessage}
+                      disabled={!inputValue.trim()}
+                      className="bg-primary-600 text-white p-2 rounded-lg hover:bg-primary-700 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                    >
+                      <Send className="w-5 h-5" />
+                    </button>
+                  </div>
+                  <p className="text-xs text-gray-500 mt-2 text-center">
+                    Pressione Enter para enviar
+                  </p>
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+      )}
+    </>
+  )
+}
