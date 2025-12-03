@@ -505,18 +505,18 @@ export default function ChatBot() {
       {/* Janela do chat */}
       {isOpen && (
         <div className={`fixed bottom-6 right-6 z-50 transition-all ${isMinimized ? 'w-80' : 'w-96'}`}>
-          <div className={`bg-white rounded-lg shadow-2xl flex flex-col ${isMinimized ? 'h-14' : 'h-[600px]'} transition-all`}>
+          <div className={`bg-white rounded-lg shadow-2xl flex flex-col ${isMinimized ? 'h-14' : 'h-[500px]'} transition-all`}>
             {/* Header */}
-            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-4 rounded-t-lg flex items-center justify-between shadow-md">
-              <div className="flex items-center gap-3">
-                <div className="bg-white p-2 rounded-full relative">
-                  <Bot className="w-5 h-5 text-primary-600" />
-                  <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
+            <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white p-3 rounded-t-lg flex items-center justify-between shadow-md">
+              <div className="flex items-center gap-2">
+                <div className="bg-white p-1.5 rounded-full relative">
+                  <Bot className="w-4 h-4 text-primary-600" />
+                  <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div>
-                  <h3 className="font-semibold flex items-center gap-2">
+                  <h3 className="font-semibold text-sm flex items-center gap-2">
                     Assistente DHS
-                    <Sparkles className="w-4 h-4 text-yellow-300" />
+                    <Sparkles className="w-3 h-3 text-yellow-300" />
                   </h3>
                   <p className="text-xs text-primary-100">🟢 Online</p>
                 </div>
@@ -534,12 +534,14 @@ export default function ChatBot() {
                 <button
                   onClick={() => setIsMinimized(!isMinimized)}
                   className="p-1.5 hover:bg-primary-500 rounded transition-colors"
+                  title={isMinimized ? "Expandir" : "Minimizar"}
                 >
                   {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1.5 hover:bg-primary-500 rounded transition-colors"
+                  className="p-1.5 hover:bg-red-500 rounded transition-colors"
+                  title="Fechar chat"
                 >
                   <X className="w-5 h-5" />
                 </button>
