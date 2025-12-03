@@ -357,6 +357,49 @@ Antes de fazer push:
 
 ---
 
+## 🔐 VARIÁVEIS DE AMBIENTE EM PRODUÇÃO
+
+### ❓ O arquivo .env vai para o GitHub?
+
+**❌ NÃO!** O `.env` está no `.gitignore` por segurança. Ele contém informações sensíveis (API Keys).
+
+### ✅ Como configurar em produção então?
+
+Configure as variáveis de ambiente **diretamente na plataforma de hospedagem**:
+
+#### 🔷 **Vercel** (Recomendado)
+
+1. Faça deploy: `vercel`
+2. Acesse: https://vercel.com/dashboard
+3. Selecione seu projeto → **Settings** → **Environment Variables**
+4. Adicione:
+   - **Key**: `VITE_GEMINI_API_KEY`
+   - **Value**: `AIzaSy...sua_chave_aqui`
+   - **Environments**: ✅ Production, ✅ Preview, ✅ Development
+5. Redeploy: `vercel --prod`
+
+**✅ Pronto!** O chatbot funciona em produção.
+
+#### 🟦 **Netlify**
+
+1. Deploy: `netlify deploy --prod`
+2. Acesse: https://app.netlify.com
+3. Site settings → **Environment variables**
+4. Add variable: `VITE_GEMINI_API_KEY` = `sua_chave`
+5. Redeploy
+
+#### 📋 **Checklist de Deploy**
+
+- [ ] API Key gerada em: https://makersuite.google.com/app/apikey
+- [ ] Variável configurada na plataforma (Vercel/Netlify)
+- [ ] Nome EXATO: `VITE_GEMINI_API_KEY`
+- [ ] Redeploy feito após adicionar variável
+- [ ] Testado em produção (F12 → Console)
+
+**📚 Guia Completo:** Consulte `CHATBOT_AI_SETUP.md` para instruções detalhadas sobre deploy e variáveis de ambiente.
+
+---
+
 ## 📞 SUPORTE
 
 Se encontrar problemas:

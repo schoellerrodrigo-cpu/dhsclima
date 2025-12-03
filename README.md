@@ -44,6 +44,11 @@ Ferramenta interativa para avaliar o grau de maturidade DHS com:
 
 ### 💡 Recursos Interativos
 
+- 🤖 **Chatbot com IA (Gemini)**: Assistente inteligente que responde perguntas sobre DHS baseado no conteúdo completo da aplicação
+  - Contexto rico com 632.763 crianças na fila de creches, 8 passos do PLANCON, critérios do PGS
+  - Respostas personalizadas e contextualizadas
+  - Histórico de conversa mantido
+  - Configuração simples via Google Gemini API (gratuita)
 - 🔍 Busca avançada em recursos
 - ❓ FAQ com 20+ perguntas
 - 📊 Visualizações de dados
@@ -71,6 +76,10 @@ cd dhsclima
 # Instale as dependências
 npm install
 
+# Configure o chatbot com IA (opcional)
+# Copie .env.example para .env e adicione sua chave do Gemini
+# Veja CHATBOT_AI_SETUP.md para detalhes
+
 # Inicie o servidor
 npm run dev
 ```
@@ -87,6 +96,7 @@ Acesse: `http://localhost:5173`
 - **Tailwind CSS 3.3** - Styling
 - **React Router 6.20** - Routing
 - **Lucide React** - Icons
+- **Google Gemini AI** - Chatbot inteligente
 
 ---
 

@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { MessageCircle, X, Send, Bot, User, Minimize2, Maximize2, Trash2, ThumbsUp, ThumbsDown, Copy, Sparkles } from 'lucide-react'
 import { useNavigate, useLocation } from 'react-router-dom'
+import { geminiService } from '../services/geminiService'
 
 interface Message {
   id: string
@@ -257,9 +258,16 @@ export default function ChatBot() {
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       setTimeout(() => {
+        const isConfigured = geminiService.isConfigured()
+        const welcomeMessage = isConfigured
+          ? 'Olá! 👋 Sou o assistente virtual do DHS Guide com IA.\n\nEstou aqui para ajudá-lo a entender o Desenvolvimento Harmônico e Sustentável.\n\n✨ Posso responder suas dúvidas de forma personalizada usando inteligência artificial!\n\nComo posso ajudar você hoje?'
+          : '⚠️ **Configuração Necessária**\n\nO chatbot com IA precisa de uma chave API do Google Gemini.\n\nCrie um arquivo `.env` na raiz do projeto com:\n```\nVITE_GEMINI_API_KEY=sua_chave_aqui\n```\n\nObtenha sua chave gratuita em: https://makersuite.google.com/app/apikey'
+        
         addBotMessage(
-          'Olá! 👋 Sou o assistente virtual do DHS Guide.\n\nEstou aqui para ajudá-lo a entender o Desenvolvimento Harmônico e Sustentável.\n\nComo posso ajudar você hoje?',
-          ['O que é DHS?', 'Como implementar?', 'Plano de Contingência', 'Primeira Infância']
+          welcomeMessage,
+          isConfigured 
+            ? ['O que é DHS?', 'Como implementar?', 'Plano de Contingência', 'Primeira Infância']
+            : []
         )
       }, 500)
     }
@@ -362,7 +370,7 @@ export default function ChatBot() {
     return maxScore > 0 ? bestMatch : null
   }
 
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (!inputValue.trim()) return
 
     const userText = inputValue.trim()
@@ -371,43 +379,24 @@ export default function ChatBot() {
     setIsTyping(true)
     setShowSuggestions(false)
 
-    const typingDelay = Math.min(userText.length * 50 + 800, 2000)
-
-    setTimeout(() => {
-      const response = findBestResponse(userText)
-
-      if (response) {
-        if (response.category) {
-          setConversationContext(prev => [...prev, response.category!].slice(-3))
-        }
-
-        let fullResponse = response.response
-        if (response.links && response.links.length > 0) {
-          fullResponse += '\n\n🔗 **Links úteis:**'
-        }
-
-        addBotMessage(fullResponse, response.relatedQuestions)
-
-        if (response.links && response.links.length > 0) {
-          setTimeout(() => {
-            setMessages(prev => [...prev, {
-              id: (Date.now() + 1).toString(),
-              text: 'links',
-              sender: 'bot',
-              timestamp: new Date()
-            }])
-          }, 500)
-        }
-      } else {
-        addBotMessage(
-          'Desculpe, não encontrei uma resposta específica. 🤔\n\n💡 Tente:\n• Reformular com outras palavras\n• Escolher um tema abaixo\n• Usar a busca (🔍) no topo',
-          ['O que é DHS?', 'Metodologias', 'Implementação', 'PLANCON']
-        )
-      }
-
+    try {
+      // Usar Gemini AI para responder
+      const response = await geminiService.sendMessage(userText)
+      
+      // Sugestões contextuais baseadas no tópico
+      const suggestions = ['Conte-me mais', 'Como implementar isso?', 'Quais os benefícios?', 'Exemplos práticos']
+      
+      addBotMessage(response, suggestions)
+    } catch (error) {
+      console.error('Erro ao enviar mensagem:', error)
+      addBotMessage(
+        'Desculpe, ocorreu um erro ao processar sua mensagem. 😔\n\n💡 Possíveis causas:\n• API Key não configurada\n• Limite de uso atingido\n• Problema de conexão\n\nTente novamente em alguns instantes.',
+        ['O que é DHS?', 'Metodologias', 'Implementação', 'PLANCON']
+      )
+    } finally {
       setIsTyping(false)
       setShowSuggestions(true)
-    }, typingDelay)
+    }
   }
 
   const handleSuggestionClick = (suggestion: string) => {
@@ -425,6 +414,7 @@ export default function ChatBot() {
       setMessages([])
       setConversationContext([])
       localStorage.removeItem('dhs-chat-history')
+      geminiService.resetChat() // Reset Gemini chat history
       setTimeout(() => {
         addBotMessage('Histórico limpo! 🧹\n\nComo posso ajudá-lo agora?', ['O que é DHS?', 'Metodologias'])
       }, 300)
